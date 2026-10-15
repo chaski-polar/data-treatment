@@ -1,2 +1,5 @@
-def main() -> None:
-    print("Hello from nasahackaton!")
+"""Herramientas del proyecto NASA Space Apps."""
+
+from nasahackaton.main import main
+
+__all__ = ["main"]
