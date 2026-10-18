@@ -16,18 +16,18 @@ import xarray as xr
 from scipy import stats
 import matplotlib.pyplot as plt
 
-# Se prueban en orden hasta que uno abra. Si ninguno abre, busca el ID vigente en
-# https://coastwatch.noaa.gov/erddap/search/index.html?searchFor=chlorophyll+aqua+modis+monthly
-SERVIDORES = [
-    "https://coastwatch.noaa.gov/erddap",
-    "https://coastwatch.pfeg.noaa.gov/erddap",
-    "https://erddap.riddc.brown.edu/erddap",  # espejo; solo tiene la versión antigua
+# Servidores y datasets a probar en orden de prioridad.
+# NOAA OceanWatch (PIFSC) está activo, es público y responde de forma confiable.
+# 'coastwatch.pfeg.noaa.gov' suele experimentar caídas o bloqueos que causan errores -68 (DAP failure) por timeout.
+CANDIDATOS = [
+    ("https://oceanwatch.pifsc.noaa.gov/erddap", "aqua_chla_monthly_2018_0"),  # MODIS-Aqua 4km mensual (2002-2022)
+    ("https://oceanwatch.pifsc.noaa.gov/erddap", "esa-cci-chla-monthly-v6-0"), # ESA CCI Ocean Colour v6 (1997-presente, multi-sensor incl. MODIS)
+    ("https://oceanwatch.pifsc.noaa.gov/erddap", "noaa_snpp_chla_monthly"),    # VIIRS 4km mensual (2012-presente)
+    ("https://coastwatch.pfeg.noaa.gov/erddap", "erdMH1chlamday_R2022SQ"),     # NOAA PFEG (si está operativo)
+    ("https://coastwatch.pfeg.noaa.gov/erddap", "erdMH1chlamday"),
 ]
-DATASETS = [
-    "erdMH1chlamday_R2022SQ",   # calidad científica, 2003-presente
-    "erdMH1chlamday",           # versión antigua (R2018), 2003-2022: sirve para tendencia
-]
-VAR = "chlorophyll"
+VAR_CANDIDATAS = ["chlor_a", "chlorophyll", "chla"]
+
 # (lat_min, lat_max, lon_min, lon_max)
 SITIOS = {
     "sechura": (-6.0, -5.2, -81.2, -80.6),
@@ -36,25 +36,24 @@ SITIOS = {
 }
 INICIO, FIN = "2003-01-01", "2025-12-31"
 
-###
-SERVIDORES = [
-    "https://coastwatch.pfeg.noaa.gov/erddap",
-]
 
-DATASETS = [
-    "erdMH1chlamday_R2022SQ",
-]
-
-VAR = "chlor_a"
-
-
-def cargar(ds, caja):
+def cargar(ds, var, caja):
     la0, la1, lo0, lo1 = caja
-    da = ds[VAR].sel(time=slice(INICIO, FIN))
+    da = ds[var].sel(time=slice(INICIO, FIN))
+
     # ERDDAP puede devolver latitud ascendente o descendente
     lat = da["latitude"].values
     lat_sl = slice(la0, la1) if lat[0] < lat[-1] else slice(la1, la0)
-    da = da.sel(latitude=lat_sl, longitude=slice(lo0, lo1))
+
+    # Longitudes: algunos datasets usan [-180, 180] y otros [0, 360]
+    lon = da["longitude"].values
+    if lon.min() >= 0 and lo0 < 0:
+        lo0_sel, lo1_sel = lo0 + 360, lo1 + 360
+    else:
+        lo0_sel, lo1_sel = lo0, lo1
+    lon_sl = slice(lo0_sel, lo1_sel) if lon[0] < lon[-1] else slice(lo1_sel, lo0_sel)
+
+    da = da.sel(latitude=lat_sl, longitude=lon_sl)
     if "altitude" in da.dims:
         da = da.squeeze("altitude", drop=True)
     return da.load()
@@ -70,8 +69,8 @@ def mann_kendall_theilsen(serie):
     return dict(n=len(s), tau=tau, p=p, pendiente_por_anio=slope, ic_lo=lo, ic_hi=hi)
 
 
-def revisar(nombre, caja, ds):
-    da = cargar(ds, caja)
+def revisar(nombre, caja, ds, var):
+    da = cargar(ds, var, caja)
     ny, nx = da.sizes["latitude"], da.sizes["longitude"]
     print(f"\n=== {nombre} ===")
     print(f"Píxeles en la caja: {ny} x {nx} = {ny*nx} (paso ~{abs(float(da.latitude[1]-da.latitude[0])):.3f}°)")
@@ -103,41 +102,31 @@ def revisar(nombre, caja, ds):
 
 def abrir():
     errores = []
-    for srv in SERVIDORES:
-        for ds_id in DATASETS:
-            URL = (
-                "https://coastwatch.pfeg.noaa.gov/erddap/"
-                "griddap/erdMH1chlamday_R2022SQ"
-            )
-            # URL = f"{srv}/griddap/{ds_id}"
-            try:
-                ds = xr.open_dataset(URL)
-                print(f"Abrió: {URL}")
-
-                ds = xr.open_dataset(URL)
-
-                print(ds)
-                print("Variables:", list(ds.data_vars))
-                print("Dimensiones:", dict(ds.sizes))
-
-                return ds
-            except Exception as e:  # noqa: BLE001
-                errores.append((URL, str(e)[:120]))
+    for srv, ds_id in CANDIDATOS:
+        url = f"{srv}/griddap/{ds_id}"
+        print(f"Intentando abrir {url}...")
+        try:
+            ds = xr.open_dataset(url)
+            var = next((v for v in VAR_CANDIDATAS if v in ds.data_vars), None)
+            if var is None:
+                raise ValueError(f"No se encontró variable de clorofila en {list(ds.data_vars)}")
+            print(f"Abrió: {url}")
+            print(f"Variable seleccionada: '{var}'")
+            print("Dimensiones:", dict(ds.sizes))
+            return ds, var
+        except Exception as e:  # noqa: BLE001
+            errores.append((url, str(e)[:120]))
     print("No abrió ninguno. Errores:")
     for u, e in errores:
         print(" -", u, "->", e)
-    raise SystemExit("Busca el ID vigente en el buscador de ERDDAP (ver comentario arriba).")
+    raise SystemExit("No se pudo conectar a ningún servidor ERDDAP disponible.")
 
 
 if __name__ == "__main__":
-    print(SERVIDORES)
-    print(DATASETS)
-    print(VAR)
-    ds = abrir()
-    print(ds)  # por si hay que ajustar nombres
+    ds, var = abrir()
     fig, axes = plt.subplots(len(SITIOS), 1, figsize=(9, 3 * len(SITIOS)), sharex=True)
     for ax, (nombre, caja) in zip(np.atleast_1d(axes), SITIOS.items()):
-        serie, anom = revisar(nombre, caja, ds)
+        serie, anom = revisar(nombre, caja, ds, var)
         ax.plot(serie.index, serie.values, ".-", lw=0.6)
         ax.set_title(f"{nombre}: clorofila mensual (mg/m3)")
         ax.set_yscale("log")
