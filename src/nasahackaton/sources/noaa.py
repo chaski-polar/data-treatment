@@ -23,7 +23,7 @@ WOA_VARS = {
     "silicate": ("silicate", "i", "i_an"),
 }
 
-DEFAULT_TIMEOUT = 90
+DEFAULT_TIMEOUT = 180
 
 
 def fetch_pdo(
@@ -143,9 +143,25 @@ def woa23_monthly_path(
     if target.exists() and target.stat().st_size > 0:
         return target
     url = f"{WOA23_HTTP}/{folder}/netcdf/all/1.00/{name}"
-    response = requests.get(url, timeout=DEFAULT_TIMEOUT)
-    response.raise_for_status()
-    target.write_bytes(response.content)
+    temporary = target.with_suffix(target.suffix + ".part")
+    last_error: Exception | None = None
+    for attempt in range(1, 4):
+        try:
+            with requests.get(url, stream=True, timeout=(20, DEFAULT_TIMEOUT)) as response:
+                response.raise_for_status()
+                with temporary.open("wb") as handle:
+                    for chunk in response.iter_content(chunk_size=1024 * 1024):
+                        if chunk:
+                            handle.write(chunk)
+            temporary.replace(target)
+            break
+        except (requests.RequestException, OSError) as exc:
+            last_error = exc
+            temporary.unlink(missing_ok=True)
+            if attempt == 3:
+                raise RuntimeError(f"No se pudo descargar WOA23 tras {attempt} intentos: {url}") from exc
+    if last_error is not None and not target.exists():
+        raise last_error
     return target
 
 
