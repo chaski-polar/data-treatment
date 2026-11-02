@@ -13,6 +13,7 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 import numpy as np
@@ -227,6 +228,32 @@ def build_monitoring_series(environment: pd.DataFrame, biomass: pd.DataFrame) ->
     return result.sort_index()
 
 
+def add_biomass_interpolation(frame: pd.DataFrame) -> pd.DataFrame:
+    """Interpola biomasa solo entre meses con observaciones de crucero.
+
+    Esta columna es exclusivamente para visualización. La columna original
+    biomass_total_t y biomass_observed se conservan intactas.
+    """
+    result = frame.copy()
+    observed = result["biomass_total_t"].where(result["biomass_observed"])
+    interpolated = observed.interpolate(method="linear", limit_area="inside")
+    result["biomass_total_t_interpolated"] = interpolated
+    result["biomass_value_type"] = np.select(
+        [
+            result["biomass_observed"],
+            interpolated.notna() & ~result["biomass_observed"],
+        ],
+        ["observed", "interpolated"],
+        default="missing",
+    )
+    result["biomass_interpolation_method"] = np.where(
+        result["biomass_value_type"].eq("interpolated"),
+        "linear_between_cruise_intervals",
+        None,
+    )
+    return result
+
+
 def build_quality_report(environment: pd.DataFrame, interval_panel: pd.DataFrame, monitoring: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for column in environment.columns:
@@ -236,6 +263,58 @@ def build_quality_report(environment: pd.DataFrame, interval_panel: pd.DataFrame
             rows.append({"table": "interval_panel", "variable": column, "rows": len(interval_panel), "non_null": int(interval_panel[column].notna().sum()), "coverage_pct": float(interval_panel[column].notna().mean() * 100)})
     rows.append({"table": "monitoring", "variable": "biomass_total_t", "rows": len(monitoring), "non_null": int(monitoring["biomass_total_t"].notna().sum()), "coverage_pct": float(monitoring["biomass_total_t"].notna().mean() * 100)})
     return pd.DataFrame(rows)
+
+
+def build_web_payload(monitoring: pd.DataFrame) -> dict:
+    """Adapta la tabla interna a un JSON estable para la página."""
+    columns = {
+        "sst": "sst_c",
+        "sss": "sss_psu",
+        "oxygen": "oxygen_ml_l",
+        "chlorophyll_a": "chlorophyll_a_mg_m3",
+        "nitrate": "nitrate_mmol_m3",
+        "phosphate": "phosphate_mmol_m3",
+        "phytoplankton_carbon": "phytoplankton_carbon_mg_c_m3",
+        "pdo": "pdo",
+        "icen": "icen",
+        "nino12": "nino12_anom_c",
+        "distance_coast": "distance_coast_nm",
+        "biomass_total_t": "biomass_total_t",
+        "biomass_total_t_interpolated": "biomass_total_t_interpolated",
+        "hsi_abiotic": "hsi_abiotic",
+        "hsi_trophic": "hsi_trophic",
+    }
+    records = monitoring.reset_index().rename(columns=columns)
+    records["date"] = pd.to_datetime(records["date"]).dt.strftime("%Y-%m-%d")
+    records["biomass_cruise_ids"] = records["biomass_cruise_ids"].apply(
+        lambda value: [item for item in str(value).split(";") if item] if pd.notna(value) else []
+    )
+    for date_column in ("biomass_interval_start", "biomass_interval_end"):
+        records[date_column] = pd.to_datetime(records[date_column], errors="coerce").dt.strftime("%Y-%m-%d")
+    records = records.replace({np.nan: None})
+    return {
+        "schema_version": "1.0",
+        "generated_at": pd.Timestamp.now("UTC").isoformat(),
+        "period": {
+            "start": records["date"].iloc[0],
+            "end": records["date"].iloc[-1],
+        },
+        "sources": {
+            "environment": "CMEMS reanalysis; OC-CCI",
+            "icen": "IGP/ENFEN, ICEN basado en ERSSTv5",
+            "nino12": "NOAA PSL/CPC Niño 1+2",
+            "pdo": "NOAA PSL",
+            "biomass": "IMARPE cruise intervals",
+            "coast_distance": "GSHHS-derived regional reference; partial coverage",
+        },
+        "notes": [
+            "Biomass is observed only during cruise intervals; it is not interpolated.",
+            "biomass_total_t_interpolated is for visualization only and must not be used as an observed response for model fitting.",
+            "Missing values are null.",
+            "distance_coast is null where the regional lookup has no coverage.",
+        ],
+        "records": records.to_dict(orient="records"),
+    }
 
 
 def main() -> None:
@@ -250,22 +329,38 @@ def main() -> None:
     parser.add_argument("--biomass", type=Path, default=DEFAULT_BIOMASS)
     parser.add_argument("--stock", default="toda_costa", choices=("toda_costa", "norte_centro", "sur"))
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument(
+        "--interpolate-biomass",
+        action="store_true",
+        help="Añade una serie interpolada solo para visualización; no extrapola.",
+    )
+    parser.add_argument(
+        "--output-suffix",
+        default="",
+        help="Sufijo para no sobrescribir outputs existentes, por ejemplo _interpolated.",
+    )
     args = parser.parse_args()
 
     environment = load_environment(args)
     biomass = load_biomass(args.biomass, args.stock)
     interval_panel = build_interval_panel(environment, biomass)
     monitoring = build_monitoring_series(environment, biomass)
+    if args.interpolate_biomass:
+        monitoring = add_biomass_interpolation(monitoring)
     quality = build_quality_report(environment, interval_panel, monitoring)
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    interval_path = args.output_dir / "panel_experiments_ab.csv"
-    monitoring_path = args.output_dir / "monitoring_series_ab.csv"
-    monitoring_json_path = args.output_dir / "monitoring_series_ab.json"
-    quality_path = args.output_dir / "panel_quality_report.csv"
+    suffix = args.output_suffix
+    interval_path = args.output_dir / f"panel_experiments_ab{suffix}.csv"
+    monitoring_path = args.output_dir / f"monitoring_series_ab{suffix}.csv"
+    monitoring_json_path = args.output_dir / f"monitoring_series_ab{suffix}.json"
+    quality_path = args.output_dir / f"panel_quality_report{suffix}.csv"
     interval_panel.to_csv(interval_path, index=False)
     monitoring.to_csv(monitoring_path, index=True, date_format="%Y-%m-%d")
-    monitoring.reset_index().to_json(monitoring_json_path, orient="records", date_format="iso", date_unit="s")
+    monitoring_json_path.write_text(
+        json.dumps(build_web_payload(monitoring), ensure_ascii=False, allow_nan=False),
+        encoding="utf-8",
+    )
     quality.to_csv(quality_path, index=False)
     print(f"Panel por intervalos: {interval_path} ({len(interval_panel)} cruceros)")
     print(f"Serie de monitoreo:    {monitoring_path} ({len(monitoring)} meses)")
