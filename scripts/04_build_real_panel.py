@@ -13,6 +13,8 @@ Uso:
 from __future__ import annotations
 
 import argparse
+import base64
+import gzip
 import json
 from pathlib import Path
 
@@ -31,6 +33,8 @@ DEFAULT_ICEN = ROOT / "data/raw/igp/icen_monthly.csv"
 DEFAULT_NINO12 = ROOT / "data/nino12.long.anom.csv"
 DEFAULT_BIOMASS = ROOT / "data/biomasa_cruceros.csv"
 DEFAULT_OUTPUT = ROOT / "data/processed/tables"
+GRID_LOG_MIN = -1.7  # 0,02 mg/m³; coincide con la escala visual del globo
+GRID_LOG_MAX = 1.3   # 20 mg/m³
 
 
 def _suitability(values: pd.Series, lower: float, upper: float, decay: float) -> pd.Series:
@@ -317,6 +321,66 @@ def build_web_payload(monitoring: pd.DataFrame) -> dict:
     }
 
 
+def build_chlorophyll_grid_payload(path: Path) -> dict:
+    """Serializa la grilla mensual de clorofila CMEMS para el mapa web.
+
+    La serie de monitoreo conserva la mediana espacial, pero el mapa necesita
+    cada celda. Se toma la media vertical de 0–5 m, se conserva el orden
+    ``time, latitude, longitude`` y se cuantiza en escala logarítmica a un
+    byte: 0 significa sin dato y 1–255 son valores válidos. El bloque de
+    bytes se comprime con gzip y se codifica en Base64 para mantener un JSON
+    transportable por una página estática.
+    """
+    with xr.open_dataset(path) as source:
+        if "chl" not in source:
+            raise ValueError(f"No se encontró la variable chl en {path}")
+        chl = source["chl"]
+        if "depth" in chl.dims:
+            chl = chl.sel(depth=slice(0, 5)).mean("depth", skipna=True)
+        time_name = "time" if "time" in chl.coords else "valid_time"
+        lat_name = next((name for name in ("latitude", "lat") if name in chl.coords), None)
+        lon_name = next((name for name in ("longitude", "lon") if name in chl.coords), None)
+        if not lat_name or not lon_name:
+            raise ValueError(f"La grilla de {path} no tiene coordenadas latitud/longitud")
+        chl = chl.transpose(time_name, lat_name, lon_name).load()
+
+    values = np.asarray(chl.values, dtype=np.float32)
+    valid = np.isfinite(values) & (values > 0)
+    quantized = np.zeros(values.shape, dtype=np.uint8)
+    with np.errstate(divide="ignore", invalid="ignore"):
+        scaled = (np.log10(values[valid]) - GRID_LOG_MIN) / (GRID_LOG_MAX - GRID_LOG_MIN)
+    quantized[valid] = np.clip(np.round(scaled * 254) + 1, 1, 255).astype(np.uint8)
+
+    dates = pd.to_datetime(chl[time_name].values).to_period("M").astype(str).tolist()
+    monthly_median = np.nanmedian(np.where(valid, values, np.nan).reshape(values.shape[0], -1), axis=1)
+    data = gzip.compress(np.ascontiguousarray(quantized).tobytes(), compresslevel=9)
+    return {
+        "schema_version": "1.0",
+        "generated_at": pd.Timestamp.now("UTC").isoformat(),
+        "source": "CMEMS biogeochemistry reanalysis",
+        "variable": "chl",
+        "units": "mg m-3",
+        "depth": {"min_m": 0, "max_m": 5, "aggregation": "mean"},
+        "period": {"start": dates[0], "end": dates[-1]},
+        "time": dates,
+        "grid": {
+            "latitude": np.asarray(chl[lat_name].values, dtype=float).round(6).tolist(),
+            "longitude": np.asarray(chl[lon_name].values, dtype=float).round(6).tolist(),
+            "shape": [int(values.shape[1]), int(values.shape[2])],
+            "data_order": ["time", "latitude", "longitude"],
+        },
+        "encoding": {
+            "type": "uint8-log10-gzip-base64",
+            "missing": 0,
+            "valid_min": 1,
+            "valid_max": 255,
+            "log10_min": GRID_LOG_MIN,
+            "log10_max": GRID_LOG_MAX,
+            "decode": "10 ** (log10_min + (value - 1) / 254 * (log10_max - log10_min))",
+        },
+        "regional_median": [None if not np.isfinite(value) else round(float(value), 8) for value in monthly_median],
+        "data_gzip_base64": base64.b64encode(data).decode("ascii"),
+    }
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--physics", type=Path, default=DEFAULT_PHYSICS)
@@ -354,6 +418,7 @@ def main() -> None:
     interval_path = args.output_dir / f"panel_experiments_ab{suffix}.csv"
     monitoring_path = args.output_dir / f"monitoring_series_ab{suffix}.csv"
     monitoring_json_path = args.output_dir / f"monitoring_series_ab{suffix}.json"
+    grid_json_path = args.output_dir / f"monitoring_grid_chlorophyll{suffix}.json"
     quality_path = args.output_dir / f"panel_quality_report{suffix}.csv"
     interval_panel.to_csv(interval_path, index=False)
     monitoring.to_csv(monitoring_path, index=True, date_format="%Y-%m-%d")
@@ -361,10 +426,15 @@ def main() -> None:
         json.dumps(build_web_payload(monitoring), ensure_ascii=False, allow_nan=False),
         encoding="utf-8",
     )
+    grid_json_path.write_text(
+        json.dumps(build_chlorophyll_grid_payload(args.bgc), ensure_ascii=False, allow_nan=False, separators=(",", ":")),
+        encoding="utf-8",
+    )
     quality.to_csv(quality_path, index=False)
     print(f"Panel por intervalos: {interval_path} ({len(interval_panel)} cruceros)")
     print(f"Serie de monitoreo:    {monitoring_path} ({len(monitoring)} meses)")
     print(f"Serie JSON para web:    {monitoring_json_path}")
+    print(f"Grilla JSON para mapa:  {grid_json_path}")
     print(f"Reporte de calidad:     {quality_path}")
     print(f"Biomasa observada: {int(monitoring['biomass_observed'].sum())} meses; sin interpolación")
     print("Variables faltantes deliberadamente: oni, distance_coast")

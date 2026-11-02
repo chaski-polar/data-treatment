@@ -132,6 +132,24 @@ Antes de unir fuentes se normalizan:
 - carbono fitoplanctónico a mg C m⁻³ cuando corresponda;
 - capturas y biomasa a toneladas.
 
+### 6.5 Grilla para el mapa web
+
+`scripts/04_build_real_panel.py` genera, además de la serie mensual agregada,
+`data/processed/tables/monitoring_grid_chlorophyll.json`. Esta salida conserva
+la dimensión espacial de `chl` del NetCDF de CMEMS:
+
+- promedio vertical de 0–5 m;
+- una matriz por mes, latitud y longitud;
+- valores positivos cuantizados en escala logarítmica para colorear el mapa;
+- `0` reservado para celdas sin dato;
+- datos comprimidos con gzip y codificados en Base64 para una página estática;
+- `regional_median` para comprobar que la grilla reproduce el valor agregado
+  de la serie de monitoreo.
+
+El JSON no convierte la salida en observaciones satelitales: `chl` sigue siendo
+un producto de reanálisis CMEMS. La interpolación de biomasa no participa en
+esta grilla y continúa siendo exclusiva de la visualización de la serie.
+
 ### 6.5 Anomalías y rezagos
 
 Para separar estacionalidad de anomalías se calcula, cuando sea necesario:
