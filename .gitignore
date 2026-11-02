@@ -16,4 +16,4 @@ fao_data/
 .obsidian/
 out/
 *.pdf
-
+graphify-out/cache/

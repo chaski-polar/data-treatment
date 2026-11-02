@@ -1,0 +1,222 @@
+{
+  "pyproject.toml": {
+    "mtime": 1793595899.8126733,
+    "ast_hash": "1d590b3169256a1af98bd2a3eb378a2d",
+    "semantic_hash": "1d590b3169256a1af98bd2a3eb378a2d"
+  },
+  "scripts/00_check_sources.py": {
+    "mtime": 1793582948.5386503,
+    "ast_hash": "eaf4d8515fc6655bf68ff92a114abc18",
+    "semantic_hash": "eaf4d8515fc6655bf68ff92a114abc18"
+  },
+  "scripts/01_download_data.py": {
+    "mtime": 1793584122.906297,
+    "ast_hash": "959d45546599a2d3a2e968fd14ec681d",
+    "semantic_hash": "959d45546599a2d3a2e968fd14ec681d"
+  },
+  "scripts/02_download_experiment_b.py": {
+    "mtime": 1793593780.017439,
+    "ast_hash": "33cf039aa180fb11692cff1b10f47f83",
+    "semantic_hash": "33cf039aa180fb11692cff1b10f47f83"
+  },
+  "scripts/03_download_icen_igp.py": {
+    "mtime": 1793594759.9635298,
+    "ast_hash": "1b9d3191a58cfbb2c10b7bf203a1ae89",
+    "semantic_hash": "1b9d3191a58cfbb2c10b7bf203a1ae89"
+  },
+  "scripts/04_build_real_panel.py": {
+    "mtime": 1793596339.3146293,
+    "ast_hash": "c4dbb6bc97bc79fc738ce198a8009580",
+    "semantic_hash": "c4dbb6bc97bc79fc738ce198a8009580"
+  },
+  "scripts/05_build_monthly_dataset.py": {
+    "mtime": 1793582993.5828505,
+    "ast_hash": "396a80915d5e424b1163c3082984d54d",
+    "semantic_hash": "396a80915d5e424b1163c3082984d54d"
+  },
+  "scripts/10_fit_experiment_a.py": {
+    "mtime": 1793582993.643852,
+    "ast_hash": "abd589f9449ae5a4a2f0057207e03a95",
+    "semantic_hash": "abd589f9449ae5a4a2f0057207e03a95"
+  },
+  "scripts/11_fit_experiment_b.py": {
+    "mtime": 1793582993.7288544,
+    "ast_hash": "e8a101526feac8dd51b6cf567de2d1f4",
+    "semantic_hash": "e8a101526feac8dd51b6cf567de2d1f4"
+  },
+  "scripts/12_check_experiment_c.py": {
+    "mtime": 1793582993.8058565,
+    "ast_hash": "816e219e8f5b81b4b14c9aba95c32cb7",
+    "semantic_hash": "816e219e8f5b81b4b14c9aba95c32cb7"
+  },
+  "src/nasahackaton/__init__.py": {
+    "mtime": 1793582977.83243,
+    "ast_hash": "9341c76226f8e6be37406ac1d6386e53",
+    "semantic_hash": "9341c76226f8e6be37406ac1d6386e53"
+  },
+  "src/nasahackaton/analysis/__init__.py": {
+    "mtime": 1792104546.1911087,
+    "ast_hash": "6f2b2b1491331991a30af6493e5f9732",
+    "semantic_hash": "6f2b2b1491331991a30af6493e5f9732"
+  },
+  "src/nasahackaton/analysis/raster.py": {
+    "mtime": 1792104546.9041195,
+    "ast_hash": "df30494ed5d2047c4246e88a5abfd94c",
+    "semantic_hash": "df30494ed5d2047c4246e88a5abfd94c"
+  },
+  "src/nasahackaton/anchoveta.py": {
+    "mtime": 1792990150.193585,
+    "ast_hash": "8e630bbac3737327f7ee8d3fcef89231",
+    "semantic_hash": "8e630bbac3737327f7ee8d3fcef89231"
+  },
+  "src/nasahackaton/config.py": {
+    "mtime": 1792992519.8675861,
+    "ast_hash": "0b32da062c6271193eaee209d748a69c",
+    "semantic_hash": "0b32da062c6271193eaee209d748a69c"
+  },
+  "src/nasahackaton/copernicus_phyto.py": {
+    "mtime": 1792998276.3999746,
+    "ast_hash": "1d2994797c21e8681fd16612cdedf56f",
+    "semantic_hash": "1d2994797c21e8681fd16612cdedf56f"
+  },
+  "src/nasahackaton/datasets/__init__.py": {
+    "mtime": 1793582947.5696244,
+    "ast_hash": "c12ef835477e697e182661122fb42f0e",
+    "semantic_hash": "c12ef835477e697e182661122fb42f0e"
+  },
+  "src/nasahackaton/datasets/anchoveta.py": {
+    "mtime": 1793583032.7739005,
+    "ast_hash": "4cfa66ba6141989e345a8d2e38a38cee",
+    "semantic_hash": "4cfa66ba6141989e345a8d2e38a38cee"
+  },
+  "src/nasahackaton/datasets/monthly_panel.py": {
+    "mtime": 1793582993.5228488,
+    "ast_hash": "2977a70fa9b89309d96b938d12b5cb39",
+    "semantic_hash": "2977a70fa9b89309d96b938d12b5cb39"
+  },
+  "src/nasahackaton/datasets/ocean.py": {
+    "mtime": 1793583032.6508973,
+    "ast_hash": "2f87fa68e3ab11e9a202e88a9c8abfd3",
+    "semantic_hash": "2f87fa68e3ab11e9a202e88a9c8abfd3"
+  },
+  "src/nasahackaton/experimentob.py": {
+    "mtime": 1792992542.9268196,
+    "ast_hash": "ef3dfd7d6f0047b90ff4242d2942f2be",
+    "semantic_hash": "ef3dfd7d6f0047b90ff4242d2942f2be"
+  },
+  "src/nasahackaton/fitoplancton.py": {
+    "mtime": 1792104629.960386,
+    "ast_hash": "ec93393aa52a6bb4a092575179696d02",
+    "semantic_hash": "ec93393aa52a6bb4a092575179696d02"
+  },
+  "src/nasahackaton/main.py": {
+    "mtime": 1792104549.1661541,
+    "ast_hash": "89ac75d00a7c14e6206f1924d088d8a6",
+    "semantic_hash": "89ac75d00a7c14e6206f1924d088d8a6"
+  },
+  "src/nasahackaton/models/__init__.py": {
+    "mtime": 1793582947.7476292,
+    "ast_hash": "dadc52e4f9dc6d654b8341d5aa496b02",
+    "semantic_hash": "dadc52e4f9dc6d654b8341d5aa496b02"
+  },
+  "src/nasahackaton/models/experiment_a.py": {
+    "mtime": 1793582948.1856408,
+    "ast_hash": "79398a409e03030a30dcc81b55ad4d76",
+    "semantic_hash": "79398a409e03030a30dcc81b55ad4d76"
+  },
+  "src/nasahackaton/models/experiment_b.py": {
+    "mtime": 1793582948.2486427,
+    "ast_hash": "599310f5ac92294664737001e70df507",
+    "semantic_hash": "599310f5ac92294664737001e70df507"
+  },
+  "src/nasahackaton/models/experiment_c.py": {
+    "mtime": 1793582948.3066442,
+    "ast_hash": "ee9aeac98a2bca1dbb0410557fa59161",
+    "semantic_hash": "ee9aeac98a2bca1dbb0410557fa59161"
+  },
+  "src/nasahackaton/models/synthetic.py": {
+    "mtime": 1793582967.2321475,
+    "ast_hash": "90548c8cbcf78a740d875927c78881cc",
+    "semantic_hash": "90548c8cbcf78a740d875927c78881cc"
+  },
+  "src/nasahackaton/modisa.py": {
+    "mtime": 1792261856.1076806,
+    "ast_hash": "ec46077c1570c8056cb24ef9fd8d4ebb",
+    "semantic_hash": "ec46077c1570c8056cb24ef9fd8d4ebb"
+  },
+  "src/nasahackaton/modisa2.py": {
+    "mtime": 1792345780.1936202,
+    "ast_hash": "0c06fdcfb1b9825f4f38e3de1597d2c3",
+    "semantic_hash": "0c06fdcfb1b9825f4f38e3de1597d2c3"
+  },
+  "src/nasahackaton/nutrientes.py": {
+    "mtime": 1792104613.426134,
+    "ast_hash": "b3c8ee93b8544ef95dae3b67bccf2869",
+    "semantic_hash": "b3c8ee93b8544ef95dae3b67bccf2869"
+  },
+  "src/nasahackaton/nutrientes2.py": {
+    "mtime": 1792104614.8421557,
+    "ast_hash": "31146ad1c8d9ef57d54ecd116e3ebc22",
+    "semantic_hash": "31146ad1c8d9ef57d54ecd116e3ebc22"
+  },
+  "src/nasahackaton/sources/__init__.py": {
+    "mtime": 1793583039.1460717,
+    "ast_hash": "d79006f4e6379a3f5d27d63249a6ad0d",
+    "semantic_hash": "d79006f4e6379a3f5d27d63249a6ad0d"
+  },
+  "src/nasahackaton/sources/copernicus.py": {
+    "mtime": 1793583032.5858955,
+    "ast_hash": "4a29732cce2e7c84d044d7a08c715a56",
+    "semantic_hash": "4a29732cce2e7c84d044d7a08c715a56"
+  },
+  "src/nasahackaton/sources/earthdata.py": {
+    "mtime": 1792104545.0760915,
+    "ast_hash": "146f15ccd10d8e586f24c6e233df69ad",
+    "semantic_hash": "146f15ccd10d8e586f24c6e233df69ad"
+  },
+  "src/nasahackaton/sources/fao.py": {
+    "mtime": 1793583032.7118988,
+    "ast_hash": "ca1a60243826f57801492b40e47e9013",
+    "semantic_hash": "ca1a60243826f57801492b40e47e9013"
+  },
+  "src/nasahackaton/sources/nasa_ocean_color.py": {
+    "mtime": 1793582947.8636324,
+    "ast_hash": "9d56ff91731213a1eba72e19a99bee32",
+    "semantic_hash": "9d56ff91731213a1eba72e19a99bee32"
+  },
+  "src/nasahackaton/sources/noaa.py": {
+    "mtime": 1793585185.9401004,
+    "ast_hash": "af23d13f7728615fa8426476fc16c877",
+    "semantic_hash": "af23d13f7728615fa8426476fc16c877"
+  },
+  "src/nasahackaton/sources/power.py": {
+    "mtime": 1792104517.5096705,
+    "ast_hash": "879ba86b49f6f514bebc068c07c7d165",
+    "semantic_hash": "879ba86b49f6f514bebc068c07c7d165"
+  },
+  "src/nasahackaton/transforms/__init__.py": {
+    "mtime": 1793582947.325618,
+    "ast_hash": "faf9c98fcde7962a213e8fb71b62900e",
+    "semantic_hash": "faf9c98fcde7962a213e8fb71b62900e"
+  },
+  "src/nasahackaton/transforms/spatial.py": {
+    "mtime": 1793582947.925634,
+    "ast_hash": "c25a6a08a6a16839aa631abf99952706",
+    "semantic_hash": "c25a6a08a6a16839aa631abf99952706"
+  },
+  "src/nasahackaton/transforms/temporal.py": {
+    "mtime": 1793582947.9876356,
+    "ast_hash": "4f709ff5629704101f5e407f409acd36",
+    "semantic_hash": "4f709ff5629704101f5e407f409acd36"
+  },
+  "src/nasahackaton/transforms/units.py": {
+    "mtime": 1793582948.0576375,
+    "ast_hash": "7c8beab00476da4c1f2dde211a56a55f",
+    "semantic_hash": "7c8beab00476da4c1f2dde211a56a55f"
+  },
+  "src/nasahackaton/util/nasa_functions.py": {
+    "mtime": 1792992527.0176585,
+    "ast_hash": "d8e8b7e52c35e1cec8fa026f74f26ec1",
+    "semantic_hash": "d8e8b7e52c35e1cec8fa026f74f26ec1"
+  }
+}
