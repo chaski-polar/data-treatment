@@ -1,5 +1,16 @@
-"""Herramientas del proyecto NASA Space Apps."""
+"""Herramientas del proyecto NASA Space Apps.
 
-from nasahackaton.main import main
+La importación de ``main`` es perezosa para que los scripts de preparación
+puedan importar un submódulo sin cargar Earthaccess, Rasterio y Copernicus a
+la vez.
+"""
+
+
+def main() -> None:
+    """Punto de entrada legado del proyecto."""
+    from nasahackaton.main import main as run
+
+    run()
+
 
 __all__ = ["main"]
