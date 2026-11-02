@@ -1,4 +1,4 @@
-"""Construye el panel real por intervalos para los experimentos A y B.
+"""Construye los paneles reales por intervalos para los experimentos A, B y C.
 
 La biomasa de cruceros no es mensual: cada fila representa una campaña con
 fecha de inicio y fin. El panel de ajuste conserva una fila por campaña y
@@ -32,6 +32,8 @@ DEFAULT_PDO = ROOT / "data/raw/noaa/pdo_monthly_1998_2026.csv"
 DEFAULT_ICEN = ROOT / "data/raw/igp/icen_monthly.csv"
 DEFAULT_NINO12 = ROOT / "data/nino12.long.anom.csv"
 DEFAULT_BIOMASS = ROOT / "data/biomasa_cruceros.csv"
+DEFAULT_ZOOPLANKTON_HINDCAST = ROOT / "data/raw/copernicus/zooplankton_hindcast_1998-01-01_2025-12-31.nc"
+DEFAULT_ZOOPLANKTON_OPERATIONAL = ROOT / "data/raw/copernicus/zooplankton_operational_2023-12-01_2026-08-31.nc"
 DEFAULT_OUTPUT = ROOT / "data/processed/tables"
 GRID_LOG_MIN = -1.7  # 0,02 mg/m³; coincide con la escala visual del globo
 GRID_LOG_MAX = 1.3   # 20 mg/m³
@@ -258,6 +260,132 @@ def add_biomass_interpolation(frame: pd.DataFrame) -> pd.DataFrame:
     return result
 
 
+def _zooplankton_monthly(path: Path, source_label: str) -> pd.DataFrame:
+    """Resume ``zooc`` espacialmente y por mes sin cargar la grilla completa."""
+    with xr.open_dataset(path) as source:
+        if "zooc" not in source:
+            raise ValueError(f"No se encontró zooc en {path}")
+        zoo = source["zooc"]
+        if "depth" in zoo.dims:
+            # El producto operativo trae capas pelágicas; usamos la epipelágica
+            # para aproximar el alimento disponible en la superficie.
+            zoo = zoo.isel(depth=0)
+        spatial_dims = [d for d in ("latitude", "longitude", "lat", "lon") if d in zoo.dims]
+        if not spatial_dims:
+            raise ValueError(f"zooc no tiene dimensiones espaciales en {path}")
+        zoo = zoo.median(spatial_dims, skipna=True)
+        if "time" not in zoo.dims:
+            time_name = "valid_time" if "valid_time" in zoo.dims else None
+            if time_name:
+                zoo = zoo.rename({time_name: "time"})
+        if "time" not in zoo.dims:
+            raise ValueError(f"zooc no tiene dimensión temporal en {path}")
+        units = str(source["zooc"].attrs.get("units", "")).lower().replace(" ", "")
+        monthly = zoo.resample(time="MS").mean(skipna=True).load()
+
+    # Canonicalizamos a mg C m-2. El hindcast ya es contenido integrado;
+    # el producto operativo es concentración en la primera capa, por lo que
+    # se integra aproximadamente sobre 5 m antes de armonizarlo.
+    if "g m-2".replace(" ", "") in units or "gm-2" in units:
+        values = monthly * 1000.0
+        conversion = "g C m-2 -> mg C m-2"
+    elif "mmolm-3" in units:
+        values = monthly * 12.0107 * 5.0
+        conversion = "mmol C m-3 -> mg C m-2 usando 5 m"
+    elif "mg c m-3".replace(" ", "") in units or "mgcm-3" in units:
+        values = monthly * 5.0
+        conversion = "mg C m-3 -> mg C m-2 usando 5 m"
+    else:
+        raise ValueError(f"Unidades de zooc no reconocidas en {path}: {units!r}")
+
+    series = pd.Series(np.asarray(values.to_numpy(), dtype=float), index=pd.to_datetime(values["time"].values), name="zooplankton_carbon")
+    return pd.DataFrame(
+        {
+            "zooplankton_carbon": series,
+            "zooplankton_source": source_label,
+            "zooplankton_conversion": conversion,
+        }
+    )
+
+
+def load_zooplankton(hindcast: Path, operational: Path) -> pd.DataFrame:
+    """Une hindcast y producto operativo, calibrando el segundo al solapamiento."""
+    frames = []
+    if hindcast.exists():
+        frames.append(_zooplankton_monthly(hindcast, "CMEMS LMTL hindcast"))
+    if operational.exists():
+        frames.append(_zooplankton_monthly(operational, "CMEMS BGC operativo"))
+    if not frames:
+        raise FileNotFoundError("No se encontró ningún NetCDF de zooplancton")
+    if len(frames) == 1:
+        result = frames[0].copy()
+        result["zooplankton_harmonization_factor"] = 1.0
+        return result.sort_index()
+
+    historical, recent = frames
+    overlap = historical.join(recent, lsuffix="_hindcast", rsuffix="_operational", how="inner")
+    valid = overlap[["zooplankton_carbon_hindcast", "zooplankton_carbon_operational"]].replace([np.inf, -np.inf], np.nan).dropna()
+    valid = valid[(valid > 0).all(axis=1)]
+    if valid.empty:
+        raise ValueError("No hay solapamiento válido entre hindcast y zooplancton operativo")
+    factor = float(np.median(valid["zooplankton_carbon_hindcast"] / valid["zooplankton_carbon_operational"]))
+    recent = recent.copy()
+    recent["zooplankton_carbon"] *= factor
+    recent["zooplankton_harmonization_factor"] = factor
+    historical = historical.copy()
+    historical["zooplankton_harmonization_factor"] = 1.0
+    result = historical.combine_first(recent)
+    result["zooplankton_source"] = historical["zooplankton_source"].combine_first(recent["zooplankton_source"])
+    result["zooplankton_conversion"] = historical["zooplankton_conversion"].combine_first(recent["zooplankton_conversion"])
+    result["zooplankton_harmonization_factor"] = historical["zooplankton_harmonization_factor"].combine_first(recent["zooplankton_harmonization_factor"])
+    return result.sort_index()
+
+
+def build_experiment_c_panel(environment: pd.DataFrame, monitoring: pd.DataFrame, zooplankton: pd.DataFrame) -> pd.DataFrame:
+    """Construye los estados F-Z-A mensuales para el Experimento C."""
+    result = environment[["phytoplankton_carbon"]].join(zooplankton, how="outer")
+    biomass_columns = ["biomass_total_t_interpolated", "biomass_total_t"]
+    biomass_column = next((column for column in biomass_columns if column in monitoring), None)
+    if biomass_column is None:
+        raise ValueError("La serie de monitoreo no contiene biomasa de anchoveta")
+    result = result.join(monitoring[[biomass_column, "biomass_observed"]], how="outer")
+    result = result.rename(columns={biomass_column: "biomass_anchoveta", "zooplankton_carbon": "zooplankton"})
+    if "biomass_value_type" in monitoring:
+        result = result.join(monitoring[["biomass_value_type"]], how="left")
+    else:
+        result["biomass_value_type"] = np.where(result["biomass_observed"], "observed", "missing")
+    result["experiment_c_data_quality"] = np.select(
+        [result["biomass_value_type"].eq("observed"), result["biomass_value_type"].eq("interpolated")],
+        ["zooplankton_model + biomass_observed", "zooplankton_model + biomass_interpolated"],
+        default="zooplankton_model + biomass_missing",
+    )
+    result.index.name = "date"
+    return result.sort_index()
+
+
+def build_experiment_c_payload(panel: pd.DataFrame) -> dict:
+    """Serializa los estados F-Z-A y sus metadatos para el monitor/videojuego."""
+    records = panel.reset_index().copy()
+    records["date"] = pd.to_datetime(records["date"]).dt.strftime("%Y-%m-%d")
+    records = records.replace({np.nan: None})
+    return {
+        "schema_version": "1.0",
+        "generated_at": pd.Timestamp.now("UTC").isoformat(),
+        "experiment": "C",
+        "states": {
+            "F": {"column": "phytoplankton_carbon", "units": "mg C m-3"},
+            "Z": {"column": "zooplankton", "units": "mg C m-2"},
+            "A": {"column": "biomass_anchoveta", "units": "t"},
+        },
+        "notes": [
+            "Zooplancton procede de modelos CMEMS y no de observaciones directas.",
+            "El producto operativo se armoniza al hindcast usando la mediana del solapamiento.",
+            "La biomasa interpolada se conserva como estimada para el monitor y el videojuego.",
+        ],
+        "records": records.to_dict(orient="records"),
+    }
+
+
 def build_quality_report(environment: pd.DataFrame, interval_panel: pd.DataFrame, monitoring: pd.DataFrame) -> pd.DataFrame:
     rows = []
     for column in environment.columns:
@@ -391,12 +519,19 @@ def main() -> None:
     parser.add_argument("--icen", type=Path, default=DEFAULT_ICEN)
     parser.add_argument("--nino12", type=Path, default=DEFAULT_NINO12)
     parser.add_argument("--biomass", type=Path, default=DEFAULT_BIOMASS)
+    parser.add_argument("--zooplankton-hindcast", type=Path, default=DEFAULT_ZOOPLANKTON_HINDCAST)
+    parser.add_argument("--zooplankton-operational", type=Path, default=DEFAULT_ZOOPLANKTON_OPERATIONAL)
     parser.add_argument("--stock", default="toda_costa", choices=("toda_costa", "norte_centro", "sur"))
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument(
         "--interpolate-biomass",
         action="store_true",
         help="Añade una serie interpolada solo para visualización; no extrapola.",
+    )
+    parser.add_argument(
+        "--experiment-c",
+        action="store_true",
+        help="Genera también el panel y JSON F-Z-A del Experimento C.",
     )
     parser.add_argument(
         "--output-suffix",
@@ -411,6 +546,13 @@ def main() -> None:
     monitoring = build_monitoring_series(environment, biomass)
     if args.interpolate_biomass:
         monitoring = add_biomass_interpolation(monitoring)
+    experiment_c = None
+    if args.experiment_c:
+        if "biomass_total_t_interpolated" not in monitoring:
+            monitoring = add_biomass_interpolation(monitoring)
+            print("Experimento C: se activó interpolación de biomasa para visualización")
+        zooplankton = load_zooplankton(args.zooplankton_hindcast, args.zooplankton_operational)
+        experiment_c = build_experiment_c_panel(environment, monitoring, zooplankton)
     quality = build_quality_report(environment, interval_panel, monitoring)
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -431,6 +573,17 @@ def main() -> None:
         encoding="utf-8",
     )
     quality.to_csv(quality_path, index=False)
+    if experiment_c is not None:
+        experiment_c_path = args.output_dir / f"experiment_c_panel{suffix}.csv"
+        experiment_c_json_path = args.output_dir / f"experiment_c_panel{suffix}.json"
+        experiment_c.to_csv(experiment_c_path, index=True, index_label="date", date_format="%Y-%m-%d")
+        experiment_c_json_path.write_text(
+            json.dumps(build_experiment_c_payload(experiment_c), ensure_ascii=False, allow_nan=False),
+            encoding="utf-8",
+        )
+        complete = experiment_c[["phytoplankton_carbon", "zooplankton", "biomass_anchoveta"]].notna().all(axis=1)
+        print(f"Panel Experimento C: {experiment_c_path} ({int(complete.sum())} estados F-Z-A completos)")
+        print(f"JSON Experimento C:   {experiment_c_json_path}")
     print(f"Panel por intervalos: {interval_path} ({len(interval_panel)} cruceros)")
     print(f"Serie de monitoreo:    {monitoring_path} ({len(monitoring)} meses)")
     print(f"Serie JSON para web:    {monitoring_json_path}")

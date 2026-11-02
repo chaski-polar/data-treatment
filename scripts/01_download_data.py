@@ -25,6 +25,18 @@ from nasahackaton.sources.noaa import WOA_VARS, fetch_pdo, woa23_monthly_path
 
 COPERNICUS_PHYSICS = "cmems_mod_glo_phy_my_0.083deg_P1M-m"
 COPERNICUS_BGC = "cmems_mod_glo_bgc_my_0.25deg_P1M-m"
+# LMTL entrega biomasa de zooplancton como carbono integrado en la capa
+# pelágica. El producto operativo entrega la continuación mensual reciente.
+# El catálogo vigente devuelve P1D-i (sin la T); el dataset Fphy es secundario
+# y no se necesita para la biomasa de zooplancton.
+COPERNICUS_ZOOPLANKTON_HINDCAST = "cmems_mod_glo_bgc_my_0.083deg-lmtl_P1D-i"
+COPERNICUS_ZOOPLANKTON_OPERATIONAL = "cmems_mod_glo_bgc-plankton_anfc_0.25deg_P1M-m"
+# El catálogo vigente reporta esta revisión para el dataset LMTL.
+COPERNICUS_ZOOPLANKTON_HINDCAST_VERSIONS = ("202511",)
+ZOOPLANKTON_HINDCAST_START = "1998-01-01"
+ZOOPLANKTON_HINDCAST_END = "2025-12-31"
+ZOOPLANKTON_OPERATIONAL_START = "2023-12-01"
+ZOOPLANKTON_OPERATIONAL_END = "2026-08-31"
 NSIDC_SOUTH_DAILY = (
     "https://noaadata.apps.nsidc.org/NOAA/G02135/south/daily/data/"
     "S_seaice_extent_daily_v4.0.csv"
@@ -85,9 +97,11 @@ def download_nsidc(args: argparse.Namespace, manifest: list[dict[str, Any]]) -> 
 
 
 def download_copernicus(args: argparse.Namespace, manifest: list[dict[str, Any]]) -> None:
-    """Descarga física y biogeoquímica en dos NetCDF separados."""
+    """Descarga física, biogeoquímica y zooplancton en NetCDF separados."""
     if args.dry_run:
         print("PLAN Copernicus: requiere credenciales configuradas con copernicusmarine.login()")
+        print(f"PLAN zooplancton histórico: {ZOOPLANKTON_HINDCAST_START} a {min(args.end, ZOOPLANKTON_HINDCAST_END)}")
+        print(f"PLAN zooplancton operativo: {max(args.start, ZOOPLANKTON_OPERATIONAL_START)} a {min(args.end, ZOOPLANKTON_OPERATIONAL_END)}")
         return
     import copernicusmarine
 
@@ -122,6 +136,71 @@ def download_copernicus(args: argparse.Namespace, manifest: list[dict[str, Any]]
         path = getattr(result, "file_path", target)
         print(f"OK Copernicus {dataset_id}: {path}")
         manifest.append({"source": dataset_id, "variables": variables, "path": str(path)})
+
+    # No se concatena aquí: el hindcast y el producto operativo tienen distinta
+    # resolución y distinta definición vertical. Mantenerlos separados permite
+    # inspeccionar el solapamiento 2023–2025 antes de construir la serie C.
+    zoo_requests = [
+        (
+            COPERNICUS_ZOOPLANKTON_HINDCAST,
+            ZOOPLANKTON_HINDCAST_START,
+            ZOOPLANKTON_HINDCAST_END,
+            "zooplankton_hindcast_{start}_{end}.nc",
+            {"dataset_versions": COPERNICUS_ZOOPLANKTON_HINDCAST_VERSIONS},
+        ),
+        (
+            COPERNICUS_ZOOPLANKTON_OPERATIONAL,
+            ZOOPLANKTON_OPERATIONAL_START,
+            ZOOPLANKTON_OPERATIONAL_END,
+            "zooplankton_operational_{start}_{end}.nc",
+            {"minimum_depth": 0, "maximum_depth": 5},
+        ),
+    ]
+    for dataset_id, available_start, available_end, filename_template, depth in zoo_requests:
+        start = max(args.start, available_start)
+        end = min(args.end, available_end)
+        if start > end:
+            print(f"SKIP zooplancton sin intersección temporal: {dataset_id}")
+            continue
+        filename = filename_template.format(start=start, end=end)
+        target = output / filename
+        if target.exists() and target.stat().st_size > 0 and not args.force:
+            print(f"SKIP existente: {target}")
+            manifest.append({"source": dataset_id, "variables": ["zooc"], "path": str(target), "start": start, "end": end})
+            continue
+        request = {
+            "dataset_id": dataset_id,
+            "variables": ["zooc"],
+            "start_datetime": start,
+            "end_datetime": end,
+            "minimum_longitude": PERU_OCEAN.west,
+            "maximum_longitude": PERU_OCEAN.east,
+            "minimum_latitude": PERU_OCEAN.south,
+            "maximum_latitude": PERU_OCEAN.north,
+            "output_filename": filename,
+            "output_directory": str(output),
+            "disable_progress_bar": False,
+            **depth,
+        }
+        versions = request.pop("dataset_versions", (None,))
+        last_error: Exception | None = None
+        for version in versions:
+            try:
+                print(f"TRY Copernicus {dataset_id} versión {version or 'automática'}")
+                result = copernicusmarine.subset(
+                    **request,
+                    **({"dataset_version": version} if version else {}),
+                )
+                break
+            except Exception as error:
+                if "DatasetNotFound" not in type(error).__name__:
+                    raise
+                last_error = error
+        else:
+            raise last_error or RuntimeError(f"No se pudo resolver {dataset_id}")
+        path = getattr(result, "file_path", target)
+        print(f"OK Copernicus {dataset_id}: {path}")
+        manifest.append({"source": dataset_id, "variables": ["zooc"], "path": str(path), "start": start, "end": end})
 
 
 def main() -> None:

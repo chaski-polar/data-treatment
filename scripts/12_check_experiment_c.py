@@ -11,7 +11,7 @@ from nasahackaton.models.experiment_c import validate_state_panel
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", type=Path, default=Path("data/processed/tables/panel_peru_monthly.csv"))
+    parser.add_argument("--input", type=Path, default=Path("data/processed/tables/experiment_c_panel.csv"))
     args = parser.parse_args()
     states = validate_state_panel(load_panel(args.input))
     print(f"Experimento C: {len(states)} observaciones completas disponibles")
