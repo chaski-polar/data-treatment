@@ -14,12 +14,23 @@ from nasahackaton.analysis.raster import (
     plot_water_layer as _plot_raster_data,
 )
 from nasahackaton.sources.earthdata import download_dswx as download_earthaccess_data
+from nasahackaton.sources.noaa import fetch_pdo, woa23_box_mean
 from nasahackaton.sources.power import fetch_daily
 
 
 def power(lat: float, lon: float, start: str, end: str, params: str = "RH2M,PRECTOTCORR,T2M,WS2M"):
     """Alias histórico de :func:`nasahackaton.sources.power.fetch_daily`."""
     return fetch_daily(lat, lon, start, end, params)
+
+
+def pdo(start: str | None = None, end: str | None = None, source: str = "erddap"):
+    """Alias de :func:`nasahackaton.sources.noaa.fetch_pdo`."""
+    return fetch_pdo(start=start, end=end, source=source)
+
+
+def woa_nutrient(nutrient: str, month: int, **kwargs):
+    """Alias de :func:`nasahackaton.sources.noaa.woa23_box_mean`."""
+    return woa23_box_mean(nutrient, month, **kwargs)
 
 
 def main() -> None:

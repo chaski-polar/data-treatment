@@ -12,6 +12,8 @@ wheels/
 # project particular
 data/
 data_chl/
+fao_data/
 .obsidian/
 out/
 *.pdf
+
