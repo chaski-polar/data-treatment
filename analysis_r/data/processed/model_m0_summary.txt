@@ -1,0 +1,37 @@
+Generalized least squares fit by maximum likelihood
+  Model: formula 
+  Data: data 
+        AIC       BIC   logLik
+  -16.59955 -9.100632 17.29978
+
+Correlation Structure: Continuous AR(1)
+ Formula: ~year 
+ Parameter estimate(s):
+         Phi 
+4.754448e-10 
+
+Coefficients:
+                    Value  Std.Error   t-value p-value
+(Intercept)      7.004057 0.03303069 212.04693  0.0000
+sst_z            0.061479 0.11953638   0.51431  0.6182
+chlorophyll_a_z  0.012134 0.05965307   0.20341  0.8429
+oxygen_z        -0.041952 0.10006049  -0.41926  0.6839
+nino12_z        -0.100352 0.11196595  -0.89627  0.3912
+pdo_z           -0.005759 0.04211444  -0.13673  0.8940
+year_z           0.028115 0.06807907   0.41298  0.6883
+
+ Correlation: 
+                (Intr) sst_z  chlr__ oxygn_ nn12_z pdo_z 
+sst_z           -0.173                                   
+chlorophyll_a_z  0.376  0.024                            
+oxygen_z        -0.440  0.477 -0.414                     
+nino12_z         0.236 -0.834  0.199 -0.247              
+pdo_z           -0.374  0.249 -0.562  0.559 -0.378       
+year_z          -0.388  0.379 -0.736  0.333 -0.641  0.508
+
+Standardized residuals:
+       Min         Q1        Med         Q3        Max 
+-2.0984263 -0.6890357  0.2787566  0.7840397  1.2933011 
+
+Residual standard error: 0.08746012 
+Degrees of freedom: 17 total; 10 residual

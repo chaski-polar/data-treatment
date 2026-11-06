@@ -10,14 +10,23 @@ wheels/
 .venv
 
 # project particular
-data/
+# Bajo data/raw se excluyen los productos grandes que se descargan de forma
+# reproducible mediante los scripts.
+data/raw/woa23/
+data/raw/copernicus/
+data/raw/connectivity/
+data/woa23/
+data/processed/
+data/gshhg/
+data/**/*.tar.gz
+data/**/*.zip
 data_chl/
 fao_data/
 .obsidian/
 out/
-*.pdf
 graphify-out/cache/
 
 # R statistical pipeline local packages and downloaded raw/cache data
 analysis_r/Rlib/
 analysis_r/data/raw/
+analysis_r/data/processed/

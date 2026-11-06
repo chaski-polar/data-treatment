@@ -1,0 +1,8 @@
+"stockid","tsn","scientificname","commonname","areaid","stocklong","region","inmyersdb","myersstockid"
+"PANCHCCH"," 551340","Engraulis ringens","Peruvian anchoveta","Chile-SUBPESCA-CH-C","Peruvian Anchoveta Central Chile","South America","0",NA
+"PANCHCHVX"," 551340","Engraulis ringens","Peruvian anchoveta","Chile-SUBPESCA-V-X","Peruvian Anchoveta Chile Region V-X","South America","0",NA
+"PANCHCSCH"," 551340","Engraulis ringens","Peruvian anchoveta","Chile-SUBPESCA-CH-CS","Peruvian Anchoveta Central-Southern Chile","South America","0",NA
+"PANCHNCH"," 551340","Engraulis ringens","Peruvian anchoveta","Chile-SUBPESCA-NCH","Peruvian Anchoveta North Chile","South America","0",NA
+"PANCHNCHSP"," 551340","Engraulis ringens","Peruvian anchoveta","Chile-SUBPESCA-NCH-SP","Peruvian Anchoveta Northern Chile Southern Peru","South America","0",NA
+"PANCHPERUNC"," 551340","Engraulis ringens","Peruvian anchoveta","Peru-IMARPE-NC","Peruvian anchoveta North-Central Peru","South America","1","PANCHNCS"
+"PANCHSCH"," 551340","Engraulis ringens","Peruvian anchoveta","Chile-SUBPESCA-SCH","Peruvian Anchoveta South Chile","South America","0",NA

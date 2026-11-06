@@ -1,0 +1,8 @@
+[
+  {
+    "source": "OC-CCI/ERDDAP",
+    "dataset_id": "esa-cci-kd-monthly-v6-0",
+    "variable": "kd_490",
+    "path": "/home/aroon/Projects/nasahackathon/data_treatment/data/raw/ocean_color/kd490_occci.nc"
+  }
+]

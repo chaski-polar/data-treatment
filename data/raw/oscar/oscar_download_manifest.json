@@ -1,0 +1,37 @@
+{
+  "created_at": "2026-11-06T16:15:56.332778+00:00",
+  "records": [
+    {
+      "source": "NASA PO.DAAC/Earthdata",
+      "dataset_id": "OSCAR_L4_OC_FINAL_V2.0",
+      "region": "peninsula_antarctica",
+      "bounding_box": {
+        "west": -75.0,
+        "south": -75.0,
+        "east": -55.0,
+        "north": -60.0
+      },
+      "start": "1998-01-01",
+      "end": "2025-12-31",
+      "granules_found": null,
+      "granules_selected": null,
+      "status": "planned"
+    },
+    {
+      "source": "NASA PO.DAAC/Earthdata",
+      "dataset_id": "OSCAR_L4_OC_FINAL_V2.0",
+      "region": "south_pacific_intermediate",
+      "bounding_box": {
+        "west": -130.0,
+        "south": -55.0,
+        "east": -75.0,
+        "north": -45.0
+      },
+      "start": "1998-01-01",
+      "end": "2025-12-31",
+      "granules_found": null,
+      "granules_selected": null,
+      "status": "planned"
+    }
+  ]
+}

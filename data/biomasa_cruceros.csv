@@ -1,0 +1,27 @@
+crucero,anio,fecha_inicio,fecha_fin,area,stock,biomasa_t,fuente,ubicacion_en_pdf,link
+9808-09,1998,1998-08-20,1998-09-18,Paita a Tacna,toda_costa,1213312,Castillo et al. 1998 Inf. IMARPE 141,Resumen y Resultados,https://repositorio.imarpe.gob.pe/server/api/core/bitstreams/7cc5dbf3-5472-4348-882c-38f15b49f960/content
+0402-03,2004,2004-02-09,2004-03-26,Tumbes a Tacna,toda_costa,11295645,Castillo et al. 2009 Inf. IMARPE 36(1-2),Resumen,https://biblioimarpe.imarpe.gob.pe/bitstream/20.500.12958/2010/1/INF.%2036%281-2%29-5.pdf
+1802-04,2018,2018-02-22,2018-04-06,Toda la costa,toda_costa,11210000,Bol. IMARPE 35(2) 2020,Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/301/287/560
+1802-04,2018,2018-02-22,2018-04-06,Region norte-centro,norte_centro,10860000,Bol. IMARPE 35(2) 2020,Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/301/287/560
+1802-04,2018,2018-02-22,2018-04-06,Region sur,sur,350000,Bol. IMARPE 35(2) 2020,Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/301/287/560
+1809-11,2018,2018-09-27,2018-11-18,Toda la costa,toda_costa,8780000,Bol. IMARPE 35(2) 2020,Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/301/287/560
+1809-11,2018,2018-09-27,2018-11-18,Region norte-centro,norte_centro,7630000,Bol. IMARPE 35(2) 2020,Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/301/287/560
+1809-11,2018,2018-09-27,2018-11-18,Region sur,sur,1150000,Bol. IMARPE 35(2) 2020,Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/301/287/560
+1902-03,2019,2019-02-12,2019-03-27,Toda la costa,toda_costa,8820000,Bol. IMARPE 35(2) 2020 p.213-241,Resumen,https://repositorio.imarpe.gob.pe/items/b0c36d60-27ff-40b3-8f64-02bb7159aa21
+1909-11,2019,2019-09-29,2019-11-15,Toda la costa,toda_costa,8380000,Bol. IMARPE 35(2) 2020 p.213-241,Resumen,https://repositorio.imarpe.gob.pe/items/b0c36d60-27ff-40b3-8f64-02bb7159aa21
+2002-03,2020,2020-02-15,2020-03-29,Toda la costa,toda_costa,11047031,Inf. IMARPE 48(3) 2021,Tabla 5,https://biblioimarpe.imarpe.gob.pe/bitstream/20.500.12958/3599/1/Informe%2048-3%20articulo1.pdf
+2009-11,2020,2020-09-22,2020-11-13,Toda la costa,toda_costa,9518207,Inf. IMARPE 48(3) 2021,Tabla 6,https://biblioimarpe.imarpe.gob.pe/bitstream/20.500.12958/3599/1/Informe%2048-3%20articulo1.pdf
+2102-07,2021,,,Toda la costa,toda_costa,12030000,Bol. IMARPE 38(1),Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/385/382/698
+2102-07,2021,,,Region norte-centro,norte_centro,10994147,Bol. IMARPE 38(1),Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/385/382/698
+2109-11,2021,2021-09-22,2021-11-03,Toda la costa,toda_costa,8030000,Bol. IMARPE 38(1),Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/385/382/698
+2109-11,2021,2021-09-22,2021-11-03,Region norte-centro,norte_centro,7010000,Bol. IMARPE 38(1),Resultados,https://revistas.imarpe.gob.pe/index.php/boletin/article/download/385/382/698
+2106-07,2021,,,Region sur,sur,1040000,IMARPE Informe region sur I temporada 2022,Texto,https://cdn.www.gob.pe/uploads/document/file/4401370/Informe%20Anch%20Sur%20y%20perspectivas%20I%20Temp%202022.pdf
+2109-11,2021,,,Region sur,sur,1020000,IMARPE Informe region sur I temporada 2022,Texto,https://cdn.www.gob.pe/uploads/document/file/4401370/Informe%20Anch%20Sur%20y%20perspectivas%20I%20Temp%202022.pdf
+2202-04,2022,,,Toda la costa,toda_costa,10200000,Inf. IMARPE 52(1) 2025,Resultados,https://repositorio.imarpe.gob.pe/server/api/core/bitstreams/4746ec15-bf55-40e6-aff1-436169ac861d/content
+2202-04,2022,,,Region norte-centro,norte_centro,9780000,Inf. IMARPE 52(1) 2025,Resultados,https://repositorio.imarpe.gob.pe/server/api/core/bitstreams/4746ec15-bf55-40e6-aff1-436169ac861d/content
+2209-11,2022,,,Toda la costa,toda_costa,7180000,Inf. IMARPE 52(1) 2025,Resultados,https://repositorio.imarpe.gob.pe/server/api/core/bitstreams/4746ec15-bf55-40e6-aff1-436169ac861d/content
+2209-11,2022,,,Region norte-centro,norte_centro,6840000,Inf. IMARPE 52(1) 2025,Resultados,https://repositorio.imarpe.gob.pe/server/api/core/bitstreams/4746ec15-bf55-40e6-aff1-436169ac861d/content
+2302-04,2023,2023-02-22,2023-03-24,Puerto Pizarro a Atico,norte_centro,6450000,IMARPE Anexo Of. 620-2023-IMARPE-PCD,Introduccion p.1,https://cdn.www.gob.pe/uploads/document/file/4641449/ANEXO-OF.%20620-2023-IMARPE-PCD-Plan%20pesca%20exploratoria%20anchoveta%20NC_junio%202023.pdf
+2502-04,2025,2025-03-30,2025-04-13,Region sur,sur,791243,IMARPE Informe region sur 2025,Texto,https://www.imarpe.gob.pe/wp-content/uploads/2026/03/Informe-de-la-situacion-de-la-anchoveta-disponible-en-la-region-sur-del-mar-peruano-durante-el-2025.pdf
+2509-10,2025,2025-10-14,2025-10-24,Region sur,sur,2486789,IMARPE Informe region sur 2025,Texto,https://www.imarpe.gob.pe/wp-content/uploads/2026/03/Informe-de-la-situacion-de-la-anchoveta-disponible-en-la-region-sur-del-mar-peruano-durante-el-2025.pdf
+2609-10,2026,,2026-10-07,Region norte-centro,norte_centro,5120000,Forbes Peru 16-oct-2026 (provisional),Parrafo 2,https://forbes.pe/economia-y-finanzas/2026-10-16/produce-descarta-segunda-temporada-de-pesca-de-anchoveta-en-la-zona-norte-centro/

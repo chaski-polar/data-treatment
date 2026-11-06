@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-11-02T06:52:05.308858+00:00",
+  "requests": [
+    {
+      "source": "cmems_mod_glo_bgc_my_0.083deg-lmtl_P1D-i",
+      "variables": [
+        "zooc"
+      ],
+      "path": "/home/aroon/Projects/nasahackathon/data_treatment/data/raw/copernicus/zooplankton_hindcast_1998-01-01_2025-12-31.nc",
+      "start": "1998-01-01",
+      "end": "2025-12-31"
+    },
+    {
+      "source": "cmems_mod_glo_bgc-plankton_anfc_0.25deg_P1M-m",
+      "variables": [
+        "zooc"
+      ],
+      "path": "/home/aroon/Projects/nasahackathon/data_treatment/data/raw/copernicus/zooplankton_operational_2023-12-01_2026-08-31.nc",
+      "start": "2023-12-01",
+      "end": "2026-08-31"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+"call","Model","df","AIC","BIC","logLik","Test","L.Ratio","p-value","comparison"
+"nlme::gls(model = formula, data = data, correlation = nlme::corCAR1(form = ~year),     method = ""ML"", na.action = na.omit, control = nlme::glsControl(msMaxIter = 200,         msVerbose = FALSE))",1,9,-16.5995517946693,-9.10063169816331,17.2997758973346,"",NA,NA,"m0"
+"nlme::gls(model = formula, data = data, method = ""ML"", na.action = na.omit)",2,10,-17.0842550078026,-8.75212156724045,18.5421275039013,"1 vs 2",2.48470321313336,0.114958031707038,"m1"

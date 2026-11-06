@@ -99,3 +99,41 @@ def subset_monthly_ocean(
     )
     return target
 
+
+def subset_connectivity_region(
+    *,
+    dataset_id: str,
+    variables: tuple[str, ...],
+    start: str,
+    end: str,
+    box: BoundingBox,
+    output_path: Path,
+    minimum_depth: float | None = None,
+    maximum_depth: float | None = None,
+) -> Path:
+    """Descarga un subconjunto regional para el panel de conectividad.
+
+    A diferencia del panel peruano, esta función no fija ni la caja ni la
+    profundidad. Las variables 2-D (por ejemplo ``zos`` y ``mlotst``) deben
+    solicitarse sin argumentos de profundidad; las variables 3-D se solicitan
+    con el intervalo vertical explícito.
+    """
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    request = {
+        "dataset_id": dataset_id,
+        "variables": list(variables),
+        **_bounds(box),
+        "start_datetime": start,
+        "end_datetime": end,
+        "output_filename": output_path.name,
+        "output_directory": str(output_path.parent),
+        "disable_progress_bar": False,
+    }
+    if minimum_depth is not None:
+        request["minimum_depth"] = minimum_depth
+    if maximum_depth is not None:
+        request["maximum_depth"] = maximum_depth
+    copernicusmarine.subset(**request)
+    return output_path
+
