@@ -22,8 +22,19 @@ def main() -> None:
     parser.add_argument("--end", default="2025-12-31")
     parser.add_argument("--output", type=Path, default=Path("data/raw/oscar"))
     parser.add_argument("--limit", type=int, default=0, help="0 = todos los granules encontrados")
+    parser.add_argument(
+        "--allow-bulk",
+        action="store_true",
+        help="confirma explícitamente la descarga potencialmente masiva de granules diarios",
+    )
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
+
+    if not args.dry_run and args.limit == 0 and not args.allow_bulk:
+        raise SystemExit(
+            "OSCAR descarga granules diarios globales y puede consumir cientos de GB. "
+            "Use --limit para una prueba o --allow-bulk para confirmarlo explícitamente."
+        )
 
     if not args.dry_run:
         earthaccess.login(persist=True)

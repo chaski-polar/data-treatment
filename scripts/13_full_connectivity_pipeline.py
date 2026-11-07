@@ -238,6 +238,11 @@ def main() -> None:
     parser.add_argument("--skip-ice", action="store_true")
     parser.add_argument("--skip-oscar", action="store_true")
     parser.add_argument(
+        "--include-oscar",
+        action="store_true",
+        help="habilita explícitamente la descarga masiva de granules diarios OSCAR",
+    )
+    parser.add_argument(
         "--skip-legacy-copernicus",
         action="store_true",
         help="no descargar los productos CMEMS peruanos heredados en data/raw/copernicus",
@@ -269,8 +274,16 @@ def main() -> None:
             )
         if not args.skip_ice:
             _run("08_download_sea_ice.py", ["--start", args.start, "--end", args.end])
-        if not args.skip_oscar:
-            _run("09_download_oscar.py", ["--regions", *args.regions, "--start", args.start, "--end", args.end])
+        if args.include_oscar and not args.skip_oscar:
+            _run(
+                "09_download_oscar.py",
+                [
+                    "--regions", *args.regions,
+                    "--start", args.start,
+                    "--end", args.end,
+                    "--allow-bulk",
+                ],
+            )
     if args.mode in {"process", "all"}:
         _run("11_build_connectivity_panel.py", [])
         _run("12_validate_connectivity.py", [])

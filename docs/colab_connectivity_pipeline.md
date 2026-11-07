@@ -133,7 +133,6 @@ profundidad:
   --physics-max-depth 500 \
   --bgc-max-depth 100 \
   --skip-ice \
-  --skip-oscar \
   --skip-legacy-copernicus
 ```
 
@@ -159,7 +158,12 @@ Esta ejecución descarga:
 2. CMEMS biogeoquímico en `data_treatment/data/raw/connectivity/`.
 3. Productos CMEMS peruanos heredados en `data_treatment/data/raw/copernicus/`.
 4. Hielo NSIDC, salvo que se indique `--skip-ice`.
-5. Corrientes OSCAR, salvo que se indique `--skip-oscar`.
+5. Corrientes OSCAR únicamente si se indica explícitamente `--include-oscar`.
+
+OSCAR no se descarga por defecto. Es un producto diario global; la caja espacial
+de `earthaccess.search_data()` filtra qué granules se seleccionan, pero no
+recorta el contenido de cada NetCDF. Activarlo sin subsetting puede consumir
+cientos de gigabytes.
 
 Para G02202, si CMR/Earthaccess no devuelve granules aunque las credenciales
 sean correctas, `08_download_sea_ice.py` usa automáticamente el índice HTTPS
@@ -172,11 +176,15 @@ Para omitir los productos peruanos heredados se añade:
 --skip-legacy-copernicus
 ```
 
-Para omitir NSIDC y OSCAR durante una primera corrida se añade:
+Para omitir NSIDC durante una primera corrida se añade:
 
 ```bash
---skip-ice --skip-oscar
+--skip-ice
 ```
+
+No uses `--include-oscar` en la primera corrida. CMEMS ya proporciona `uo` y
+`vo` mensuales para el análisis exploratorio de circulación. OSCAR debe añadirse
+después mediante un flujo de subsetting espacial/temporal específico.
 
 El script conserva los archivos existentes y registra cada solicitud en los
 manifiestos. Si una descarga se interrumpe, vuelve a ejecutar el mismo comando;
@@ -189,8 +197,7 @@ Después de la descarga:
 ```bash
 !python data_treatment/scripts/13_full_connectivity_pipeline.py \
   --mode process \
-  --skip-ice \
-  --skip-oscar
+  --skip-ice
 ```
 
 Se generan:
