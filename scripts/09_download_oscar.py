@@ -53,9 +53,14 @@ def main() -> None:
         if not args.dry_run:
             target = args.output / region
             target.mkdir(parents=True, exist_ok=True)
-            paths = earthaccess.download(selected, str(target))
-            record["downloaded_files"] = len(paths)
-            record["status"] = "downloaded"
+            if selected:
+                paths = earthaccess.download(selected, str(target))
+                record["downloaded_files"] = len(paths)
+                record["status"] = "downloaded"
+            else:
+                record["downloaded_files"] = 0
+                record["status"] = "no_granules"
+                print(f"ADVERTENCIA: OSCAR no devolvió granules para {region}; se continúa.")
         records.append(record)
     args.output.mkdir(parents=True, exist_ok=True)
     manifest = args.output / "oscar_download_manifest.json"
