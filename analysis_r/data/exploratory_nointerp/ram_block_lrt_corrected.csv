@@ -1,0 +1,5 @@
+"call","Model","df","AIC","BIC","logLik","Test","L.Ratio","p-value","comparison_type"
+"nlme::gls(model = f0_ram, data = annual, method = ""ML"")",1,8,-18.5995517994583,-11.9338450470086,17.2997758997292,"",NA,NA,"GLS_ML_same_IID_covariance"
+"nlme::gls(model = f1_ram, data = annual, method = ""ML"")",2,10,-17.0842550078026,-8.75212156724045,18.5421275039013,"1 vs 2",2.48470320834427,0.288704500331415,"GLS_ML_same_IID_covariance"
+"nlme::gls(model = f0_ram, data = annual, correlation = nlme::corAR1(form = ~year),     method = ""ML"")",1,9,-21.1815221292297,-13.6826020327238,19.5907610646149,"",NA,NA,"GLS_ML_same_AR1_covariance"
+"nlme::gls(model = f1_ram, data = annual, correlation = nlme::corAR1(form = ~year),     method = ""ML"")",2,11,-30.9479222226348,-21.7825754380164,26.4739611113174,"1 vs 2",13.7664000934051,0.00102485919485361,"GLS_ML_same_AR1_covariance"

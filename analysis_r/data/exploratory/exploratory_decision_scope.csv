@@ -1,0 +1,3 @@
+"scope","conclusion"
+"cruise_panel","Exploratory only: nine observed cruises; no confirmatory rejection is defensible."
+"annual_RAM","Use the same-covariance GLS comparison in ram_block_lrt_corrected.csv; the previous mixed-covariance LRT is superseded."
