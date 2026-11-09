@@ -1,0 +1,231 @@
+{
+  "version": "1.0",
+  "generado": "2026-11-09",
+  "proyecto": {
+    "nombre": "ANCHOVETA 360",
+    "descripcion": "Plataforma de exploración de datos oceanográficos del hemisferio sur con módulo regional del mar peruano.",
+    "aviso": "Las relaciones mostradas son asociaciones estadísticas, no pruebas de causalidad."
+  },
+
+  "meses_inicio": "1998-01",
+  "meses_fin": "2025-12",
+  "frecuencia": "mensual",
+
+  "fuentes": {
+    "occci_v6": {
+      "nombre": "ESA Ocean Colour CCI v6 (clorofila-a mensual, 4 km)",
+      "institucion": "ESA / servidor ERDDAP NOAA NEFSC",
+      "tipo": "satelital",
+      "url": "https://comet.nefsc.noaa.gov/erddap/griddap/occci_V6_monthly_4km.html",
+      "dataset_id": "occci_V6_monthly_4km",
+      "resolucion_espacial": "4 km",
+      "cobertura_temporal": ["1998-01", "2026-01"],
+      "procesamiento": "Mediana mensual de los píxeles dentro de cada zona.",
+      "cita": "ESA Ocean Colour Climate Change Initiative, versión 6."
+    },
+    "crw_sst": {
+      "nombre": "NOAA Coral Reef Watch v3.1 (temperatura superficial mensual)",
+      "institucion": "NOAA",
+      "tipo": "satelital",
+      "url": "https://oceanwatch.pifsc.noaa.gov/erddap/griddap/CRW_sst_v3_1_monthly.html",
+      "dataset_id": "CRW_sst_v3_1_monthly",
+      "resolucion_espacial": "5 km",
+      "cobertura_temporal": ["1985-12", "2025-12"],
+      "procesamiento": "Mediana mensual por zona.",
+      "cita": "NOAA Coral Reef Watch, versión 3.1."
+    },
+    "nino12_psl": {
+      "nombre": "Índice Niño 1+2",
+      "institucion": "NOAA PSL",
+      "tipo": "indice_climatico",
+      "url": "https://psl.noaa.gov/data/timeseries/month/DS/NINO12/",
+      "cobertura_temporal": ["1870-01", "2026-07"],
+      "procesamiento": "Sin cambios (ya es anomalía en °C).",
+      "cita": "NOAA Physical Sciences Laboratory, ERSST."
+    },
+    "cmems_reanalisis": {
+      "nombre": "Copernicus Marine, reanálisis físico y biogeoquímico",
+      "institucion": "Copernicus Marine Service",
+      "tipo": "modelo",
+      "url": "https://marine.copernicus.eu",
+      "cobertura_temporal": ["1998-01", "2025-12"],
+      "procesamiento": "Promedios por región y banda de profundidad.",
+      "cita": "Copernicus Marine Service."
+    },
+    "imarpe_cruceros": {
+      "nombre": "Biomasa de anchoveta por crucero hidroacústico",
+      "institucion": "IMARPE",
+      "tipo": "observacion_in_situ",
+      "url": "https://repositorio.imarpe.gob.pe",
+      "cobertura_temporal": ["1998-08", "2026-10"],
+      "procesamiento": "Valores publicados por crucero; sin interpolación.",
+      "cita": "Informes y boletines IMARPE (ver archivo de cruceros)."
+    }
+  },
+
+  "variables": {
+    "clorofila": {
+      "nombre": "Clorofila-a",
+      "unidad": "mg/m³",
+      "descripcion": "Indicador de la cantidad de fitoplancton en la superficie.",
+      "fuente": "occci_v6",
+      "categoria": "productividad"
+    },
+    "temperatura_superficial": {
+      "nombre": "Temperatura superficial del mar",
+      "unidad": "°C",
+      "descripcion": "Temperatura de los primeros metros del mar.",
+      "fuente": "crw_sst",
+      "categoria": "fisica"
+    },
+    "oxigeno_100_200m": {
+      "nombre": "Oxígeno disuelto a 100-200 m",
+      "unidad": "mmol/m³",
+      "descripcion": "Oxígeno subsuperficial (reanálisis).",
+      "fuente": "cmems_reanalisis",
+      "categoria": "biogeoquimica"
+    }
+  },
+
+  "zonas": {
+    "peru_centro_norte_chimbote": {
+      "nombre": "Chimbote",
+      "region": "Perú",
+      "escala": "peru",
+      "lat": -9.0,
+      "lon": -79.0,
+      "caja": { "lat_min": -10.0, "lat_max": -8.0, "lon_min": -80.0, "lon_max": -78.0 },
+      "tipo": "costera"
+    },
+    "peru_centro_callao": {
+      "nombre": "Callao",
+      "region": "Perú",
+      "escala": "peru",
+      "lat": -12.0,
+      "lon": -77.65,
+      "caja": { "lat_min": -13.0, "lat_max": -11.0, "lon_min": -78.5, "lon_max": -76.8 },
+      "tipo": "costera"
+    },
+    "antartida_peninsula": {
+      "nombre": "Península Antártica",
+      "region": "Antártida",
+      "escala": "oceano_austral",
+      "lat": -64.0,
+      "lon": -62.5,
+      "caja": { "lat_min": -68.0, "lat_max": -60.0, "lon_min": -70.0, "lon_max": -55.0 },
+      "tipo": "oceanica"
+    }
+  },
+
+  "series": {
+    "clorofila": {
+      "peru_centro_norte_chimbote": [1.21, 0.98, null],
+      "peru_centro_callao": [1.05, 0.87, 0.92],
+      "antartida_peninsula": [0.16, 0.21, null]
+    },
+    "temperatura_superficial": {
+      "peru_centro_norte_chimbote": [24.1, 25.3, 24.8],
+      "peru_centro_callao": [22.6, 23.4, 23.0],
+      "antartida_peninsula": [0.4, 0.6, 0.2]
+    }
+  },
+
+  "anomalias": {
+    "_metodo": "Valor del mes menos el promedio de ese mes del año (1998-2025). Clorofila en log10.",
+    "clorofila": {
+      "peru_centro_norte_chimbote": [-0.12, -0.20, null]
+    },
+    "temperatura_superficial": {
+      "peru_centro_norte_chimbote": [2.1, 2.5, 2.3]
+    }
+  },
+
+  "indices": {
+    "nino12": [3.55, 3.10, 2.62],
+    "oni": [2.22, 1.91, 1.43],
+    "sam": [0.78, -0.12, 0.35]
+  },
+
+  "eventos_nino": [
+    {
+      "nombre": "El Niño 1997-98",
+      "inicio": "1998-01",
+      "fin": "1998-06",
+      "tipo": "global",
+      "cambio_clorofila_pct": { "peru_centro_norte_chimbote": -66.6, "peru_centro_callao": -59.8 }
+    },
+    {
+      "nombre": "El Niño costero 2023-24",
+      "inicio": "2023-03",
+      "fin": "2024-01",
+      "tipo": "costero",
+      "cambio_clorofila_pct": { "peru_centro_norte_chimbote": -45.6, "peru_centro_callao": -42.9 }
+    },
+    {
+      "nombre": "El Niño 2026",
+      "inicio": "2026-04",
+      "fin": null,
+      "tipo": "en_curso",
+      "cambio_clorofila_pct": null,
+      "nota": "Pendiente: comparar la predicción con la clorofila satelital de 2026."
+    }
+  ],
+
+  "hallazgos": [
+    {
+      "id": "asimetria",
+      "titulo": "El calor resta fitoplancton; el frío casi no lo devuelve",
+      "estado": "comprobado",
+      "resumen": "Por cada °C de calentamiento del mar local, la clorofila cae entre 18 % y 33 % según la zona; el enfriamiento no produce un aumento significativo.",
+      "metodo": "Regresión con pendientes separadas para anomalías cálidas y frías; bootstrap por bloques de 12 meses.",
+      "resultados": {
+        "peru_centro_norte_chimbote": { "pct_por_grado_calido": -25.3, "pct_por_grado_frio": 3.5, "p": 0.001 },
+        "peru_centro_callao": { "pct_por_grado_calido": -23.9, "pct_por_grado_frio": 6.3, "p": 0.007 }
+      },
+      "figura": "figuras/10_umbral_asimetria.png",
+      "tabla": "tablas/dif_asimetria_temperatura_local.csv"
+    },
+    {
+      "id": "antartida",
+      "titulo": "Sin relación robusta entre el océano Austral y el fitoplancton peruano",
+      "estado": "comprobado",
+      "resumen": "Más de 900 pruebas (superficie, profundidad, altimetría, desfases de hasta 5 años) sin relación significativa tras corrección por comparaciones múltiples.",
+      "metodo": "Correlación de anomalías con n efectivo, corrección FDR y controles positivos.",
+      "resultados": { "pruebas": 900, "significativas_fdr": 0 },
+      "figura": "figuras/09_austral_vs_humboldt.png",
+      "tabla": "tablas/h1e_austral_vs_humboldt.csv"
+    },
+    {
+      "id": "prediccion_2026",
+      "titulo": "Predicción de la caída del fitoplancton durante El Niño 2026",
+      "estado": "pendiente",
+      "resumen": "Estimación preliminar de 55-60 % de caída en Chimbote y Callao para +3 °C; falta comparar con la clorofila satelital real de 2026.",
+      "metodo": "Curva de respuesta asimétrica aplicada al Niño 1+2 observado en 2026.",
+      "resultados": null,
+      "figura": null,
+      "tabla": null
+    }
+  ],
+
+  "impacto_local": {
+    "anchoveta_biomasa_cruceros": [
+      { "crucero": "9808-09", "fecha_inicio": "1998-08-20", "fecha_fin": "1998-09-18", "biomasa_t": 1213312, "cobertura": "toda_costa", "fuente": "imarpe_cruceros" },
+      { "crucero": "2209-11", "fecha_inicio": "2022-09-15", "fecha_fin": "2022-11-15", "biomasa_t": 7180000, "cobertura": "toda_costa", "fuente": "imarpe_cruceros", "fecha_aproximada": true }
+    ],
+    "temporadas_canceladas": [
+      { "temporada": "2023-I", "motivo": "El Niño costero" },
+      { "temporada": "2026-II", "motivo": "Biomasa baja y alto porcentaje de juveniles" }
+    ],
+    "concha_abanico_cosecha_t": { "anios": [2011, 2012, 2013], "peru": [52213, 24782, 67694] }
+  },
+
+  "mapas": {
+    "clorofila_media_1998_2025": {
+      "unidad": "mg/m³",
+      "fuente": "occci_v6",
+      "lat": [-9.75, -9.25],
+      "lon": [-80.25, -79.75, -79.25],
+      "valores": [[0.85, 1.40, 3.10], [0.80, 1.25, null]]
+    }
+  }
+}
