@@ -113,7 +113,7 @@ años completos para el modelo: 17
 
 El panel generado se encuentra en:
 
-[annual_panel_ram44.csv](../analysis_r/data/processed/annual_panel_ram44.csv)
+[annual_panel_ram44.csv](../../analysis_r/data/processed/annual_panel_ram44.csv)
 
 Las variables se estandarizaron después de construir el periodo común. El panel incluye, entre otras:
 
@@ -184,7 +184,7 @@ El modelo M1 mejora ligeramente el AIC, pero la mejora conjunta no es significat
 
 Los intervalos incluyen el valor cero en ambos predictores.
 
-El archivo completo de resultados está en [model_m1_coefficients.csv](../analysis_r/data/processed/model_m1_coefficients.csv) y el contraste conjunto en [model_block_lrt.csv](../analysis_r/data/processed/model_block_lrt.csv).
+El archivo completo de resultados está en [model_m1_coefficients.csv](../../analysis_r/data/processed/model_m1_coefficients.csv) y el contraste conjunto en [model_block_lrt.csv](../../analysis_r/data/processed/model_block_lrt.csv).
 
 ## 7. Decisión sobre las hipótesis
 
@@ -221,13 +221,13 @@ El instalador utiliza una biblioteca local en `analysis_r/Rlib/`. Los datos brut
 
 Archivos de salida principales:
 
-- [annual_panel_metadata.csv](../analysis_r/data/processed/annual_panel_metadata.csv)
-- [annual_panel_ram44.csv](../analysis_r/data/processed/annual_panel_ram44.csv)
-- [hypothesis_test.csv](../analysis_r/data/processed/hypothesis_test.csv)
-- [model_metrics.csv](../analysis_r/data/processed/model_metrics.csv)
-- [model_m0_summary.txt](../analysis_r/data/processed/model_m0_summary.txt)
-- [model_m1_summary.txt](../analysis_r/data/processed/model_m1_summary.txt)
-- [ram_engraulis_candidates.csv](../analysis_r/data/processed/ram_engraulis_candidates.csv)
+- [annual_panel_metadata.csv](../../analysis_r/data/processed/annual_panel_metadata.csv)
+- [annual_panel_ram44.csv](../../analysis_r/data/processed/annual_panel_ram44.csv)
+- [hypothesis_test.csv](../../analysis_r/data/processed/hypothesis_test.csv)
+- [model_metrics.csv](../../analysis_r/data/processed/model_metrics.csv)
+- [model_m0_summary.txt](../../analysis_r/data/processed/model_m0_summary.txt)
+- [model_m1_summary.txt](../../analysis_r/data/processed/model_m1_summary.txt)
+- [ram_engraulis_candidates.csv](../../analysis_r/data/processed/ram_engraulis_candidates.csv)
 
 Entorno usado durante la sesión:
 

@@ -29,7 +29,7 @@ También se incorporaron:
 - ICEN mensual del IGP/ENFEN;
 - anomalía mensual de Niño 1+2.
 
-El ICEN se descargó desde el archivo oficial enlazado por el IGP y se normalizó mediante [03_download_icen_igp.py](../scripts/03_download_icen_igp.py). La serie original y la tabla de eventos costeros se conservaron en data/raw/igp/.
+El ICEN se descargó desde el archivo oficial enlazado por el IGP y se normalizó mediante [03_download_icen_igp.py](../../scripts/03_download_icen_igp.py). La serie original y la tabla de eventos costeros se conservaron en data/raw/igp/.
 
 Niño 1+2 e ICEN se mantienen como variables separadas. No se deben introducir simultáneamente en un mismo modelo sin evaluar antes la colinealidad.
 
@@ -59,7 +59,7 @@ Los productos ambientales se agregaron espacialmente mediante la mediana de la c
 
 El reporte de cobertura se guarda en:
 
-[panel_quality_report.csv](../data/processed/tables/panel_quality_report.csv)
+[panel_quality_report.csv](../../data/processed/tables/panel_quality_report.csv)
 
 ## 4. Tratamiento de la distancia a la costa
 
@@ -77,11 +77,11 @@ Por esa razón, distance_coast permanece como null en el panel general cuando no
 
 El procesamiento se encuentra en:
 
-[04_build_real_panel.py](../scripts/04_build_real_panel.py)
+[04_build_real_panel.py](../../scripts/04_build_real_panel.py)
 
 ### Panel por intervalos
 
-[panel_experiments_ab.csv](../data/processed/tables/panel_experiments_ab.csv)
+[panel_experiments_ab.csv](../../data/processed/tables/panel_experiments_ab.csv)
 
 Contiene una fila por crucero y las condiciones ambientales resumidas durante el intervalo:
 
@@ -107,20 +107,20 @@ Este es el archivo apropiado para futuros ajustes por intervalos.
 
 ### Serie mensual para monitoreo
 
-[monitoring_series_ab.json](../data/processed/tables/monitoring_series_ab.json)
+[monitoring_series_ab.json](../../data/processed/tables/monitoring_series_ab.json)
 
 Es la salida recomendada para la página. Contiene metadatos, fuentes, periodo y una lista de registros mensuales. Los valores faltantes se representan como null.
 
 También existe la versión tabular:
 
-[monitoring_series_ab.csv](../data/processed/tables/monitoring_series_ab.csv)
+[monitoring_series_ab.csv](../../data/processed/tables/monitoring_series_ab.csv)
 
 ## 6. Interpolación para visualización
 
 Se generó una versión adicional con interpolación lineal únicamente para mostrar una trayectoria continua en la página:
 
-- [monitoring_series_ab_interpolated.json](../data/processed/tables/monitoring_series_ab_interpolated.json)
-- [monitoring_series_ab_interpolated.csv](../data/processed/tables/monitoring_series_ab_interpolated.csv)
+- [monitoring_series_ab_interpolated.json](../../data/processed/tables/monitoring_series_ab_interpolated.json)
+- [monitoring_series_ab_interpolated.csv](../../data/processed/tables/monitoring_series_ab_interpolated.csv)
 
 La serie interpolada contiene:
 

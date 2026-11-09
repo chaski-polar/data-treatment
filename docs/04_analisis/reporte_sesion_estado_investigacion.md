@@ -286,10 +286,10 @@ La parte antártica disponible actualmente permite estudiar una señal climátic
 
 ## 11. Archivos relevantes del repositorio
 
-- [Reporte previo de capacidad de datos](reporte_capacidad_datos_investigacion.md)
+- [Reporte previo de capacidad de datos](../02_datos/reporte_capacidad_datos_investigacion.md)
 - [Reporte del primer análisis estadístico en R](REPORTE_SESION_ANALISIS_ESTADISTICO_R.md)
-- [CSV hidroacústico corregido](../analysis_r/data/raw/Cruceros_hidroacusticos_1985_2017.csv)
-- [Panel anual RAM](../analysis_r/data/processed/annual_panel_ram44.csv)
-- [Resultado del contraste de hipótesis](../analysis_r/data/processed/hypothesis_test.csv)
-- [Panel mensual de calidad](../data/processed/tables/panel_quality_report.csv)
-- [Manifiesto de paneles experimentales](../data/processed/tables/experiment_panels_manifest.json)
+- [CSV hidroacústico corregido](../../analysis_r/data/raw/Cruceros_hidroacusticos_1985_2017.csv)
+- [Panel anual RAM](../../analysis_r/data/processed/annual_panel_ram44.csv)
+- [Resultado del contraste de hipótesis](../../analysis_r/data/processed/hypothesis_test.csv)
+- [Panel mensual de calidad](../../data/processed/tables/panel_quality_report.csv)
+- [Manifiesto de paneles experimentales](../../data/processed/tables/experiment_panels_manifest.json)

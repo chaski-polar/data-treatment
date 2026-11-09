@@ -54,7 +54,7 @@ Esta serie permite estudiar variabilidad histórica y cambios de régimen, pero 
 
 ### 2.4 Cruceros hidroacústicos
 
-El nuevo archivo [Cruceros_hidroacusticos_1985_2017.csv](../analysis_r/data/raw/Cruceros_hidroacusticos_1985_2017.csv), obtenido de *El libro de la anchoveta*, contiene aproximadamente 70 cruceros hidroacústicos únicos entre 1985 y 2017, con unos 50 cruceros entre 1998 y 2017.
+El nuevo archivo [Cruceros_hidroacusticos_1985_2017.csv](../../analysis_r/data/raw/Cruceros_hidroacusticos_1985_2017.csv), obtenido de *El libro de la anchoveta*, contiene aproximadamente 70 cruceros hidroacústicos únicos entre 1985 y 2017, con unos 50 cruceros entre 1998 y 2017.
 
 Incluye biomasa, área de distribución y área evaluada. Esto mejora sustancialmente la información biológica disponible frente al panel anterior, que solo utilizaba 9 cruceros con fechas de inicio y fin completas.
 
