@@ -31,6 +31,17 @@ Los rezagos 0 y 2 años, las variables individuales y las respuestas
 alternativas son análisis secundarios y se corrigen con FDR. No se debe
 seleccionar el rezago con menor p-valor y presentarlo como confirmatorio.
 
+## Nota sobre la estructura de covarianza
+
+`03_fit_hypothesis.R` ajusta M0 y M1 con la misma estructura (CAR(1) si
+converge en ambos; si no, IID en ambos) y la registra en la columna
+`covariance`. Versiones anteriores podían comparar M0 con CAR(1) contra M1
+sin correlación, lo que producía `p = 0.115`; ese valor no es válido. Con la
+misma estructura IID el resultado es `p = 0.289`. La sensibilidad con AR(1)
+simétrica (`p = 0.001`) está en `04_exploratory_models.R` y no debe leerse como
+confirmatoria (17 años para 11 parámetros); ver
+`docs/informe_analisis_exploratorio_h1_h0.md`.
+
 ## Ejecución
 
 Desde la raíz de este repositorio:
