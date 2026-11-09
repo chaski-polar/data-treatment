@@ -2,13 +2,7 @@ Generalized least squares fit by maximum likelihood
   Model: formula 
   Data: data 
         AIC       BIC   logLik
-  -16.59955 -9.100632 17.29978
-
-Correlation Structure: Continuous AR(1)
- Formula: ~year 
- Parameter estimate(s):
-         Phi 
-4.754448e-10 
+  -18.59955 -11.93385 17.29978
 
 Coefficients:
                     Value  Std.Error   t-value p-value

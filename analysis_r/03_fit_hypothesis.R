@@ -28,8 +28,9 @@ if (nrow(dat) <= length(attr(stats::terms(formula1), "term.labels")) + 3L) {
   stop("Muy pocas observaciones para el número de parámetros del modelo.")
 }
 
-fit_gls <- function(formula, data) {
-  if (!requireNamespace("nlme", quietly = TRUE)) stop("nlme no está disponible")
+if (!requireNamespace("nlme", quietly = TRUE)) stop("nlme no está disponible")
+
+fit_gls_car1 <- function(formula, data) {
   tryCatch(
     nlme::gls(
       formula,
@@ -40,16 +41,31 @@ fit_gls <- function(formula, data) {
       control = nlme::glsControl(msMaxIter = 200, msVerbose = FALSE)
     ),
     error = function(e) {
-      warning("GLS con CAR(1) falló; se ajusta GLS sin correlación: ", conditionMessage(e))
-      nlme::gls(formula, data = data, method = "ML", na.action = na.omit)
+      warning("GLS con CAR(1) falló: ", conditionMessage(e))
+      NULL
     }
   )
 }
 
-m0 <- fit_gls(formula0, dat)
-m1 <- fit_gls(formula1, dat)
+fit_gls_iid <- function(formula, data) {
+  nlme::gls(formula, data = data, method = "ML", na.action = na.omit)
+}
+
+# El LRT solo es válido si M0 y M1 comparten la estructura de covarianza.
+# Si CAR(1) falla en cualquiera de los dos, ambos se ajustan sin correlación.
+m0 <- fit_gls_car1(formula0, dat)
+m1 <- fit_gls_car1(formula1, dat)
+if (is.null(m0) || is.null(m1)) {
+  m0 <- fit_gls_iid(formula0, dat)
+  m1 <- fit_gls_iid(formula1, dat)
+  covariance <- "IID"
+} else {
+  covariance <- "CAR1"
+}
+message("Estructura de covarianza usada en M0 y M1: ", covariance)
 
 lrt <- as.data.frame(stats::anova(m0, m1))
+lrt$covariance <- covariance
 lrt$comparison <- rownames(lrt)
 rownames(lrt) <- NULL
 block_p <- suppressWarnings(as.numeric(lrt$`p-value`[nrow(lrt)]))
@@ -81,6 +97,7 @@ hypothesis <- data.frame(
   null = "H0: todos los coeficientes antárticos del bloque son 0",
   n = nrow(dat),
   p_block_lrt = block_p,
+  covariance = covariance,
   alpha = 0.05,
   decision = ifelse(is.finite(block_p) && block_p < 0.05, "rechazar H0 bajo esta especificación", "no rechazar H0"),
   caveat = "Asociación temporal; no prueba causalidad ni transporte directo ACC-Humboldt",
