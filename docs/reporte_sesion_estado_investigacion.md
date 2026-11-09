@@ -4,6 +4,8 @@
 **Fecha:** 6 de noviembre de 2026  
 **Alcance:** revisión del repositorio, verificación de los datos antárticos disponibles, revisión del análisis estadístico en R y comprobación del archivo hidroacústico corregido.
 
+> **Nota de corrección (8 de noviembre de 2026):** el valor `p = 0.114958` citado en este reporte comparaba M0 con CAR(1) contra M1 sin correlación, por lo que el contraste no era válido. Con la misma estructura en ambos modelos el resultado es `p = 0.289` (IID); la conclusión (no rechazar H0) no cambia. Ver `analysis_r/README.md` y `docs/informe_analisis_exploratorio_h1_h0.md`.
+
 ## 1. Resumen ejecutivo
 
 Durante esta sesión se verificó qué información existe actualmente en el repositorio para estudiar la cadena:
