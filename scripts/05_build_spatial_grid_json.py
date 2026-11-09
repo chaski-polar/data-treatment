@@ -122,11 +122,24 @@ def _find_variable(ds: xr.Dataset, candidates: tuple[str, ...]) -> str | None:
 
 def _subset_bbox(data: xr.DataArray, lat: str, lon: str, bbox: dict[str, float]) -> xr.DataArray:
     """Recorta independientemente de si las coordenadas están ascendentes."""
+    # Algunos productos ERDDAP/OC-CCI entregan longitudes en 0–360 y la caja
+    # peruana está expresada en -180–180. Normalizar antes de seleccionar evita
+    # obtener una dimensión espacial de tamaño cero.
+    lon_values = np.asarray(data[lon].values, dtype=float)
+    if np.nanmax(lon_values) > 180:
+        normalized_lon = ((lon_values + 180) % 360) - 180
+        data = data.assign_coords({lon: normalized_lon}).sortby(lon)
     lat_values = np.asarray(data[lat].values)
     lon_values = np.asarray(data[lon].values)
     lat_slice = slice(bbox["south"], bbox["north"]) if lat_values[0] < lat_values[-1] else slice(bbox["north"], bbox["south"])
     lon_slice = slice(bbox["west"], bbox["east"]) if lon_values[0] < lon_values[-1] else slice(bbox["east"], bbox["west"])
-    return data.sel({lat: lat_slice, lon: lon_slice})
+    result = data.sel({lat: lat_slice, lon: lon_slice})
+    if result.sizes.get(lat, 0) == 0 or result.sizes.get(lon, 0) == 0:
+        raise ValueError(
+            f"la caja no intersecta la grilla después de normalizar coordenadas "
+            f"(lat={result.sizes.get(lat, 0)}, lon={result.sizes.get(lon, 0)})"
+        )
+    return result
 
 
 def _prepare_dataarray(ds: xr.Dataset, variable: str, spec: dict[str, Any], bbox: dict[str, float]) -> xr.DataArray:
@@ -234,7 +247,10 @@ def build(args: argparse.Namespace) -> dict[str, Any]:
     target_lon: np.ndarray | None = None
 
     for spec in specs:
-        paths = spec.get("files", [spec["file"]])
+        # No usar spec.get(..., [spec["file"]]): el argumento por defecto se
+        # evalúa antes de llamar a get y rompería las especificaciones NASA que
+        # solo tienen la clave ``files``.
+        paths = spec["files"] if "files" in spec else [spec["file"]]
         missing = [path for path in paths if not path.exists()]
         if missing:
             quality.append({"variable_id": spec["id"], "status": "missing_file", "file": ";".join(map(str, missing))})
