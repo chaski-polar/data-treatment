@@ -42,6 +42,28 @@ simétrica (`p = 0.001`) está en `04_exploratory_models.R` y no debe leerse com
 confirmatoria (17 años para 11 parámetros); ver
 `docs/informe_analisis_exploratorio_h1_h0.md`.
 
+## Sensibilidad de los modelos de cruceros
+
+`05_cruise_sensitivity.R` repite los modelos A y B de cruceros en cinco
+variantes: los 9 cruceros originales, sin el crucero 9808-09 (1998), ampliado a
+12 cruceros y dos variantes de 11. Escribe sus resultados en
+`analysis_r/data/sensitivity/`.
+
+- Los 3 cruceros añadidos (2102-07, 2202-04, 2209-11) están en
+  `data/biomasa_cruceros_fechas_aproximadas.csv`, con fechas aproximadas (día
+  15 de cada mes del código) y marcadas como `fecha_aproximada = TRUE`. No se
+  modifica `data/biomasa_cruceros.csv`.
+- Los predictores salen de `data/entorno_mensual_1998_2026.csv`, que es la
+  serie mensual generada por `scripts/04_build_real_panel.py`. Con la misma
+  ponderación por días reproduce exactamente los valores `ab_sst`, `ab_nino12`
+  y `ab_chlorophyll_a` de los 9 cruceros originales. El script se detiene si la
+  variante original no reproduce las métricas de `exploratory_nointerp/`.
+- El modelo C no se incluye porque el panel de conectividad no está versionado.
+
+```bash
+Rscript analysis_r/05_cruise_sensitivity.R
+```
+
 ## Ejecución
 
 Desde la raíz de este repositorio:
