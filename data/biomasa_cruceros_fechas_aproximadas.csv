@@ -1,0 +1,4 @@
+crucero,anio,fecha_inicio,fecha_fin,area,stock,biomasa_t,fecha_aproximada,regla_fecha
+2102-07,2021,2021-02-15,2021-07-15,Toda la costa,toda_costa,12030000,TRUE,dia 15 del mes de inicio y del mes de fin segun el codigo AAMM-MM
+2202-04,2022,2022-02-15,2022-04-15,Toda la costa,toda_costa,10200000,TRUE,dia 15 del mes de inicio y del mes de fin segun el codigo AAMM-MM
+2209-11,2022,2022-09-15,2022-11-15,Toda la costa,toda_costa,7180000,TRUE,dia 15 del mes de inicio y del mes de fin segun el codigo AAMM-MM
