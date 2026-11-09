@@ -1,2 +1,2 @@
-"hypothesis","null","n","p_block_lrt","alpha","decision","caveat"
-"H1: el bloque antártico se asocia con log biomasa después de controles","H0: todos los coeficientes antárticos del bloque son 0",17,0.114958031707038,0.05,"no rechazar H0","Asociación temporal; no prueba causalidad ni transporte directo ACC-Humboldt"
+"hypothesis","null","n","p_block_lrt","covariance","alpha","decision","caveat"
+"H1: el bloque antártico se asocia con log biomasa después de controles","H0: todos los coeficientes antárticos del bloque son 0",17,0.288704500331415,"IID",0.05,"no rechazar H0","Asociación temporal; no prueba causalidad ni transporte directo ACC-Humboldt"
