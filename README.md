@@ -47,13 +47,20 @@ Rscript analysis_r/04_exploratory_models.R \
 ## Fuentes
 
 Cada conjunto de datos indica su fuente en su `LEEME.md` o en
-`docs/metodologia.md`. Fuentes principales: IMARPE (cruceros y biomasa), BCRP
+`docs/01_metodologia/metodologia.md`. Fuentes principales: IMARPE (cruceros y biomasa), BCRP
 (desembarques), PRODUCE (cuotas y temporadas), RAM Legacy v4.44, NOAA PSL/CPC
 (Niño 1+2, PDO, AAO/SAM), NSIDC (hielo marino antártico), ESA OC-CCI
 (clorofila), Copernicus Marine y World Ocean Atlas 2023.
 
 ## Limitaciones
 
-Ver `docs/informe_analisis_exploratorio_h1_h0.md` (sección 4.4). En resumen:
+Ver `docs/04_analisis/informe_analisis_exploratorio_h1_h0.md` (sección 4.4). En resumen:
 pocos cruceros con fechas completas, resultados sensibles a la estructura
 temporal y respuestas biológicas que no deben combinarse entre sí.
+
+Alcance de las variables:
+
+- **Niño 1+2, temperatura y clorofila** son el núcleo del análisis y alimentan el monitor y el juego del repositorio `chaski-polar-webpage`.
+- **Carbono fitoplanctónico** entra solo como una respuesta exploratoria (`ab_phytoplankton_carbon`) y no se mezcla con la clorofila.
+- **Temperatura y oxígeno a 100–200 m** tienen una ronda de tendencias en `docs/pruebas_pendientes/RESULTADOS_RONDA_SEIS_VARIABLES.md`; todavía no se usan en el monitor ni en el juego.
+- **Licencia:** el repositorio aún no tiene archivo de licencia; el equipo debe elegirla antes de la entrega (Space Apps pide contenido original open source).

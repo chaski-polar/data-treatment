@@ -4,7 +4,7 @@
 **Fecha:** 6 de noviembre de 2026  
 **Alcance:** adquisición de datos, construcción de panel anual y primer contraste estadístico en R.
 
-> **Nota de corrección (8 de noviembre de 2026):** el valor `p = 0.114958` citado en este reporte comparaba M0 con CAR(1) contra M1 sin correlación, por lo que el contraste no era válido. Con la misma estructura en ambos modelos el resultado es `p = 0.289` (IID); la conclusión (no rechazar H0) no cambia. Ver `analysis_r/README.md` y `docs/informe_analisis_exploratorio_h1_h0.md`.
+> **Nota de corrección (8 de noviembre de 2026):** el valor `p = 0.114958` citado en este reporte comparaba M0 con CAR(1) contra M1 sin correlación, por lo que el contraste no era válido. Con la misma estructura en ambos modelos el resultado es `p = 0.289` (IID); la conclusión (no rechazar H0) no cambia. Ver `analysis_r/README.md` y `docs/04_analisis/informe_analisis_exploratorio_h1_h0.md`.
 
 ## 1. Resumen ejecutivo
 

@@ -40,7 +40,7 @@ sin correlación, lo que producía `p = 0.115`; ese valor no es válido. Con la
 misma estructura IID el resultado es `p = 0.289`. La sensibilidad con AR(1)
 simétrica (`p = 0.001`) está en `04_exploratory_models.R` y no debe leerse como
 confirmatoria (17 años para 11 parámetros); ver
-`docs/informe_analisis_exploratorio_h1_h0.md`.
+`docs/04_analisis/informe_analisis_exploratorio_h1_h0.md`.
 
 ## Sensibilidad de los modelos de cruceros
 
