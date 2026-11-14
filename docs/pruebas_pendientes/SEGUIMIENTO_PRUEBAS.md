@@ -108,6 +108,30 @@ Scripts: `enfoques_nuevos.py` (E1 a E3), `enfoque_adelanto.py` (E4), `enfoque_ll
 
 E4 no se confirma con una segunda fuente independiente: la dirección se repite, pero la significancia no. Se presenta como pista, no como hallazgo. Con OC-CCI pasa el criterio; con MODIS-Aqua (NASA), no. Lo honesto es decir que depende del producto y del periodo, lo mismo que se ve en las tendencias.
 
+### E7. Mecanismo físico de El Niño (cadena con mediación)
+
+Script: `enfoque_mecanismo.py`. Panel de conectividad (región peru_humboldt, reanálisis CMEMS, 1998-2025) frente a Niño 1+2 y a la clorofila observada de Chimbote y Callao. 140 pruebas (eslabón A: 70; eslabón B: 80 con y sin control de Niño; capa de mezcla sin datos).
+
+**Eslabón A, Niño 1+2 → variable del mar.** Es el resultado más fuerte hallado hasta ahora; todas pasan FDR, mantienen la dirección sin 1998 y en las dos mitades:
+
+| Variable (región peru_humboldt) | Desfase | r | Lectura |
+|---|---|---|---|
+| Temperatura superficial | 0 meses | +0,84 | El mar se calienta con El Niño |
+| Nivel del mar | 0 | +0,68 | Sube con El Niño |
+| Temperatura a 100-200 m | 2 meses | +0,64 | La capa cálida se profundiza y llega con 2 meses de retraso |
+| Oxígeno a 100-200 m | 0 | **+0,60** | **Aumenta** a esa profundidad: la capa sin oxígeno se hunde |
+| Oxígeno superficial | 1 mes | −0,66 | Disminuye (agua más cálida) |
+| Fosfato superficial | 2 meses | −0,54 | Menos nutriente en superficie |
+| Clorofila (modelo) | 0 | −0,32 | Cae |
+| Nitrato superficial | 0 | −0,20 | Baja, sin pasar FDR |
+
+- Confirma con datos lo que se afirma en el juego y en la web: con El Niño la zona sin oxígeno se hunde. A 100-200 m el oxígeno sube (+0,60), no baja.
+- Estos vínculos son conocidos en la literatura; aquí se confirman con las series propias, y el retraso de 2 meses de la temperatura profunda respecto a la superficie es una característica propia de los datos.
+
+**Eslabón B, variable → clorofila de la costa central, con Niño 1+2 controlado.** Solo 2 de 80 pruebas son robustas (oxígeno a 100-200 m en Callao, r = −0,17; temperatura a 100-200 m en Chimbote, r = −0,24; ambas con p_fdr cerca de 0,04-0,05). Sin controlar El Niño hay 29 robustas. Es decir, ninguna de estas variables aporta información sobre la clorofila más allá de El Niño: el mecanismo se describe, pero con estos datos mensuales y regionales no se separa un mediador independiente.
+
+Tablas: `tablas/nuevos_E7_eslabonA_nino_a_variable.csv`, `tablas/nuevos_E7_eslabonB_variable_a_clorofila.csv`.
+
 ## 4. Pendiente
 
 - Repetir el análisis de tendencias con MODIS-Aqua (Giovanni) para las demás zonas y con la temperatura de MODIS-Aqua para la Antártida, como tercera fuente independiente.
