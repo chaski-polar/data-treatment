@@ -1,0 +1,702 @@
+serie,fuente,inicio,n,tendencia_por_decada,p
+SST paita,CRW v3.1 (NOAA),1986,40,-0.043,0.8521
+SST paita,CRW v3.1 (NOAA),1987,39,-0.0567,0.7623
+SST paita,CRW v3.1 (NOAA),1988,38,0.0093,0.9499
+SST paita,CRW v3.1 (NOAA),1989,37,-0.0543,0.7536
+SST paita,CRW v3.1 (NOAA),1990,36,-0.0518,0.7853
+SST paita,CRW v3.1 (NOAA),1991,35,-0.0517,0.7873
+SST paita,CRW v3.1 (NOAA),1992,34,-0.0003,0.9882
+SST paita,CRW v3.1 (NOAA),1993,33,0.0557,0.7237
+SST paita,CRW v3.1 (NOAA),1994,32,0.1118,0.4887
+SST paita,CRW v3.1 (NOAA),1995,31,0.1333,0.4375
+SST paita,CRW v3.1 (NOAA),1996,30,0.1333,0.4788
+SST paita,CRW v3.1 (NOAA),1997,29,0.0472,0.8091
+SST paita,CRW v3.1 (NOAA),1998,28,0.1373,0.4215
+SST paita,CRW v3.1 (NOAA),1999,27,0.2341,0.1704
+SST paita,CRW v3.1 (NOAA),2000,26,0.1608,0.3356
+SST paita,CRW v3.1 (NOAA),2001,25,0.1333,0.473
+SST paita,CRW v3.1 (NOAA),2002,24,0.1019,0.6062
+SST paita,CRW v3.1 (NOAA),2003,23,0.1833,0.4325
+SST paita,CRW v3.1 (NOAA),2004,22,0.1056,0.6556
+SST paita,CRW v3.1 (NOAA),2005,21,0.0722,0.7884
+SST paita,CRW v3.1 (NOAA),2006,20,-0.0295,0.9745
+SST paita,CRW v3.1 (NOAA),2007,19,-0.0517,0.945
+SST paita,CRW v3.1 (NOAA),2008,18,-0.287,0.4543
+SST paita,CRW v3.1 (NOAA),2009,17,-0.1385,0.7765
+SST paita,CRW v3.1 (NOAA),2010,16,-0.0155,1.0
+SST paita,"ERSST v5 (NOAA, 2 grados)",1950,76,0.1119,0.0335
+SST paita,"ERSST v5 (NOAA, 2 grados)",1951,75,0.0938,0.0666
+SST paita,"ERSST v5 (NOAA, 2 grados)",1952,74,0.1048,0.0424
+SST paita,"ERSST v5 (NOAA, 2 grados)",1953,73,0.1006,0.0619
+SST paita,"ERSST v5 (NOAA, 2 grados)",1954,72,0.1184,0.0375
+SST paita,"ERSST v5 (NOAA, 2 grados)",1955,71,0.0938,0.0764
+SST paita,"ERSST v5 (NOAA, 2 grados)",1956,70,0.0722,0.1429
+SST paita,"ERSST v5 (NOAA, 2 grados)",1957,69,0.0706,0.1814
+SST paita,"ERSST v5 (NOAA, 2 grados)",1958,68,0.0923,0.0944
+SST paita,"ERSST v5 (NOAA, 2 grados)",1959,67,0.1041,0.0619
+SST paita,"ERSST v5 (NOAA, 2 grados)",1960,66,0.1177,0.0495
+SST paita,"ERSST v5 (NOAA, 2 grados)",1961,65,0.1192,0.0586
+SST paita,"ERSST v5 (NOAA, 2 grados)",1962,64,0.1197,0.0725
+SST paita,"ERSST v5 (NOAA, 2 grados)",1963,63,0.0976,0.1397
+SST paita,"ERSST v5 (NOAA, 2 grados)",1964,62,0.0997,0.1717
+SST paita,"ERSST v5 (NOAA, 2 grados)",1965,61,0.0703,0.3075
+SST paita,"ERSST v5 (NOAA, 2 grados)",1966,60,0.0923,0.1976
+SST paita,"ERSST v5 (NOAA, 2 grados)",1967,59,0.0856,0.2691
+SST paita,"ERSST v5 (NOAA, 2 grados)",1968,58,0.05,0.4484
+SST paita,"ERSST v5 (NOAA, 2 grados)",1969,57,0.0368,0.6595
+SST paita,"ERSST v5 (NOAA, 2 grados)",1970,56,0.0486,0.534
+SST paita,"ERSST v5 (NOAA, 2 grados)",1971,55,0.0212,0.8107
+SST paita,"ERSST v5 (NOAA, 2 grados)",1972,54,-0.0154,0.8873
+SST paita,"ERSST v5 (NOAA, 2 grados)",1973,53,0.0172,0.8419
+SST paita,"ERSST v5 (NOAA, 2 grados)",1974,52,-0.0072,0.9371
+SST paita,"ERSST v5 (NOAA, 2 grados)",1975,51,-0.0454,0.6551
+SST paita,"ERSST v5 (NOAA, 2 grados)",1976,50,-0.0622,0.3889
+SST paita,"ERSST v5 (NOAA, 2 grados)",1977,49,-0.0497,0.5348
+SST paita,"ERSST v5 (NOAA, 2 grados)",1978,48,-0.0615,0.4553
+SST paita,"ERSST v5 (NOAA, 2 grados)",1979,47,-0.0853,0.3265
+SST paita,"ERSST v5 (NOAA, 2 grados)",1980,46,-0.0885,0.3389
+SST paita,"ERSST v5 (NOAA, 2 grados)",1981,45,-0.1037,0.2998
+SST paita,"ERSST v5 (NOAA, 2 grados)",1982,44,-0.1593,0.169
+SST paita,"ERSST v5 (NOAA, 2 grados)",1983,43,-0.1301,0.237
+SST paita,"ERSST v5 (NOAA, 2 grados)",1984,42,-0.0819,0.4416
+SST paita,"ERSST v5 (NOAA, 2 grados)",1985,41,-0.0966,0.4059
+SST paita,"ERSST v5 (NOAA, 2 grados)",1986,40,-0.1588,0.244
+SST paita,"ERSST v5 (NOAA, 2 grados)",1987,39,-0.1598,0.271
+SST paita,"ERSST v5 (NOAA, 2 grados)",1988,38,-0.0943,0.4582
+SST paita,"ERSST v5 (NOAA, 2 grados)",1989,37,-0.1782,0.2289
+SST paita,"ERSST v5 (NOAA, 2 grados)",1990,36,-0.1969,0.2202
+SST paita,"ERSST v5 (NOAA, 2 grados)",1991,35,-0.2081,0.2166
+SST paita,"ERSST v5 (NOAA, 2 grados)",1992,34,-0.1971,0.2926
+SST paita,"ERSST v5 (NOAA, 2 grados)",1993,33,-0.1051,0.4886
+SST paita,"ERSST v5 (NOAA, 2 grados)",1994,32,-0.0569,0.7355
+SST paita,"ERSST v5 (NOAA, 2 grados)",1995,31,-0.0494,0.8398
+SST paita,"ERSST v5 (NOAA, 2 grados)",1996,30,-0.0728,0.7502
+SST paita,"ERSST v5 (NOAA, 2 grados)",1997,29,-0.2069,0.402
+SST paita,"ERSST v5 (NOAA, 2 grados)",1998,28,-0.0674,0.7393
+SST paita,"ERSST v5 (NOAA, 2 grados)",1999,27,0.0384,0.9014
+SST paita,"ERSST v5 (NOAA, 2 grados)",2000,26,0.016,0.9652
+SST paita,"ERSST v5 (NOAA, 2 grados)",2001,25,-0.0207,0.9816
+SST paita,"ERSST v5 (NOAA, 2 grados)",2002,24,-0.0845,0.8253
+SST paita,"ERSST v5 (NOAA, 2 grados)",2003,23,0.06,0.8755
+SST paita,"ERSST v5 (NOAA, 2 grados)",2004,22,0.0536,0.9556
+SST paita,"ERSST v5 (NOAA, 2 grados)",2005,21,0.0492,0.9762
+SST paita,"ERSST v5 (NOAA, 2 grados)",2006,20,-0.1851,0.7732
+SST paita,"ERSST v5 (NOAA, 2 grados)",2007,19,-0.1968,0.836
+SST paita,"ERSST v5 (NOAA, 2 grados)",2008,18,-0.3775,0.4543
+SST paita,"ERSST v5 (NOAA, 2 grados)",2009,17,-0.2539,0.715
+SST paita,"ERSST v5 (NOAA, 2 grados)",2010,16,-0.1206,0.9647
+clorofila paita,OC-CCI v6 (ESA),1998,28,-0.0352,0.4683
+clorofila paita,OC-CCI v6 (ESA),1999,27,-0.0243,0.7101
+clorofila paita,OC-CCI v6 (ESA),2000,26,0.0016,0.9652
+clorofila paita,OC-CCI v6 (ESA),2001,25,-0.0106,0.908
+clorofila paita,OC-CCI v6 (ESA),2002,24,-0.0247,0.7128
+clorofila paita,OC-CCI v6 (ESA),2003,23,-0.0592,0.4325
+clorofila paita,OC-CCI v6 (ESA),2004,22,-0.0592,0.5394
+clorofila paita,OC-CCI v6 (ESA),2005,21,-0.0848,0.4921
+clorofila paita,OC-CCI v6 (ESA),2006,20,-0.1004,0.4223
+clorofila paita,OC-CCI v6 (ESA),2007,19,-0.1117,0.4893
+clorofila paita,OC-CCI v6 (ESA),2008,18,-0.1027,0.7089
+clorofila paita,OC-CCI v6 (ESA),2009,17,-0.1213,0.4896
+clorofila paita,OC-CCI v6 (ESA),2010,16,-0.1544,0.3502
+SST chimbote,CRW v3.1 (NOAA),1986,40,0.0539,0.7093
+SST chimbote,CRW v3.1 (NOAA),1987,39,0.0347,0.7995
+SST chimbote,CRW v3.1 (NOAA),1988,38,0.0896,0.5214
+SST chimbote,CRW v3.1 (NOAA),1989,37,0.0634,0.7142
+SST chimbote,CRW v3.1 (NOAA),1990,36,0.0616,0.7437
+SST chimbote,CRW v3.1 (NOAA),1991,35,0.059,0.7655
+SST chimbote,CRW v3.1 (NOAA),1992,34,0.0977,0.6247
+SST chimbote,CRW v3.1 (NOAA),1993,33,0.1765,0.38
+SST chimbote,CRW v3.1 (NOAA),1994,32,0.2484,0.2137
+SST chimbote,CRW v3.1 (NOAA),1995,31,0.276,0.1865
+SST chimbote,CRW v3.1 (NOAA),1996,30,0.2875,0.2008
+SST chimbote,CRW v3.1 (NOAA),1997,29,0.2137,0.402
+SST chimbote,CRW v3.1 (NOAA),1998,28,0.2991,0.1504
+SST chimbote,CRW v3.1 (NOAA),1999,27,0.3583,0.0402
+SST chimbote,CRW v3.1 (NOAA),2000,26,0.3282,0.0856
+SST chimbote,CRW v3.1 (NOAA),2001,25,0.325,0.1424
+SST chimbote,CRW v3.1 (NOAA),2002,24,0.2847,0.2675
+SST chimbote,CRW v3.1 (NOAA),2003,23,0.3369,0.1888
+SST chimbote,CRW v3.1 (NOAA),2004,22,0.3369,0.2876
+SST chimbote,CRW v3.1 (NOAA),2005,21,0.3181,0.455
+SST chimbote,CRW v3.1 (NOAA),2006,20,0.1712,0.7246
+SST chimbote,CRW v3.1 (NOAA),2007,19,0.1721,0.7825
+SST chimbote,CRW v3.1 (NOAA),2008,18,-0.1239,0.8228
+SST chimbote,CRW v3.1 (NOAA),2009,17,-0.0957,0.9032
+SST chimbote,CRW v3.1 (NOAA),2010,16,-0.0471,0.9647
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1950,76,0.0972,0.0673
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1951,75,0.0824,0.1254
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1952,74,0.0923,0.0939
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1953,73,0.0881,0.1228
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1954,72,0.0977,0.0818
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1955,71,0.0822,0.1543
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1956,70,0.0628,0.2713
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1957,69,0.0552,0.3512
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1958,68,0.0755,0.2077
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1959,67,0.0879,0.1257
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1960,66,0.0968,0.1003
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1961,65,0.0995,0.103
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1962,64,0.0995,0.1205
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1963,63,0.0877,0.1981
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1964,62,0.085,0.2411
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1965,61,0.0589,0.3974
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1966,60,0.0766,0.2671
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1967,59,0.0738,0.3364
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1968,58,0.0379,0.5416
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1969,57,0.016,0.762
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1970,56,0.034,0.6613
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1971,55,0.0044,0.9364
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1972,54,-0.0216,0.7711
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1973,53,0.0021,0.9633
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1974,52,-0.0156,0.8251
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1975,51,-0.0482,0.5424
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1976,50,-0.0802,0.3035
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1977,49,-0.0551,0.4278
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1978,48,-0.0584,0.4238
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1979,47,-0.073,0.3543
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1980,46,-0.0748,0.3786
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1981,45,-0.0831,0.3477
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1982,44,-0.1213,0.2407
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1983,43,-0.0936,0.3409
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1984,42,-0.0517,0.5954
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1985,41,-0.0546,0.6212
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1986,40,-0.0747,0.4282
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1987,39,-0.0793,0.446
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1988,38,-0.0549,0.6782
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1989,37,-0.1015,0.4326
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1990,36,-0.1193,0.3834
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1991,35,-0.1551,0.3133
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1992,34,-0.1465,0.4149
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1993,33,-0.0623,0.6781
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1994,32,-0.0202,0.9359
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1995,31,0.006,0.9731
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1996,30,0.006,0.9718
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1997,29,-0.0595,0.7239
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1998,28,0.0291,0.8911
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1999,27,0.1483,0.5084
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2000,26,0.1205,0.631
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2001,25,0.0905,0.7288
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2002,24,0.0023,1.0
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2003,23,0.1005,0.7147
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2004,22,0.0669,0.8673
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2005,21,0.0781,0.8815
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2006,20,-0.0321,0.8728
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2007,19,-0.0453,0.945
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2008,18,-0.1901,0.5498
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2009,17,-0.1614,0.715
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",2010,16,-0.1094,0.8248
+clorofila chimbote,OC-CCI v6 (ESA),1998,28,-0.1537,0.2305
+clorofila chimbote,OC-CCI v6 (ESA),1999,27,-0.2235,0.0662
+clorofila chimbote,OC-CCI v6 (ESA),2000,26,-0.2665,0.0334
+clorofila chimbote,OC-CCI v6 (ESA),2001,25,-0.301,0.0114
+clorofila chimbote,OC-CCI v6 (ESA),2002,24,-0.2922,0.0339
+clorofila chimbote,OC-CCI v6 (ESA),2003,23,-0.3093,0.0384
+clorofila chimbote,OC-CCI v6 (ESA),2004,22,-0.3121,0.0622
+clorofila chimbote,OC-CCI v6 (ESA),2005,21,-0.2289,0.1763
+clorofila chimbote,OC-CCI v6 (ESA),2006,20,-0.1539,0.3859
+clorofila chimbote,OC-CCI v6 (ESA),2007,19,-0.0543,0.7825
+clorofila chimbote,OC-CCI v6 (ESA),2008,18,-0.0543,0.8814
+clorofila chimbote,OC-CCI v6 (ESA),2009,17,0.0173,0.9032
+clorofila chimbote,OC-CCI v6 (ESA),2010,16,0.0456,0.8248
+SST callao,CRW v3.1 (NOAA),1986,40,0.0331,0.8157
+SST callao,CRW v3.1 (NOAA),1987,39,-0.0025,0.9711
+SST callao,CRW v3.1 (NOAA),1988,38,0.0382,0.7533
+SST callao,CRW v3.1 (NOAA),1989,37,0.029,0.8547
+SST callao,CRW v3.1 (NOAA),1990,36,0.02,0.9349
+SST callao,CRW v3.1 (NOAA),1991,35,-0.0025,0.966
+SST callao,CRW v3.1 (NOAA),1992,34,0.0333,0.8472
+SST callao,CRW v3.1 (NOAA),1993,33,0.0774,0.5693
+SST callao,CRW v3.1 (NOAA),1994,32,0.1264,0.3415
+SST callao,CRW v3.1 (NOAA),1995,31,0.1615,0.2644
+SST callao,CRW v3.1 (NOAA),1996,30,0.1935,0.2413
+SST callao,CRW v3.1 (NOAA),1997,29,0.1287,0.4453
+SST callao,CRW v3.1 (NOAA),1998,28,0.2326,0.1744
+SST callao,CRW v3.1 (NOAA),1999,27,0.2922,0.0545
+SST callao,CRW v3.1 (NOAA),2000,26,0.282,0.1033
+SST callao,CRW v3.1 (NOAA),2001,25,0.2827,0.1424
+SST callao,CRW v3.1 (NOAA),2002,24,0.2091,0.2675
+SST callao,CRW v3.1 (NOAA),2003,23,0.2726,0.2272
+SST callao,CRW v3.1 (NOAA),2004,22,0.2753,0.2628
+SST callao,CRW v3.1 (NOAA),2005,21,0.2838,0.3858
+SST callao,CRW v3.1 (NOAA),2006,20,0.1855,0.6308
+SST callao,CRW v3.1 (NOAA),2007,19,0.1917,0.7825
+SST callao,CRW v3.1 (NOAA),2008,18,-0.07,0.8228
+SST callao,CRW v3.1 (NOAA),2009,17,-0.1143,0.7765
+SST callao,CRW v3.1 (NOAA),2010,16,-0.1627,0.8944
+SST callao,"ERSST v5 (NOAA, 2 grados)",1950,76,0.1133,0.0133
+SST callao,"ERSST v5 (NOAA, 2 grados)",1951,75,0.0979,0.0284
+SST callao,"ERSST v5 (NOAA, 2 grados)",1952,74,0.1066,0.023
+SST callao,"ERSST v5 (NOAA, 2 grados)",1953,73,0.1034,0.0329
+SST callao,"ERSST v5 (NOAA, 2 grados)",1954,72,0.1148,0.0247
+SST callao,"ERSST v5 (NOAA, 2 grados)",1955,71,0.0986,0.0523
+SST callao,"ERSST v5 (NOAA, 2 grados)",1956,70,0.0845,0.1037
+SST callao,"ERSST v5 (NOAA, 2 grados)",1957,69,0.0764,0.162
+SST callao,"ERSST v5 (NOAA, 2 grados)",1958,68,0.0893,0.0844
+SST callao,"ERSST v5 (NOAA, 2 grados)",1959,67,0.1025,0.0424
+SST callao,"ERSST v5 (NOAA, 2 grados)",1960,66,0.1132,0.0369
+SST callao,"ERSST v5 (NOAA, 2 grados)",1961,65,0.1136,0.0415
+SST callao,"ERSST v5 (NOAA, 2 grados)",1962,64,0.1125,0.0544
+SST callao,"ERSST v5 (NOAA, 2 grados)",1963,63,0.0986,0.0956
+SST callao,"ERSST v5 (NOAA, 2 grados)",1964,62,0.0949,0.1304
+SST callao,"ERSST v5 (NOAA, 2 grados)",1965,61,0.0812,0.2179
+SST callao,"ERSST v5 (NOAA, 2 grados)",1966,60,0.094,0.129
+SST callao,"ERSST v5 (NOAA, 2 grados)",1967,59,0.0861,0.1887
+SST callao,"ERSST v5 (NOAA, 2 grados)",1968,58,0.0654,0.3374
+SST callao,"ERSST v5 (NOAA, 2 grados)",1969,57,0.0452,0.5176
+SST callao,"ERSST v5 (NOAA, 2 grados)",1970,56,0.0449,0.534
+SST callao,"ERSST v5 (NOAA, 2 grados)",1971,55,0.0217,0.7994
+SST callao,"ERSST v5 (NOAA, 2 grados)",1972,54,-0.0065,0.9109
+SST callao,"ERSST v5 (NOAA, 2 grados)",1973,53,0.0159,0.8419
+SST callao,"ERSST v5 (NOAA, 2 grados)",1974,52,-0.0086,0.887
+SST callao,"ERSST v5 (NOAA, 2 grados)",1975,51,-0.0317,0.5975
+SST callao,"ERSST v5 (NOAA, 2 grados)",1976,50,-0.0584,0.3445
+SST callao,"ERSST v5 (NOAA, 2 grados)",1977,49,-0.0446,0.4797
+SST callao,"ERSST v5 (NOAA, 2 grados)",1978,48,-0.0421,0.5107
+SST callao,"ERSST v5 (NOAA, 2 grados)",1979,47,-0.0544,0.4466
+SST callao,"ERSST v5 (NOAA, 2 grados)",1980,46,-0.0574,0.432
+SST callao,"ERSST v5 (NOAA, 2 grados)",1981,45,-0.0605,0.4002
+SST callao,"ERSST v5 (NOAA, 2 grados)",1982,44,-0.0776,0.3216
+SST callao,"ERSST v5 (NOAA, 2 grados)",1983,43,-0.062,0.4449
+SST callao,"ERSST v5 (NOAA, 2 grados)",1984,42,-0.018,0.7369
+SST callao,"ERSST v5 (NOAA, 2 grados)",1985,41,-0.0176,0.7531
+SST callao,"ERSST v5 (NOAA, 2 grados)",1986,40,-0.0433,0.5141
+SST callao,"ERSST v5 (NOAA, 2 grados)",1987,39,-0.0574,0.4754
+SST callao,"ERSST v5 (NOAA, 2 grados)",1988,38,-0.018,0.7154
+SST callao,"ERSST v5 (NOAA, 2 grados)",1989,37,-0.0476,0.48
+SST callao,"ERSST v5 (NOAA, 2 grados)",1990,36,-0.061,0.4295
+SST callao,"ERSST v5 (NOAA, 2 grados)",1991,35,-0.0999,0.3133
+SST callao,"ERSST v5 (NOAA, 2 grados)",1992,34,-0.0999,0.3981
+SST callao,"ERSST v5 (NOAA, 2 grados)",1993,33,-0.0288,0.6557
+SST callao,"ERSST v5 (NOAA, 2 grados)",1994,32,-0.0102,0.9104
+SST callao,"ERSST v5 (NOAA, 2 grados)",1995,31,0.0046,0.9731
+SST callao,"ERSST v5 (NOAA, 2 grados)",1996,30,0.0052,0.9436
+SST callao,"ERSST v5 (NOAA, 2 grados)",1997,29,-0.025,0.7239
+SST callao,"ERSST v5 (NOAA, 2 grados)",1998,28,0.0108,0.8911
+SST callao,"ERSST v5 (NOAA, 2 grados)",1999,27,0.1047,0.5084
+SST callao,"ERSST v5 (NOAA, 2 grados)",2000,26,0.0513,0.631
+SST callao,"ERSST v5 (NOAA, 2 grados)",2001,25,0.0428,0.7288
+SST callao,"ERSST v5 (NOAA, 2 grados)",2002,24,-0.0034,1.0
+SST callao,"ERSST v5 (NOAA, 2 grados)",2003,23,0.0409,0.7147
+SST callao,"ERSST v5 (NOAA, 2 grados)",2004,22,0.038,0.7805
+SST callao,"ERSST v5 (NOAA, 2 grados)",2005,21,0.0992,0.6982
+SST callao,"ERSST v5 (NOAA, 2 grados)",2006,20,0.0086,0.9745
+SST callao,"ERSST v5 (NOAA, 2 grados)",2007,19,0.1286,0.6787
+SST callao,"ERSST v5 (NOAA, 2 grados)",2008,18,0.0052,1.0
+SST callao,"ERSST v5 (NOAA, 2 grados)",2009,17,-0.003,1.0
+SST callao,"ERSST v5 (NOAA, 2 grados)",2010,16,0.0646,0.9647
+clorofila callao,OC-CCI v6 (ESA),1998,28,0.0296,0.7992
+clorofila callao,OC-CCI v6 (ESA),1999,27,-0.0272,0.8044
+clorofila callao,OC-CCI v6 (ESA),2000,26,-0.0502,0.6003
+clorofila callao,OC-CCI v6 (ESA),2001,25,-0.1005,0.2755
+clorofila callao,OC-CCI v6 (ESA),2002,24,-0.1386,0.1743
+clorofila callao,OC-CCI v6 (ESA),2003,23,-0.101,0.2944
+clorofila callao,OC-CCI v6 (ESA),2004,22,-0.1282,0.3712
+clorofila callao,OC-CCI v6 (ESA),2005,21,-0.0353,0.7429
+clorofila callao,OC-CCI v6 (ESA),2006,20,0.0343,0.9235
+clorofila callao,OC-CCI v6 (ESA),2007,19,-0.011,0.836
+clorofila callao,OC-CCI v6 (ESA),2008,18,-0.0329,0.8814
+clorofila callao,OC-CCI v6 (ESA),2009,17,0.0438,0.9677
+clorofila callao,OC-CCI v6 (ESA),2010,16,0.1512,0.4503
+SST pisco,CRW v3.1 (NOAA),1986,40,0.0153,0.8157
+SST pisco,CRW v3.1 (NOAA),1987,39,0.0064,0.9325
+SST pisco,CRW v3.1 (NOAA),1988,38,0.0393,0.6782
+SST pisco,CRW v3.1 (NOAA),1989,37,0.0098,0.9167
+SST pisco,CRW v3.1 (NOAA),1990,36,0.0098,0.9349
+SST pisco,CRW v3.1 (NOAA),1991,35,-0.0295,0.8535
+SST pisco,CRW v3.1 (NOAA),1992,34,0.0076,0.9645
+SST pisco,CRW v3.1 (NOAA),1993,33,0.0488,0.6781
+SST pisco,CRW v3.1 (NOAA),1994,32,0.0842,0.4491
+SST pisco,CRW v3.1 (NOAA),1995,31,0.1107,0.3442
+SST pisco,CRW v3.1 (NOAA),1996,30,0.1148,0.3207
+SST pisco,CRW v3.1 (NOAA),1997,29,0.0824,0.5641
+SST pisco,CRW v3.1 (NOAA),1998,28,0.139,0.2463
+SST pisco,CRW v3.1 (NOAA),1999,27,0.2137,0.0874
+SST pisco,CRW v3.1 (NOAA),2000,26,0.2078,0.1349
+SST pisco,CRW v3.1 (NOAA),2001,25,0.2046,0.2012
+SST pisco,CRW v3.1 (NOAA),2002,24,0.1858,0.3128
+SST pisco,CRW v3.1 (NOAA),2003,23,0.1958,0.3194
+SST pisco,CRW v3.1 (NOAA),2004,22,0.1958,0.3712
+SST pisco,CRW v3.1 (NOAA),2005,21,0.139,0.5306
+SST pisco,CRW v3.1 (NOAA),2006,20,0.0964,0.7732
+SST pisco,CRW v3.1 (NOAA),2007,19,0.1067,0.7825
+SST pisco,CRW v3.1 (NOAA),2008,18,-0.1452,0.8228
+SST pisco,CRW v3.1 (NOAA),2009,17,-0.1215,0.8393
+SST pisco,CRW v3.1 (NOAA),2010,16,-0.161,0.8248
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1950,76,0.1182,0.0069
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1951,75,0.1054,0.0151
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1952,74,0.1126,0.0122
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1953,73,0.1105,0.0177
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1954,72,0.1203,0.0135
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1955,71,0.1056,0.0301
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1956,70,0.0912,0.0628
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1957,69,0.0798,0.1017
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1958,68,0.0981,0.0502
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1959,67,0.109,0.0234
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1960,66,0.1176,0.0198
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1961,65,0.1188,0.0222
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1962,64,0.1175,0.0302
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1963,63,0.1064,0.0539
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1964,62,0.1045,0.0751
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1965,61,0.0882,0.1321
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1966,60,0.1044,0.0721
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1967,59,0.0937,0.115
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1968,58,0.0704,0.2196
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1969,57,0.0517,0.3563
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1970,56,0.0488,0.3886
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1971,55,0.0268,0.6267
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1972,54,0.0094,0.8991
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1973,53,0.0254,0.6675
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1974,52,0.0062,0.9246
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1975,51,-0.0226,0.7762
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1976,50,-0.05,0.4875
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1977,49,-0.0465,0.6293
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1978,48,-0.0387,0.6697
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1979,47,-0.05,0.6012
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1980,46,-0.0507,0.5894
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1981,45,-0.0578,0.5705
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1982,44,-0.0705,0.4916
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1983,43,-0.0611,0.6377
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1984,42,-0.0037,0.9741
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1985,41,0.0027,0.9821
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1986,40,-0.0459,0.7619
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1987,39,-0.05,0.7077
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1988,38,-0.0004,0.99
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1989,37,-0.0492,0.7338
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1990,36,-0.0577,0.6828
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1991,35,-0.0975,0.5228
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1992,34,-0.0975,0.5238
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1993,33,-0.0264,0.8177
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1994,32,0.0062,0.9359
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1995,31,0.0153,0.8398
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1996,30,0.0179,0.8045
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1997,29,-0.0212,0.8672
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1998,28,0.0297,0.7393
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1999,27,0.1173,0.3848
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2000,26,0.0743,0.5122
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2001,25,0.071,0.5631
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2002,24,0.0175,0.8637
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2003,23,0.0398,0.754
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2004,22,0.0357,0.7805
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2005,21,0.084,0.6119
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2006,20,0.04,0.8227
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2007,19,0.2078,0.534
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2008,18,0.0398,0.8228
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2009,17,0.0359,0.8393
+SST pisco,"ERSST v5 (NOAA, 2 grados)",2010,16,0.0712,0.7566
+clorofila pisco,OC-CCI v6 (ESA),1998,28,-0.1657,0.129
+clorofila pisco,OC-CCI v6 (ESA),1999,27,-0.2228,0.0362
+clorofila pisco,OC-CCI v6 (ESA),2000,26,-0.2642,0.0072
+clorofila pisco,OC-CCI v6 (ESA),2001,25,-0.3037,0.0024
+clorofila pisco,OC-CCI v6 (ESA),2002,24,-0.3594,0.0001
+clorofila pisco,OC-CCI v6 (ESA),2003,23,-0.3515,0.0004
+clorofila pisco,OC-CCI v6 (ESA),2004,22,-0.3924,0.0003
+clorofila pisco,OC-CCI v6 (ESA),2005,21,-0.3415,0.0017
+clorofila pisco,OC-CCI v6 (ESA),2006,20,-0.4025,0.0008
+clorofila pisco,OC-CCI v6 (ESA),2007,19,-0.4416,0.0014
+clorofila pisco,OC-CCI v6 (ESA),2008,18,-0.3627,0.0067
+clorofila pisco,OC-CCI v6 (ESA),2009,17,-0.436,0.0134
+clorofila pisco,OC-CCI v6 (ESA),2010,16,-0.3608,0.0413
+SST ilo,CRW v3.1 (NOAA),1986,40,-0.1035,0.0591
+SST ilo,CRW v3.1 (NOAA),1987,39,-0.1121,0.0575
+SST ilo,CRW v3.1 (NOAA),1988,38,-0.0974,0.122
+SST ilo,CRW v3.1 (NOAA),1989,37,-0.0996,0.136
+SST ilo,CRW v3.1 (NOAA),1990,36,-0.0914,0.2102
+SST ilo,CRW v3.1 (NOAA),1991,35,-0.1121,0.0857
+SST ilo,CRW v3.1 (NOAA),1992,34,-0.1145,0.1127
+SST ilo,CRW v3.1 (NOAA),1993,33,-0.0973,0.2228
+SST ilo,CRW v3.1 (NOAA),1994,32,-0.0943,0.2944
+SST ilo,CRW v3.1 (NOAA),1995,31,-0.0683,0.4375
+SST ilo,CRW v3.1 (NOAA),1996,30,-0.0708,0.457
+SST ilo,CRW v3.1 (NOAA),1997,29,-0.1095,0.2878
+SST ilo,CRW v3.1 (NOAA),1998,28,-0.0568,0.57
+SST ilo,CRW v3.1 (NOAA),1999,27,-0.0038,0.9671
+SST ilo,CRW v3.1 (NOAA),2000,26,-0.0142,0.8615
+SST ilo,CRW v3.1 (NOAA),2001,25,-0.042,0.6943
+SST ilo,CRW v3.1 (NOAA),2002,24,-0.0094,0.9024
+SST ilo,CRW v3.1 (NOAA),2003,23,0.019,0.9584
+SST ilo,CRW v3.1 (NOAA),2004,22,0.0417,0.9556
+SST ilo,CRW v3.1 (NOAA),2005,21,-0.0565,0.8815
+SST ilo,CRW v3.1 (NOAA),2006,20,-0.1177,0.5424
+SST ilo,CRW v3.1 (NOAA),2007,19,-0.0708,0.73
+SST ilo,CRW v3.1 (NOAA),2008,18,-0.2064,0.3297
+SST ilo,CRW v3.1 (NOAA),2009,17,-0.2922,0.3081
+SST ilo,CRW v3.1 (NOAA),2010,16,-0.2375,0.4503
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1950,76,0.1537,0.0
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1951,75,0.1493,0.0
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1952,74,0.1574,0.0
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1953,73,0.1574,0.0
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1954,72,0.1617,0.0001
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1955,71,0.1541,0.0001
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1956,70,0.1391,0.0004
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1957,69,0.13,0.001
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1958,68,0.141,0.0006
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1959,67,0.1537,0.0002
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1960,66,0.1577,0.0003
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1961,65,0.16,0.0004
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1962,64,0.16,0.0007
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1963,63,0.1537,0.0015
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1964,62,0.1552,0.0023
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1965,61,0.1413,0.0049
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1966,60,0.1596,0.0019
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1967,59,0.1457,0.0039
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1968,58,0.1286,0.0102
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1969,57,0.1112,0.024
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1970,56,0.1021,0.0447
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1971,55,0.0779,0.0964
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1972,54,0.0577,0.1867
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1973,53,0.0586,0.2084
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1974,52,0.0399,0.3683
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1975,51,0.022,0.5975
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1976,50,0.0071,0.9001
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1977,49,-0.012,0.8361
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1978,48,-0.0036,0.9433
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1979,47,-0.0175,0.7206
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1980,46,-0.0281,0.6292
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1981,45,-0.0293,0.6527
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1982,44,-0.0358,0.6131
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1983,43,-0.0294,0.6832
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1984,42,0.0021,0.9741
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1985,41,0.0105,0.8751
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1986,40,-0.0132,0.8521
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1987,39,-0.0196,0.7995
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1988,38,0.0071,0.9099
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1989,37,-0.0063,0.9583
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1990,36,-0.01,0.9349
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1991,35,-0.0514,0.6598
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1992,34,-0.0624,0.5433
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1993,33,-0.0305,0.8177
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1994,32,-0.039,0.8094
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1995,31,-0.0143,0.9195
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1996,30,-0.0244,0.9155
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1997,29,-0.0976,0.6156
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1998,28,0.0001,1.0
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1999,27,0.0459,0.6201
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2000,26,0.0236,0.8273
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2001,25,0.0435,0.7993
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2002,24,0.0158,0.9804
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2003,23,0.0298,0.8755
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2004,22,0.0585,0.7381
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2005,21,0.1687,0.4196
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2006,20,0.1484,0.5006
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2007,19,0.3629,0.1863
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2008,18,0.2463,0.3686
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2009,17,0.1298,0.5976
+SST ilo,"ERSST v5 (NOAA, 2 grados)",2010,16,0.3566,0.3057
+clorofila ilo,OC-CCI v6 (ESA),1998,28,0.1477,0.129
+clorofila ilo,OC-CCI v6 (ESA),1999,27,0.1201,0.3004
+clorofila ilo,OC-CCI v6 (ESA),2000,26,0.0632,0.5408
+clorofila ilo,OC-CCI v6 (ESA),2001,25,0.0324,0.8715
+clorofila ilo,OC-CCI v6 (ESA),2002,24,0.0056,0.9804
+clorofila ilo,OC-CCI v6 (ESA),2003,23,0.05,0.754
+clorofila ilo,OC-CCI v6 (ESA),2004,22,0.1252,0.468
+clorofila ilo,OC-CCI v6 (ESA),2005,21,0.1525,0.2422
+clorofila ilo,OC-CCI v6 (ESA),2006,20,0.1962,0.1284
+clorofila ilo,OC-CCI v6 (ESA),2007,19,0.2011,0.1863
+clorofila ilo,OC-CCI v6 (ESA),2008,18,0.2344,0.1124
+clorofila ilo,OC-CCI v6 (ESA),2009,17,0.2243,0.2362
+clorofila ilo,OC-CCI v6 (ESA),2010,16,0.2522,0.265
+SST rey_jorge,CRW v3.1 (NOAA),1986,40,0.0188,0.6412
+SST rey_jorge,CRW v3.1 (NOAA),1987,39,0.0382,0.3392
+SST rey_jorge,CRW v3.1 (NOAA),1988,38,0.0506,0.1954
+SST rey_jorge,CRW v3.1 (NOAA),1989,37,0.0601,0.143
+SST rey_jorge,CRW v3.1 (NOAA),1990,36,0.0782,0.0766
+SST rey_jorge,CRW v3.1 (NOAA),1991,35,0.1028,0.0343
+SST rey_jorge,CRW v3.1 (NOAA),1992,34,0.111,0.0233
+SST rey_jorge,CRW v3.1 (NOAA),1993,33,0.1369,0.0081
+SST rey_jorge,CRW v3.1 (NOAA),1994,32,0.1476,0.0055
+SST rey_jorge,CRW v3.1 (NOAA),1995,31,0.17,0.0018
+SST rey_jorge,CRW v3.1 (NOAA),1996,30,0.1797,0.0013
+SST rey_jorge,CRW v3.1 (NOAA),1997,29,0.1598,0.0051
+SST rey_jorge,CRW v3.1 (NOAA),1998,28,0.1806,0.002
+SST rey_jorge,CRW v3.1 (NOAA),1999,27,0.1769,0.0051
+SST rey_jorge,CRW v3.1 (NOAA),2000,26,0.1756,0.0109
+SST rey_jorge,CRW v3.1 (NOAA),2001,25,0.1799,0.0196
+SST rey_jorge,CRW v3.1 (NOAA),2002,24,0.1553,0.0493
+SST rey_jorge,CRW v3.1 (NOAA),2003,23,0.1526,0.1019
+SST rey_jorge,CRW v3.1 (NOAA),2004,22,0.0955,0.2628
+SST rey_jorge,CRW v3.1 (NOAA),2005,21,0.0442,0.5706
+SST rey_jorge,CRW v3.1 (NOAA),2006,20,0.0139,0.9235
+SST rey_jorge,CRW v3.1 (NOAA),2007,19,0.0154,0.836
+SST rey_jorge,CRW v3.1 (NOAA),2008,18,-0.0317,0.8814
+SST rey_jorge,CRW v3.1 (NOAA),2009,17,-0.0768,0.5976
+SST rey_jorge,CRW v3.1 (NOAA),2010,16,-0.069,0.6901
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1950,76,0.056,0.0
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1951,75,0.0545,0.0001
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1952,74,0.0519,0.0002
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1953,73,0.0491,0.0006
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1954,72,0.0462,0.0016
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1955,71,0.0439,0.0038
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1956,70,0.0419,0.0067
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1957,69,0.0397,0.0125
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1958,68,0.0351,0.0269
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1959,67,0.0293,0.0561
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1960,66,0.0242,0.1122
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1961,65,0.0199,0.2088
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1962,64,0.0162,0.342
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1963,63,0.0113,0.518
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1964,62,0.0042,0.7567
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1965,61,-0.0006,0.9702
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1966,60,-0.0017,0.8583
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1967,59,-0.0056,0.6331
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1968,58,-0.0112,0.4018
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1969,57,-0.0142,0.2829
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1970,56,-0.0225,0.1703
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1971,55,-0.0261,0.122
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1972,54,-0.026,0.1376
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1973,53,-0.0299,0.1176
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1974,52,-0.0347,0.1007
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1975,51,-0.0366,0.0992
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1976,50,-0.0382,0.096
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1977,49,-0.0408,0.0758
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1978,48,-0.0475,0.0505
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1979,47,-0.0499,0.0391
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1980,46,-0.0511,0.05
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1981,45,-0.0621,0.0245
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1982,44,-0.0661,0.019
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1983,43,-0.0674,0.0231
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1984,42,-0.0768,0.0148
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1985,41,-0.0798,0.0126
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1986,40,-0.0767,0.0224
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1987,39,-0.0882,0.0115
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1988,38,-0.1104,0.0051
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1989,37,-0.1235,0.0034
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1990,36,-0.1134,0.0097
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1991,35,-0.1107,0.0206
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1992,34,-0.1152,0.0233
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1993,33,-0.1146,0.033
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1994,32,-0.0866,0.0887
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1995,31,-0.0733,0.1754
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1996,30,-0.0728,0.2413
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1997,29,-0.0473,0.4911
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1998,28,-0.0263,0.7992
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1999,27,0.0016,0.9342
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2000,26,0.0411,0.5122
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2001,25,0.0699,0.2012
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2002,24,0.0986,0.0968
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2003,23,0.1164,0.0722
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2004,22,0.1519,0.0358
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2005,21,0.1709,0.0307
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2006,20,0.1984,0.0283
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2007,19,0.2209,0.0083
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2008,18,0.2314,0.0172
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2009,17,0.2682,0.0171
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",2010,16,0.3046,0.0115
+clorofila rey_jorge,OC-CCI v6 (ESA),1998,28,0.0385,0.072
+clorofila rey_jorge,OC-CCI v6 (ESA),1999,27,0.0296,0.1704
+clorofila rey_jorge,OC-CCI v6 (ESA),2000,26,0.0343,0.1598
+clorofila rey_jorge,OC-CCI v6 (ESA),2001,25,0.0385,0.1076
+clorofila rey_jorge,OC-CCI v6 (ESA),2002,24,0.0352,0.2466
+clorofila rey_jorge,OC-CCI v6 (ESA),2003,23,0.0289,0.4023
+clorofila rey_jorge,OC-CCI v6 (ESA),2004,22,0.007,0.7805
+clorofila rey_jorge,OC-CCI v6 (ESA),2005,21,0.0033,0.9287
+clorofila rey_jorge,OC-CCI v6 (ESA),2006,20,0.0077,0.8227
+clorofila rey_jorge,OC-CCI v6 (ESA),2007,19,0.0289,0.4467
+clorofila rey_jorge,OC-CCI v6 (ESA),2008,18,0.0445,0.3297
+clorofila rey_jorge,OC-CCI v6 (ESA),2009,17,0.0193,0.5976
+clorofila rey_jorge,OC-CCI v6 (ESA),2010,16,0.0224,0.5056
+SST peninsula_antartica,CRW v3.1 (NOAA),1986,40,-0.0111,0.7619
+SST peninsula_antartica,CRW v3.1 (NOAA),1987,39,-0.008,0.8371
+SST peninsula_antartica,CRW v3.1 (NOAA),1988,38,0.006,0.8504
+SST peninsula_antartica,CRW v3.1 (NOAA),1989,37,0.0167,0.7338
+SST peninsula_antartica,CRW v3.1 (NOAA),1990,36,0.0465,0.3984
+SST peninsula_antartica,CRW v3.1 (NOAA),1991,35,0.064,0.2063
+SST peninsula_antartica,CRW v3.1 (NOAA),1992,34,0.0741,0.187
+SST peninsula_antartica,CRW v3.1 (NOAA),1993,33,0.0967,0.1109
+SST peninsula_antartica,CRW v3.1 (NOAA),1994,32,0.111,0.0716
+SST peninsula_antartica,CRW v3.1 (NOAA),1995,31,0.1383,0.0407
+SST peninsula_antartica,CRW v3.1 (NOAA),1996,30,0.1611,0.0116
+SST peninsula_antartica,CRW v3.1 (NOAA),1997,29,0.1458,0.0365
+SST peninsula_antartica,CRW v3.1 (NOAA),1998,28,0.1563,0.0303
+SST peninsula_antartica,CRW v3.1 (NOAA),1999,27,0.1608,0.0493
+SST peninsula_antartica,CRW v3.1 (NOAA),2000,26,0.1683,0.0465
+SST peninsula_antartica,CRW v3.1 (NOAA),2001,25,0.1716,0.0463
+SST peninsula_antartica,CRW v3.1 (NOAA),2002,24,0.161,0.1074
+SST peninsula_antartica,CRW v3.1 (NOAA),2003,23,0.1383,0.2707
+SST peninsula_antartica,CRW v3.1 (NOAA),2004,22,0.0644,0.5394
+SST peninsula_antartica,CRW v3.1 (NOAA),2005,21,0.0069,0.9762
+SST peninsula_antartica,CRW v3.1 (NOAA),2006,20,-0.0472,0.6308
+SST peninsula_antartica,CRW v3.1 (NOAA),2007,19,-0.0222,0.836
+SST peninsula_antartica,CRW v3.1 (NOAA),2008,18,-0.0828,0.4101
+SST peninsula_antartica,CRW v3.1 (NOAA),2009,17,-0.0805,0.5423
+SST peninsula_antartica,CRW v3.1 (NOAA),2010,16,-0.0275,0.8248
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1950,76,0.0337,0.0027
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1951,75,0.0329,0.0048
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1952,74,0.0311,0.0084
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1953,73,0.0291,0.0164
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1954,72,0.0258,0.034
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1955,71,0.0228,0.0613
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1956,70,0.0214,0.0803
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1957,69,0.021,0.1017
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1958,68,0.017,0.1788
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1959,67,0.0136,0.3064
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1960,66,0.0092,0.4961
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1961,65,0.0047,0.7087
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1962,64,0.0014,0.9354
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1963,63,-0.002,0.8448
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1964,62,-0.0077,0.5639
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1965,61,-0.0112,0.3974
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1966,60,-0.01,0.429
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1967,59,-0.0139,0.2984
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1968,58,-0.0165,0.2196
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1969,57,-0.0191,0.1602
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1970,56,-0.0276,0.0749
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1971,55,-0.0285,0.0641
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1972,54,-0.028,0.0876
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1973,53,-0.0322,0.0496
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1974,52,-0.0332,0.0468
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1975,51,-0.0332,0.0542
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1976,50,-0.033,0.0695
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1977,49,-0.0366,0.0474
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1978,48,-0.0397,0.0375
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1979,47,-0.049,0.0203
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1980,46,-0.053,0.0158
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1981,45,-0.0608,0.0055
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1982,44,-0.0672,0.0038
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1983,43,-0.0763,0.0027
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1984,42,-0.0891,0.0016
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1985,41,-0.0894,0.0026
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1986,40,-0.087,0.0056
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1987,39,-0.1002,0.0033
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1988,38,-0.1145,0.0011
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1989,37,-0.1185,0.0014
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1990,36,-0.1047,0.0046
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1991,35,-0.1061,0.0086
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1992,34,-0.1165,0.0067
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1993,33,-0.1205,0.0089
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1994,32,-0.1017,0.0277
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1995,31,-0.0944,0.0565
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1996,30,-0.0944,0.0937
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1997,29,-0.0636,0.1974
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1998,28,-0.0469,0.3564
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1999,27,-0.0224,0.6201
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2000,26,-0.0006,1.0
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2001,25,0.0287,0.5948
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2002,24,0.0395,0.4172
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2003,23,0.0171,0.676
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2004,22,0.0441,0.2876
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2005,21,0.0749,0.1967
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2006,20,0.0876,0.1859
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2007,19,0.1151,0.0344
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2008,18,0.1533,0.0137
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2009,17,0.1649,0.006
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",2010,16,0.1871,0.0086
+clorofila peninsula_antartica,OC-CCI v6 (ESA),1998,28,0.01,0.298
+clorofila peninsula_antartica,OC-CCI v6 (ESA),1999,27,0.0054,0.5629
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2000,26,0.0076,0.4574
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2001,25,0.0113,0.2755
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2002,24,0.0115,0.3371
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2003,23,0.0138,0.2944
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2004,22,0.01,0.468
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2005,21,0.0103,0.5306
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2006,20,0.0122,0.4605
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2007,19,0.0269,0.1433
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2008,18,0.0269,0.2008
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2009,17,0.0214,0.3081
+clorofila peninsula_antartica,OC-CCI v6 (ESA),2010,16,0.023,0.3984
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2003,23,-0.1363,0.676
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2004,22,-0.0512,1.0
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2005,21,0.1076,0.6119
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2006,20,0.2321,0.3514
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2007,19,0.3813,0.1248
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2008,18,0.5107,0.0395
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2009,17,0.5784,0.0217
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2010,16,0.6546,0.0326

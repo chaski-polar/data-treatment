@@ -1,0 +1,15 @@
+prueba,zona,periodo,n_anios,tau,p,tendencia_por_decada,p_fdr
+E1 meses con clorofila <= -30 % por año,paita,1998-2025,28,0.1168,0.4232,-0.0,0.7407
+E1 meses con temperatura >= +1.0 °C sobre 1986-2015 por año,paita,1986-2025,40,0.0142,0.9042,-0.0,1.0
+E1 meses con clorofila <= -30 % por año,chimbote,1998-2025,28,0.1433,0.3115,-0.0,0.6239
+E1 meses con temperatura >= +1.0 °C sobre 1986-2015 por año,chimbote,1986-2025,40,0.0657,0.5804,-0.0,0.8258
+E1 meses con clorofila <= -30 % por año,callao,1998-2025,28,0.0,1.0,-0.0,1.0
+E1 meses con temperatura >= +1.0 °C sobre 1986-2015 por año,callao,1986-2025,40,0.1368,0.2545,-0.0,0.6239
+E1 meses con clorofila <= -30 % por año,pisco,1998-2025,28,0.1846,0.2066,-0.0,0.6239
+E1 meses con temperatura >= +1.0 °C sobre 1986-2015 por año,pisco,1986-2025,40,0.0656,0.5898,-0.0,0.8258
+E1 meses con clorofila <= -30 % por año,ilo,1998-2025,28,-0.245,0.0834,-0.7692,0.5837
+E1 meses con temperatura >= +1.0 °C sobre 1986-2015 por año,ilo,1986-2025,40,-0.1464,0.2455,-0.0,0.6239
+E1 meses con clorofila <= -30 % por año,rey_jorge,1998-2025,4,,,,1.0
+E1 meses con temperatura >= +0.5 °C sobre 1986-2015 por año,rey_jorge,1986-2025,33,0.0306,0.8234,-0.0,1.0
+E1 meses con clorofila <= -30 % por año,peninsula_antartica,1998-2025,21,-0.357,0.0427,-0.0,0.5837
+E1 meses con temperatura >= +0.5 °C sobre 1986-2015 por año,peninsula_antartica,1986-2025,40,-0.1202,0.312,-0.0,0.6239
