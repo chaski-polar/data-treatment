@@ -1,0 +1,111 @@
+serie,fuente,periodo,metodo,n,tendencia_por_decada,p,significativa_p05
+SST paita,CRW v3.1 (NOAA),1986-2025,Mann-Kendall anual (media del año),40,-0.043,0.8521,False
+SST paita,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo verano (dic-mar)",40,-0.0325,0.7977,False
+SST paita,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo invierno (jun-sep)",40,-0.0217,0.8248,False
+SST paita,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall estacional (Hirsch, mensual)",480,-0.0373,0.38,False
+SST paita,CRW v3.1 (NOAA),1986-2025,Regresión mensual sin estacionalidad (n efectivo),480,-0.0414,0.8275,False
+SST paita,"ERSST v5 (NOAA, 2 grados)",1950-2025,Mann-Kendall anual (media del año),76,0.1119,0.0335,True
+SST paita,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo verano (dic-mar)",76,0.1194,0.012,True
+SST paita,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo invierno (jun-sep)",76,0.0979,0.1144,False
+SST paita,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall estacional (Hirsch, mensual)",912,0.109,0.0,True
+SST paita,"ERSST v5 (NOAA, 2 grados)",1950-2025,Regresión mensual sin estacionalidad (n efectivo),912,0.1111,0.191,False
+clorofila paita,OC-CCI v6 (ESA),1998-2025,Mann-Kendall anual (media del año),28,-0.0352,0.4683,False
+clorofila paita,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo verano (dic-mar)",28,-0.1533,0.0933,False
+clorofila paita,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo invierno (jun-sep)",28,0.0206,0.7992,False
+clorofila paita,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall estacional (Hirsch, mensual)",336,-0.0296,0.2966,False
+clorofila paita,OC-CCI v6 (ESA),1998-2025,Regresión mensual sin estacionalidad (n efectivo),336,-0.0307,0.5727,False
+SST chimbote,CRW v3.1 (NOAA),1986-2025,Mann-Kendall anual (media del año),40,0.0539,0.7093,False
+SST chimbote,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo verano (dic-mar)",40,-0.0425,0.7708,False
+SST chimbote,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo invierno (jun-sep)",40,0.0489,0.6749,False
+SST chimbote,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall estacional (Hirsch, mensual)",480,0.0132,0.7621,False
+SST chimbote,CRW v3.1 (NOAA),1986-2025,Regresión mensual sin estacionalidad (n efectivo),480,0.0135,0.9448,False
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1950-2025,Mann-Kendall anual (media del año),76,0.0972,0.0673,False
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo verano (dic-mar)",76,0.131,0.0036,True
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo invierno (jun-sep)",76,0.0784,0.1873,False
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall estacional (Hirsch, mensual)",912,0.1009,0.0,True
+SST chimbote,"ERSST v5 (NOAA, 2 grados)",1950-2025,Regresión mensual sin estacionalidad (n efectivo),912,0.099,0.2036,False
+clorofila chimbote,OC-CCI v6 (ESA),1998-2025,Mann-Kendall anual (media del año),28,-0.1537,0.2305,False
+clorofila chimbote,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo verano (dic-mar)",28,0.0693,0.6525,False
+clorofila chimbote,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo invierno (jun-sep)",28,-0.2951,0.0007,True
+clorofila chimbote,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall estacional (Hirsch, mensual)",334,-0.1195,0.0368,True
+clorofila chimbote,OC-CCI v6 (ESA),1998-2025,Regresión mensual sin estacionalidad (n efectivo),334,-0.1016,0.3556,False
+SST callao,CRW v3.1 (NOAA),1986-2025,Mann-Kendall anual (media del año),40,0.0331,0.8157,False
+SST callao,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo verano (dic-mar)",40,-0.025,0.8704,False
+SST callao,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo invierno (jun-sep)",40,-0.0116,0.9814,False
+SST callao,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall estacional (Hirsch, mensual)",480,-0.0275,0.5584,False
+SST callao,CRW v3.1 (NOAA),1986-2025,Regresión mensual sin estacionalidad (n efectivo),480,-0.0042,0.9796,False
+SST callao,"ERSST v5 (NOAA, 2 grados)",1950-2025,Mann-Kendall anual (media del año),76,0.1133,0.0133,True
+SST callao,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo verano (dic-mar)",76,0.1531,0.0001,True
+SST callao,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo invierno (jun-sep)",76,0.0842,0.1365,False
+SST callao,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall estacional (Hirsch, mensual)",912,0.121,0.0,True
+SST callao,"ERSST v5 (NOAA, 2 grados)",1950-2025,Regresión mensual sin estacionalidad (n efectivo),912,0.1182,0.0644,False
+clorofila callao,OC-CCI v6 (ESA),1998-2025,Mann-Kendall anual (media del año),28,0.0296,0.7992,False
+clorofila callao,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo verano (dic-mar)",28,0.2165,0.4446,False
+clorofila callao,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo invierno (jun-sep)",28,-0.1462,0.0177,True
+clorofila callao,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall estacional (Hirsch, mensual)",335,0.0074,0.7834,False
+clorofila callao,OC-CCI v6 (ESA),1998-2025,Regresión mensual sin estacionalidad (n efectivo),335,0.0409,0.6914,False
+SST pisco,CRW v3.1 (NOAA),1986-2025,Mann-Kendall anual (media del año),40,0.0153,0.8157,False
+SST pisco,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo verano (dic-mar)",40,-0.1486,0.2041,False
+SST pisco,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo invierno (jun-sep)",40,0.1009,0.4559,False
+SST pisco,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall estacional (Hirsch, mensual)",480,-0.025,0.5561,False
+SST pisco,CRW v3.1 (NOAA),1986-2025,Regresión mensual sin estacionalidad (n efectivo),480,-0.0142,0.9239,False
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1950-2025,Mann-Kendall anual (media del año),76,0.1182,0.0069,True
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo verano (dic-mar)",76,0.16,0.0,True
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo invierno (jun-sep)",76,0.0836,0.1207,False
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall estacional (Hirsch, mensual)",912,0.125,0.0,True
+SST pisco,"ERSST v5 (NOAA, 2 grados)",1950-2025,Regresión mensual sin estacionalidad (n efectivo),912,0.1218,0.0456,True
+clorofila pisco,OC-CCI v6 (ESA),1998-2025,Mann-Kendall anual (media del año),28,-0.1657,0.129,False
+clorofila pisco,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo verano (dic-mar)",28,-0.2452,0.201,False
+clorofila pisco,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo invierno (jun-sep)",28,-0.0852,0.1504,False
+clorofila pisco,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall estacional (Hirsch, mensual)",336,-0.0878,0.0289,True
+clorofila pisco,OC-CCI v6 (ESA),1998-2025,Regresión mensual sin estacionalidad (n efectivo),336,-0.112,0.1922,False
+SST ilo,CRW v3.1 (NOAA),1986-2025,Mann-Kendall anual (media del año),40,-0.1035,0.0591,False
+SST ilo,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo verano (dic-mar)",40,-0.2332,0.0003,True
+SST ilo,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo invierno (jun-sep)",40,-0.0288,0.7354,False
+SST ilo,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall estacional (Hirsch, mensual)",480,-0.1,0.0002,True
+SST ilo,CRW v3.1 (NOAA),1986-2025,Regresión mensual sin estacionalidad (n efectivo),480,-0.1246,0.0526,False
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1950-2025,Mann-Kendall anual (media del año),76,0.1537,0.0,True
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo verano (dic-mar)",76,0.2057,0.0,True
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo invierno (jun-sep)",76,0.1006,0.0222,True
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall estacional (Hirsch, mensual)",912,0.1599,0.0,True
+SST ilo,"ERSST v5 (NOAA, 2 grados)",1950-2025,Regresión mensual sin estacionalidad (n efectivo),912,0.1607,0.0,True
+clorofila ilo,OC-CCI v6 (ESA),1998-2025,Mann-Kendall anual (media del año),28,0.1477,0.129,False
+clorofila ilo,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo verano (dic-mar)",28,0.0989,0.4215,False
+clorofila ilo,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo invierno (jun-sep)",28,0.109,0.1394,False
+clorofila ilo,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall estacional (Hirsch, mensual)",336,0.1166,0.0024,True
+clorofila ilo,OC-CCI v6 (ESA),1998-2025,Regresión mensual sin estacionalidad (n efectivo),336,0.1607,0.0529,False
+SST rey_jorge,CRW v3.1 (NOAA),1986-2025,Mann-Kendall anual (media del año),40,0.0188,0.6412,False
+SST rey_jorge,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo verano (dic-mar)",40,0.0476,0.2083,False
+SST rey_jorge,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo invierno (jun-sep)",17,0.0957,0.1767,False
+SST rey_jorge,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall estacional (Hirsch, mensual)",403,0.0692,0.0,True
+SST rey_jorge,CRW v3.1 (NOAA),1986-2025,Regresión mensual sin estacionalidad (n efectivo),403,0.0429,0.1456,False
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1950-2025,Mann-Kendall anual (media del año),76,0.056,0.0,True
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo verano (dic-mar)",76,0.0284,0.0436,True
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo invierno (jun-sep)",76,0.0534,0.0,True
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall estacional (Hirsch, mensual)",912,0.045,0.0,True
+SST rey_jorge,"ERSST v5 (NOAA, 2 grados)",1950-2025,Regresión mensual sin estacionalidad (n efectivo),912,0.0509,0.0007,True
+clorofila rey_jorge,OC-CCI v6 (ESA),1998-2025,Mann-Kendall anual (media del año),28,0.0385,0.072,False
+clorofila rey_jorge,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo verano (dic-mar)",28,0.0498,0.1744,False
+clorofila rey_jorge,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo invierno (jun-sep)",0,,,False
+clorofila rey_jorge,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall estacional (Hirsch, mensual)",226,0.0148,0.0006,True
+clorofila rey_jorge,OC-CCI v6 (ESA),1998-2025,Regresión mensual sin estacionalidad (n efectivo),226,0.0484,0.0822,False
+SST peninsula_antartica,CRW v3.1 (NOAA),1986-2025,Mann-Kendall anual (media del año),40,-0.0111,0.7619,False
+SST peninsula_antartica,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo verano (dic-mar)",40,0.0181,0.7977,False
+SST peninsula_antartica,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall anual, solo invierno (jun-sep)",40,-0.0124,0.6919,False
+SST peninsula_antartica,CRW v3.1 (NOAA),1986-2025,"Mann-Kendall estacional (Hirsch, mensual)",480,0.0308,0.1398,False
+SST peninsula_antartica,CRW v3.1 (NOAA),1986-2025,Regresión mensual sin estacionalidad (n efectivo),480,-0.0058,0.8825,False
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1950-2025,Mann-Kendall anual (media del año),76,0.0337,0.0027,True
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo verano (dic-mar)",76,0.0149,0.2546,False
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall anual, solo invierno (jun-sep)",76,0.0441,0.0,True
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1950-2025,"Mann-Kendall estacional (Hirsch, mensual)",912,0.0323,0.0,True
+SST peninsula_antartica,"ERSST v5 (NOAA, 2 grados)",1950-2025,Regresión mensual sin estacionalidad (n efectivo),912,0.0312,0.0327,True
+clorofila peninsula_antartica,OC-CCI v6 (ESA),1998-2025,Mann-Kendall anual (media del año),28,0.01,0.298,False
+clorofila peninsula_antartica,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo verano (dic-mar)",28,0.0099,0.681,False
+clorofila peninsula_antartica,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall anual, solo invierno (jun-sep)",0,,,False
+clorofila peninsula_antartica,OC-CCI v6 (ESA),1998-2025,"Mann-Kendall estacional (Hirsch, mensual)",245,0.0093,0.0175,True
+clorofila peninsula_antartica,OC-CCI v6 (ESA),1998-2025,Regresión mensual sin estacionalidad (n efectivo),245,0.0072,0.567,False
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2003-2025,Mann-Kendall anual (media del año),23,-0.1363,0.676,False
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2003-2025,"Mann-Kendall anual, solo verano (dic-mar)",23,0.3225,0.4639,False
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2003-2025,"Mann-Kendall anual, solo invierno (jun-sep)",23,-0.2052,0.1554,False
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2003-2025,"Mann-Kendall estacional (Hirsch, mensual)",280,-0.1398,0.0822,False
+clorofila chimbote,"MODIS-Aqua (NASA, Giovanni)",2003-2025,Regresión mensual sin estacionalidad (n efectivo),280,0.0143,0.9462,False
