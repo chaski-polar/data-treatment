@@ -50,7 +50,7 @@ Viento a favor de la surgencia (componente hacia el noroeste), sin estacionalida
 
 - Sí: no se encontró relación robusta entre la clorofila y los desembarques mensuales, el viento local ni El Niño → Antártida, con el criterio indicado.
 - No: no corresponde afirmar que la asimetría predice mejor que la relación lineal, ni sugerir un vínculo con la Antártida.
-- Quedan sin probar B2, B3, B4, B5, A2 y A5 (esta última depende de la descarga de nivel del mar de CMEMS).
+- Las pruebas restantes (A2, A5, B2 a B5) se resumen en la segunda tanda, más abajo.
 
 ---
 
@@ -99,4 +99,4 @@ Pota, jurel, sardina, concha, anchoveta de Chile y krill frente a hielo marino y
 
 ## Balance de las pruebas
 
-De unas 940 pruebas nuevas (A1, A3, A4, B1 a B5, A2, A5), solo dos grupos pasan el criterio: la relación mecánica Kd490–clorofila y el nivel del mar sin control de El Niño. En ambos casos no son hallazgos independientes. El resultado general es consistente con lo anterior: El Niño explica casi todo lo que se ve en la costa y no se encontró un vínculo antártico robusto.
+De unas 900 pruebas nuevas (A1, A3, A4, B1 a B5, A2, A5), solo dos grupos pasan el criterio: la relación mecánica Kd490–clorofila y el nivel del mar sin control de El Niño. En ambos casos no son hallazgos independientes. El resultado general es consistente con lo anterior: El Niño explica casi todo lo que se ve en la costa y no se encontró un vínculo antártico robusto.
