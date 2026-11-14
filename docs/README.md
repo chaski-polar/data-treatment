@@ -2,6 +2,10 @@
 
 La documentación está agrupada por función y tema. Empieza por la metodología para entender el diseño general y luego consulta los reportes de datos, los pipelines o los análisis.
 
+Para consultar los resultados integrados y las relaciones prioritarias, lee el
+[reporte consolidado de resultados](pruebas_pendientes/REPORTE_CONSOLIDADO_RESULTADOS.md),
+actualizado al 14 de noviembre de 2026.
+
 ## Recorrido recomendado
 
 1. [Metodología del proyecto](01_metodologia/metodologia.md)

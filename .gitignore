@@ -30,3 +30,6 @@ graphify-out/cache/
 analysis_r/Rlib/
 analysis_r/data/raw/
 analysis_r/data/processed/
+
+.env
+graphify-out/memory/
