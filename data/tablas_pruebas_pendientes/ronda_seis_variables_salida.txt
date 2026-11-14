@@ -1,0 +1,101 @@
+pruebas totales: 162 | significativas FDR 5 %: 38
+                                      variable    periodo    n  sen_decada  lo_decada  hi_decada       p   q_fdr  signif_fdr
+0         Nivel del mar (GLORYS zos, Humboldt)  1998-2025   28      0.0259     0.0196     0.0329  0.0000  0.0001        True
+2         Nivel del mar (GLORYS zos, Humboldt)  2003-2025   23      0.0287     0.0211     0.0395  0.0000  0.0001        True
+4         Nivel del mar (GLORYS zos, Humboldt)  2010-2025   16      0.0266     0.0076     0.0487  0.0115  0.0489        True
+6          Nivel del mar (mareografo Matarani)  1942-1969   27     -0.0098    -0.0246     0.0030  0.1043  0.2485       False
+8          Nivel del mar (mareografo Matarani)  1950-1969   19     -0.0006    -0.0267     0.0259  1.0000  1.0000       False
+10           Nivel del mar (mareografo Talara)  1942-1969   28      0.0080    -0.0071     0.0245  0.2281  0.4561       False
+12           Nivel del mar (mareografo Talara)  1950-1969   20      0.0168    -0.0161     0.0456  0.2598  0.4952       False
+14         Nivel del mar (mareografo Chimbote)  1955-1968   14     -0.0602    -0.1833     0.0178  0.1010  0.2480       False
+16         Nivel del mar (mareografo San Juan)  1958-1968    9     -0.1165    -0.1581    -0.0433  0.0024  0.0176        True
+18           Nivel del mar (mareografo Callao)  1970-2024   54     -0.0126    -0.0200    -0.0050  0.0037  0.0231        True
+20           Nivel del mar (mareografo Callao)  1998-2024   26     -0.0121    -0.0327     0.0133  0.4313  0.6369       False
+22           Nivel del mar (mareografo Callao)  2003-2024   21     -0.0153    -0.0456     0.0196  0.4921  0.6872       False
+24           Nivel del mar (mareografo Callao)  2010-2024   14     -0.0740    -0.1176    -0.0330  0.0020  0.0176        True
+26           Nivel del mar (mareografo Callao)  1979-2024   45     -0.0166    -0.0242    -0.0082  0.0003  0.0062        True
+28           Nivel del mar (mareografo Callao)  1980-2024   44     -0.0163    -0.0249    -0.0076  0.0007  0.0100        True
+30           Nivel del mar (mareografo Callao)  1990-2024   34     -0.0147    -0.0276    -0.0008  0.0393  0.1159       False
+32   Hielo marino antartico (extension, NSIDC)  1979-2026   48     -0.0276    -0.1476     0.1029  0.6957  0.8256       False
+34   Hielo marino antartico (extension, NSIDC)  1998-2026   29     -0.4261    -0.6127    -0.0745  0.0104  0.0456        True
+36   Hielo marino antartico (extension, NSIDC)  2003-2026   24     -0.6356    -0.9817    -0.3831  0.0025  0.0176        True
+38   Hielo marino antartico (extension, NSIDC)  2010-2026   17     -1.1583    -1.7119    -0.4917  0.0018  0.0176        True
+40   Hielo marino antartico (extension, NSIDC)  1980-2026   47     -0.0241    -0.1465     0.1185  0.8044  0.8968       False
+42   Hielo marino antartico (extension, NSIDC)  1990-2026   37     -0.1629    -0.3317     0.0531  0.1106  0.2523       False
+44           TSM ERSST Norte-centro (Nino 1+2)  1854-2026  173      0.0306     0.0074     0.0563  0.0073  0.0372        True
+46           TSM ERSST Norte-centro (Nino 1+2)  1998-2026   29      0.1729    -0.1789     0.5945  0.4233  0.6369       False
+48           TSM ERSST Norte-centro (Nino 1+2)  2003-2026   24      0.2319    -0.1927     0.8603  0.3893  0.6369       False
+50           TSM ERSST Norte-centro (Nino 1+2)  2010-2026   17      0.2575    -0.6881     1.5550  0.6553  0.8145       False
+52           TSM ERSST Norte-centro (Nino 1+2)  1979-2026   48      0.0438    -0.1234     0.2032  0.5695  0.7447       False
+54           TSM ERSST Norte-centro (Nino 1+2)  1950-2026   77      0.1230     0.0505     0.1990  0.0022  0.0176        True
+56           TSM ERSST Norte-centro (Nino 1+2)  1980-2026   47      0.0560    -0.1155     0.2173  0.5150  0.6996       False
+58           TSM ERSST Norte-centro (Nino 1+2)  1990-2026   37      0.0319    -0.1940     0.2914  0.8139  0.8968       False
+60           TSM ERSST Norte-centro (Nino 1+2)  1900-2026  127      0.0765     0.0422     0.1112  0.0000  0.0008        True
+62                         TSM ERSST Costa sur  1854-2026  173      0.0245     0.0014     0.0470  0.0357  0.1071       False
+64                         TSM ERSST Costa sur  1998-2026   29      0.1255    -0.2150     0.4820  0.4020  0.6369       False
+66                         TSM ERSST Costa sur  2003-2026   24      0.1821    -0.2791     0.7177  0.4172  0.6369       False
+68                         TSM ERSST Costa sur  2010-2026   17      0.4508    -0.5199     1.3964  0.3488  0.6012       False
+70                         TSM ERSST Costa sur  1979-2026   48     -0.0326    -0.1571     0.0969  0.7222  0.8478       False
+72                         TSM ERSST Costa sur  1950-2026   77      0.1284     0.0516     0.1925  0.0011  0.0137        True
+74                         TSM ERSST Costa sur  1980-2026   47     -0.0272    -0.1618     0.1072  0.7482  0.8597       False
+76                         TSM ERSST Costa sur  1990-2026   37      0.0226    -0.2110     0.2076  0.8753  0.9390       False
+78                         TSM ERSST Costa sur  1900-2026  127      0.1053     0.0705     0.1405  0.0000  0.0000        True
+80                         TSM satelital paita  1998-2025   28      0.1373    -0.2451     0.5735  0.4215  0.6369       False
+82                         TSM satelital paita  2003-2025   23      0.1833    -0.3250     0.8708  0.4325  0.6369       False
+84                         TSM satelital paita  2010-2025   16     -0.0155    -1.1333     1.2639  1.0000  1.0000       False
+86                      TSM satelital chimbote  1998-2025   28      0.2991    -0.1565     0.7255  0.1504  0.3250       False
+88                      TSM satelital chimbote  2003-2025   23      0.3369    -0.2516     0.9948  0.1888  0.3973       False
+90                      TSM satelital chimbote  2010-2025   16     -0.0471    -1.3187     1.3755  0.9647  0.9829       False
+92                        TSM satelital callao  1998-2025   28      0.2326    -0.1029     0.5857  0.1744  0.3718       False
+94                        TSM satelital callao  2003-2025   23      0.2726    -0.1922     0.7995  0.2272  0.4561       False
+96                        TSM satelital callao  2010-2025   16     -0.1627    -1.2260     1.0937  0.8944  0.9470       False
+98                         TSM satelital pisco  1998-2025   28      0.1390    -0.1452     0.4804  0.2463  0.4807       False
+100                        TSM satelital pisco  2003-2025   23      0.1958    -0.1954     0.7208  0.3194  0.5749       False
+102                        TSM satelital pisco  2010-2025   16     -0.1610    -1.0146     0.9156  0.8248  0.8968       False
+104                          TSM satelital ilo  1998-2025   28     -0.0568    -0.3073     0.1521  0.5700  0.7447       False
+106                          TSM satelital ilo  2003-2025   23      0.0190    -0.3158     0.2971  0.9584  0.9826       False
+108                          TSM satelital ilo  2010-2025   16     -0.2375    -0.8533     0.3018  0.4503  0.6459       False
+110               Oxigeno 100-200 m (Humboldt)  1998-2025   28      1.5970    -3.7183     5.6283  0.4215  0.6369       False
+112               Oxigeno 100-200 m (Humboldt)  2003-2025   23      5.3627     1.6671    12.2777  0.0024  0.0176        True
+114               Oxigeno 100-200 m (Humboldt)  2010-2025   16      3.5666   -11.9221    15.5618  0.5056  0.6996       False
+116           Temperatura 100-200 m (Humboldt)  1998-2025   28      0.1614     0.0396     0.2750  0.0141  0.0519       False
+118           Temperatura 100-200 m (Humboldt)  2003-2025   23      0.2600     0.1010     0.3952  0.0013  0.0153        True
+120           Temperatura 100-200 m (Humboldt)  2010-2025   16      0.3720     0.0447     0.5749  0.0326  0.1036       False
+122          Viento rapidez Paita (hasta 2016)  1998-2016   19      0.0392    -0.2023     0.2681  0.6787  0.8145       False
+124          Viento rapidez Paita (hasta 2016)  2003-2016   14     -0.1751    -0.5726     0.1724  0.4506  0.6459       False
+126                Viento v Paita (hasta 2016)  1998-2016   19      0.0792    -0.1677     0.2840  0.6787  0.8145       False
+128                Viento v Paita (hasta 2016)  2003-2016   14     -0.1610    -0.5383     0.1288  0.3308  0.5825       False
+130       Viento rapidez Chimbote (hasta 2016)  1998-2016   19     -0.3796    -0.6355    -0.0748  0.0128  0.0519       False
+132       Viento rapidez Chimbote (hasta 2016)  2003-2016   14     -0.5350    -0.7596    -0.0683  0.0264  0.0930       False
+134             Viento v Chimbote (hasta 2016)  1998-2016   19     -0.3375    -0.5481    -0.1021  0.0083  0.0394        True
+136             Viento v Chimbote (hasta 2016)  2003-2016   14     -0.4990    -0.7429    -0.1436  0.0098  0.0439        True
+138         Viento rapidez Callao (hasta 2016)  1998-2016   19     -0.4517    -0.7125    -0.2011  0.0032  0.0211        True
+140         Viento rapidez Callao (hasta 2016)  2003-2016   14     -0.5913    -0.8768    -0.1350  0.0138  0.0519       False
+142               Viento v Callao (hasta 2016)  1998-2016   19     -0.4228    -0.6641    -0.1652  0.0024  0.0176        True
+144               Viento v Callao (hasta 2016)  2003-2016   14     -0.5082    -0.8416    -0.1536  0.0067  0.0352        True
+146          Viento rapidez Pisco (hasta 2016)  1998-2016   19     -0.2695    -0.5694    -0.0148  0.0286  0.0946       False
+148          Viento rapidez Pisco (hasta 2016)  2003-2016   14     -0.4363    -0.8073    -0.0194  0.0138  0.0519       False
+150                Viento v Pisco (hasta 2016)  1998-2016   19     -0.2281    -0.5253    -0.0169  0.0286  0.0946       False
+152                Viento v Pisco (hasta 2016)  2003-2016   14     -0.3953    -0.7235    -0.0407  0.0138  0.0519       False
+154            Viento rapidez Ilo (hasta 2016)  1998-2016   19     -0.0419    -0.2715     0.0656  0.4893  0.6872       False
+156            Viento rapidez Ilo (hasta 2016)  2003-2016   14     -0.0259    -0.3142     0.2609  0.9145  0.9581       False
+158                  Viento v Ilo (hasta 2016)  1998-2016   19      0.0880    -0.1221     0.2596  0.3270  0.5821       False
+160                  Viento v Ilo (hasta 2016)  2003-2016   14      0.0740    -0.1730     0.3612  0.5106  0.6996       False
+
+SIN anios Nino extremo, solo significativas FDR:
+                                      variable    periodo    n  sen_decada       p   q_fdr
+1         Nivel del mar (GLORYS zos, Humboldt)  1999-2025   25      0.0257  0.0000  0.0000
+3         Nivel del mar (GLORYS zos, Humboldt)  2003-2025   21      0.0265  0.0000  0.0002
+17         Nivel del mar (mareografo San Juan)  1958-1968    9     -0.1165  0.0024  0.0176
+19           Nivel del mar (mareografo Callao)  1970-2024   52     -0.0130  0.0050  0.0277
+25           Nivel del mar (mareografo Callao)  2010-2024   13     -0.0744  0.0067  0.0352
+27           Nivel del mar (mareografo Callao)  1979-2024   43     -0.0170  0.0005  0.0074
+29           Nivel del mar (mareografo Callao)  1980-2024   42     -0.0169  0.0009  0.0118
+39   Hielo marino antartico (extension, NSIDC)  2010-2026   15     -0.8597  0.0083  0.0394
+55           TSM ERSST Norte-centro (Nino 1+2)  1950-2026   74      0.1005  0.0086  0.0398
+61           TSM ERSST Norte-centro (Nino 1+2)  1900-2026  124      0.0666  0.0002  0.0049
+73                         TSM ERSST Costa sur  1950-2026   74      0.1077  0.0048  0.0275
+79                         TSM ERSST Costa sur  1900-2026  124      0.0954  0.0000  0.0000
+113               Oxigeno 100-200 m (Humboldt)  2003-2025   21      4.7632  0.0021  0.0176
+117           Temperatura 100-200 m (Humboldt)  1999-2025   25      0.1640  0.0046  0.0275
+119           Temperatura 100-200 m (Humboldt)  2003-2025   21      0.2328  0.0033  0.0211
