@@ -132,6 +132,22 @@ Script: `enfoque_mecanismo.py`. Panel de conectividad (región peru_humboldt, re
 
 Tablas: `tablas/nuevos_E7_eslabonA_nino_a_variable.csv`, `tablas/nuevos_E7_eslabonB_variable_a_clorofila.csv`.
 
+### E8. Capacidad predictiva (validación con origen móvil)
+
+Script: `prediccion_validacion.py`. Tablas: `tablas/nuevos_E8_*.csv`. Para cada año de 2010 a 2025 se ajusta una regresión con datos anteriores a ese año (anomalía de clorofila en función de Niño 1+2 y de la propia clorofila, h meses antes) y se predice el año siguiente. Se compara con la climatología (predecir 0) y con la persistencia (repetir la anomalía de h meses antes).
+
+| Zona | Habilidad a 1 mes frente a la climatología | A 3 meses | r a 1 mes |
+|---|---|---|---|
+| Ilo | +17,4 % | +4,4 % | 0,57 |
+| Chimbote | +14,4 % | +3,4 % | 0,54 |
+| Paita | +12,5 % | +4,2 % | 0,49 |
+| Callao | +8,3 % | +3,1 % | 0,40 |
+| Pisco | +5,2 % | −4,1 % | 0,35 |
+
+- Hay capacidad predictiva modesta a 1 mes y cae a casi nada a 3 meses. Supera siempre a la persistencia (entre +9 % y +31 %).
+- Es una predicción de la anomalía mensual con la información disponible h meses antes; no es una predicción de El Niño.
+- **Comprobación con 2026 (siete meses con clorofila observada):** con un ajuste 1998-2025 y el Niño 1+2 de cada mes, la predicción sigue bien la observada en Callao (r = 0,84; media observada −16,3 % y predicha −19,6 %), Chimbote (r = 0,77; −15,3 % y −19,2 %), Pisco (r = 0,91) y Paita (r = 0,64). En Ilo falla (observada −45 %, predicha −8 %). Es una comprobación con Niño 1+2 conocido, no una predicción hacia adelante, y con solo 7 meses.
+
 ## 4. Pendiente
 
 - Repetir el análisis de tendencias con MODIS-Aqua (Giovanni) para las demás zonas y con la temperatura de MODIS-Aqua para la Antártida, como tercera fuente independiente.
