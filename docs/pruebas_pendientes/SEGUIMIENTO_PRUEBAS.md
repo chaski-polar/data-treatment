@@ -61,7 +61,8 @@ Con la serie larga disponible, la afirmación sostenible es "no se detecta una t
 | Dato | Ubicación | Estado |
 |---|---|---|
 | Clorofila MODIS-Aqua, Chimbote, 2002-07 a 2025-11 (Giovanni) | `datos/giovanni/chimbote_modisa_chl_mensual_2002-2025.csv` | Descargado |
-| Giovanni: Paita, Callao, Pisco, Ilo, Rey Jorge, Península | — | Pendiente. El periodo completo tarda varios minutos por zona; se puede partir en tramos. |
+| Clorofila MODIS-Aqua, Paita, 2002-07 a 2025-11 (Giovanni) | `datos/giovanni/paita_modisa_chl_mensual_2002-2025.csv` | Descargado (tardó unos 4 minutos) |
+| Giovanni: Callao, Pisco, Ilo, Rey Jorge, Península | — | Pendiente. Cada zona tarda varios minutos. |
 | ERSST v5 mensual 1854-2026 (NOAA PSL, 162 MB) | `datos/tendencias_largas/ersstv5_sst_mnmean.nc` | Descargado; no se sube al repositorio |
 | CRW v3.1 (temperatura 1986-2025) | `datos/peru/variables_mensuales.csv` | Ya disponible |
 | CMEMS año por año (nivel del mar, nutrientes) | `datos/copernicus/anual/` | Detenida: el panel de conectividad ya traía esas variables hasta 2025 |
@@ -79,6 +80,7 @@ Scripts: `enfoques_nuevos.py` (E1 a E3), `enfoque_adelanto.py` (E4), `enfoque_ll
 | E3 | Estudio de eventos de El Niño: relación entre la intensidad del pico y la caída de la clorofila, y recuperación | Solo 4 eventos con Niño 1+2 ≥ 1,5 °C (1998, 2015, 2023 y 2026, este último sin terminar): insuficiente | No concluyente |
 | E4 | Capacidad de adelanto: Niño 1+2 y ONI frente a la clorofila, 0 a 8 meses | 135 pruebas, 24 robustas (ver abajo) | Un resultado nuevo |
 | E5 | ¿La lluvia explica el hallazgo de Paita? (NASA POWER) | No: la relación sigue igual al quitar la lluvia | Sin explicación |
+| E6 | Contraste de E4 con una segunda fuente: clorofila MODIS-Aqua (NASA, Giovanni), Paita, 2002-07 a 2025-11 | Misma dirección y forma, pero no significativa con FDR (r = +0,16 a +0,22 a 2-8 meses; p_fdr de 0,05 a 0,13) | E4 se debilita: candidato no confirmado |
 
 ### E4. Respuesta tardía en Paita–Sechura
 
@@ -95,13 +97,19 @@ Scripts: `enfoques_nuevos.py` (E1 a E3), `enfoque_adelanto.py` (E4), `enfoque_ll
 - La relación Niño 1+2 → clorofila de Paita a 5 meses sigue igual (r = +0,355) al quitar la parte explicada por la lluvia. La escorrentía de los ríos no explica el hallazgo.
 - Las hipótesis que quedan sin probar: recuperación tras el calentamiento (rebote de nutrientes y afloramiento), cambios en el algoritmo de color en aguas turbias y variación en la ventana de observación por nubosidad. Hace falta contrastarlo con otra fuente (clorofila MODIS-Aqua de Giovanni para Paita) antes de presentarlo como hallazgo.
 
+### E6. Segunda fuente para Paita (MODIS-Aqua, Giovanni)
+
+- Las anomalías de MODIS-Aqua y de OC-CCI en Paita se parecen (r = 0,63 en 280 meses).
+- Con MODIS-Aqua la relación Niño 1+2 → clorofila de Paita mantiene el signo positivo y crece con el desfase (de +0,06 sin desfase a +0,22 a 8 meses), pero ninguna combinación pasa FDR (p_fdr entre 0,05 y 0,13; n efectivo ≈ 104).
+- Con OC-CCI sobre el mismo periodo (2002-07 a 2025-11) el resultado sigue pasando FDR en los desfases de 3 a 8 meses, pero más débil que con la serie completa (r = +0,30 a 5 meses frente a +0,36), y en la primera mitad de ese periodo la correlación casi desaparece (+0,14 a 4 meses).
+- Con la serie más corta (23 años) y otra fuente, el rebote no se confirma como significativo.
+
 ### Estado
 
-Es el único resultado nuevo que cumple el criterio de aceptación, y no depende de 1998. Se presenta como candidato, no como hallazgo establecido: la explicación física no está probada y falta una segunda fuente.
+E4 no se confirma con una segunda fuente independiente: la dirección se repite, pero la significancia no. Se presenta como pista, no como hallazgo. Con OC-CCI pasa el criterio; con MODIS-Aqua (NASA), no. Lo honesto es decir que depende del producto y del periodo, lo mismo que se ve en las tendencias.
 
 ## 4. Pendiente
 
-- Contrastar la respuesta tardía de Paita (E4) con la clorofila MODIS-Aqua de Giovanni para esa zona.
 - Repetir el análisis de tendencias con MODIS-Aqua (Giovanni) para las demás zonas y con la temperatura de MODIS-Aqua para la Antártida, como tercera fuente independiente.
 - Usar OISST (NOAA, 1981-2026, 0,25 grados) como comparación de la temperatura antártica.
 - Implementar en la web el panel de tendencias (Mann-Kendall y pendiente de Sen, con la sensibilidad al periodo).
