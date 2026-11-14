@@ -1,5 +1,9 @@
 # Pruebas pendientes (13/11/2026)
 
+**Reporte principal:** [Reporte consolidado de resultados](REPORTE_CONSOLIDADO_RESULTADOS.md),
+con resumen inicial de relaciones interesantes, métodos, resultados históricos,
+correcciones de la ronda de tendencias y anexos completos de las pruebas recientes.
+
 - `SEGUIMIENTO_PRUEBAS.md`: registro de todo lo probado y su estado (se actualiza).
 - `tendencias.py`: tendencias (Mann-Kendall, Sen, serie larga).
 - `PRUEBAS_POSIBLES.md`: hipótesis, criterio de aceptación y viabilidad.
