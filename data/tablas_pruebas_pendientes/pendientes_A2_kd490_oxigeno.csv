@@ -1,0 +1,17 @@
+respuesta,control_nino12,lag,n,n_eff,r,p,r_sin1998,r_mitad1,r_mitad2,p_fdr,misma_direccion,robusta
+o2_peru_humboldt,False,0,336,105.4,0.1579,0.1071,0.0383,0.2154,0.1621,0.1318,True,False
+o2_peru_humboldt,True,0,336,115.0,-0.1875,0.0448,-0.2114,-0.1889,-0.147,0.0896,True,False
+o2_peru_humboldt,False,1,335,105.0,0.1822,0.0629,0.074,0.2731,0.1664,0.1118,True,False
+o2_peru_humboldt,True,1,335,114.7,-0.1935,0.0386,-0.2143,-0.181,-0.1616,0.0882,True,False
+o2_peru_humboldt,False,2,334,105.4,0.1719,0.079,0.0649,0.2933,0.1357,0.1212,True,False
+o2_peru_humboldt,True,2,334,114.5,-0.1587,0.0909,-0.1828,-0.1373,-0.1261,0.1212,True,False
+o2_peru_humboldt,False,3,333,105.0,0.1698,0.0833,0.0618,0.3198,0.1155,0.1212,True,False
+o2_peru_humboldt,True,3,333,114.6,-0.1016,0.2806,-0.1357,-0.0242,-0.1134,0.2993,True,False
+chl_occci,False,0,344,124.2,0.9946,0.0,0.9944,0.9948,0.9948,0.0,True,True
+chl_occci,True,0,343,127.5,0.9935,0.0,0.9936,0.9933,0.9938,0.0,True,True
+chl_occci,False,1,343,123.8,0.5933,0.0,0.5473,0.5891,0.5748,0.0,True,True
+chl_occci,True,1,342,127.1,0.5272,0.0,0.5125,0.4999,0.4952,0.0,True,True
+chl_occci,False,2,342,123.4,0.2983,0.0008,0.2379,0.3515,0.2238,0.0025,True,True
+chl_occci,True,2,341,127.3,0.2053,0.0204,0.1898,0.2089,0.109,0.0545,True,False
+chl_occci,False,3,341,122.9,0.1258,0.1657,0.0723,0.1212,0.0914,0.1893,True,False
+chl_occci,True,3,340,127.6,0.0267,0.7649,0.0195,-0.0427,-0.0272,0.7649,False,False

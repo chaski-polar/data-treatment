@@ -1,0 +1,7 @@
+respuesta,lag_nino,coef_interaccion,coef_sin1998,p_desplazamiento,p_fdr,robusta
+chl_rey_jorge_anom_pct,0,-0.065,-0.029,0.247,0.546,False
+chl_rey_jorge_anom_pct,6,0.078,0.085,0.162,0.546,False
+chl_peninsula_antartica_anom_pct,0,-0.021,0.025,0.747,0.747,False
+chl_peninsula_antartica_anom_pct,6,-0.03,-0.019,0.685,0.747,False
+sea_ice_antarctic_anom_mkm2,0,0.047,0.039,0.488,0.732,False
+sea_ice_antarctic_anom_mkm2,6,0.072,0.061,0.273,0.546,False
