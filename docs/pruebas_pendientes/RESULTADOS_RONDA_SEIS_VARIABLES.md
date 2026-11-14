@@ -26,27 +26,29 @@ Comprobar si otras variables, además de la clorofila, muestran una tendencia de
 ## Resultados (pendiente de Sen por década, todos los años)
 | Variable | Periodo | n | Pendiente/década (IC 95 %) | q (FDR) |
 |---|---|---|---|---|
-| Temperatura 100-200 m, Humboldt (°C) | 1998-2025 | 28 | +0,16 (0,04 a 0,28) | 0,034 |
-| Temperatura 100-200 m, Humboldt (°C) | 2003-2025 | 23 | +0,26 (0,10 a 0,40) | 0,005 |
-| Temperatura 100-200 m, Humboldt (°C) | 2010-2025 | 16 | +0,37 (0,04 a 0,57) | 0,076 (no significativo) |
+| Temperatura 100-200 m, Humboldt (°C) | 1998-2025 | 28 | +0,16 (0,04 a 0,28) | 0,052 (no significativo; al límite) |
+| Temperatura 100-200 m, Humboldt (°C) | 2003-2025 | 23 | +0,26 (0,10 a 0,40) | 0,015 |
+| Temperatura 100-200 m, Humboldt (°C) | 2010-2025 | 16 | +0,37 (0,04 a 0,57) | 0,104 (no significativo) |
 | Nivel del mar GLORYS, Humboldt (m) | 1998-2025 | 28 | +0,026 (0,020 a 0,033) | 0,0001 |
-| Nivel del mar GLORYS, Humboldt (m) | 2010-2025 | 16 | +0,027 (0,008 a 0,049) | 0,028 |
-| Hielo marino antártico (M km²) | 1979-2026 | 48 | −0,03 (−0,15 a 0,10) | 0,76 (no significativo) |
-| Hielo marino antártico (M km²) | 1998-2026 | 29 | −0,43 (−0,61 a −0,07) | 0,026 |
-| Hielo marino antártico (M km²) | 2010-2026 | 17 | −1,16 (−1,71 a −0,49) | 0,006 |
+| Nivel del mar GLORYS, Humboldt (m) | 2010-2025 | 16 | +0,027 (0,008 a 0,049) | 0,049 (al límite) |
+| Hielo marino antártico (M km²) | 1979-2026 | 48 | −0,03 (−0,15 a 0,10) | 0,83 (no significativo) |
+| Hielo marino antártico (M km²) | 1998-2026 | 29 | −0,43 (−0,61 a −0,07) | 0,046 (al límite) |
+| Hielo marino antártico (M km²) | 2010-2026 | 17 | −1,16 (−1,71 a −0,49) | 0,018 |
 | TSM ERSST norte-centro (°C) | 1900-2026 | 127 | +0,077 (0,042 a 0,111) | 0,0008 |
 | TSM ERSST norte-centro (°C) | 1979-2026 | 48 | +0,04 (−0,12 a 0,20) | 0,74 (no significativo) |
 | TSM ERSST norte-centro (°C) | 1998-2026 | 29 | +0,17 (−0,18 a 0,59) | 0,64 (no significativo) |
 | TSM ERSST costa sur (°C) | 1900-2026 | 127 | +0,105 (0,071 a 0,141) | < 0,0001 |
 | TSM ERSST costa sur (°C) | 1979-2026 | 48 | −0,03 (−0,16 a 0,10) | 0,85 (no significativo) |
-| Oxígeno 100-200 m, Humboldt (mmol/m³) | 1998-2025 | 28 | +1,6 (−3,7 a 5,6) | 0,53 (no significativo) |
-| Oxígeno 100-200 m, Humboldt (mmol/m³) | 2003-2025 | 23 | +5,4 (1,7 a 12,3) | 0,007 |
-| TSM satelital, cinco zonas (°C) | 1998-2025, 2003-2025, 2010-2025 | 16-28 | −0,24 a +0,34 | todas > 0,24 (no significativas) |
+| Oxígeno 100-200 m, Humboldt (mmol/m³) | 1998-2025 | 28 | +1,6 (−3,7 a 5,6) | 0,64 (no significativo) |
+| Oxígeno 100-200 m, Humboldt (mmol/m³) | 2003-2025 | 23 | +5,4 (1,7 a 12,3) | 0,018 |
+| TSM satelital, cinco zonas (°C) | 1998-2025, 2003-2025, 2010-2025 | 16-28 | −0,24 a +0,34 | todas ≥ 0,33 (no significativas) |
 
-Sin los años de El Niño extremo se mantienen significativos: temperatura 100-200 m (desde 1999 y 2003), nivel del mar GLORYS (los tres periodos), hielo (desde 2003 y 2010) y oxígeno (desde 2003).
+Sin los años de El Niño extremo (q con FDR sobre las 162 pruebas): siguen significativos la temperatura 100-200 m (desde 1999, q 0,028, y desde 2003, q 0,021), el nivel del mar GLORYS (desde 1999 y 2003; desde 2010 queda en q 0,052, no significativo), el hielo solo desde 2010 (q 0,039; desde 2003 pasa a q 0,060 y desde 1999 a q 0,142) y el oxígeno desde 2003 (q 0,018).
+
+Nota de corrección (14/11/2026): una versión anterior de esta tabla traía valores q de la primera corrida (146 pruebas). Los valores actuales son los de `ronda_seis_variables.csv` (162 pruebas, 38 significativas con FDR 5 %). Los p y las pendientes no cambian. Con la corrección, la temperatura a 100-200 m desde 1998 ya no es significativa con FDR (q 0,052).
 
 ## Lectura
-- **Nivel del mar GLORYS y temperatura 100-200 m**: son las dos tendencias más consistentes. La del nivel del mar se mantiene en los tres periodos y sin los años de El Niño. La de temperatura a 100-200 m deja de ser significativa si el periodo empieza en 2010 (n=16).
+- **Nivel del mar GLORYS y temperatura 100-200 m**: son las dos tendencias más consistentes. La del nivel del mar se mantiene en los tres periodos (en 2010-2025 con q 0,049, al límite) y sin los años de El Niño desde 1999 y 2003. La de temperatura a 100-200 m es significativa desde 2003, está al límite desde 1998 (q 0,052) y deja de serlo desde 2010 (n=16).
 - **Hielo marino, TSM de serie larga y oxígeno**: la significancia depende del año de inicio. El hielo cae desde 1998 pero no hay tendencia en 1979-2026; la TSM de ERSST sube desde 1900 o 1950 pero no desde 1979; el oxígeno solo es significativo desde 2003. Es el mismo comportamiento ya observado con la clorofila.
 - **TSM satelital por zona (1998-2025)**: ninguna tendencia significativa.
 
