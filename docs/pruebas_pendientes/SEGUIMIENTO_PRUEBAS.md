@@ -1,6 +1,6 @@
 # Seguimiento de pruebas
 
-Registro de lo que se ha probado, con qué datos, qué resultó y en qué estado queda. Se actualiza cada vez que se corre algo nuevo. Fecha de la última actualización: 13 de noviembre de 2026.
+Registro de lo que se ha probado, con qué datos, qué resultó y en qué estado queda. Se actualiza cada vez que se corre algo nuevo. Fecha de la última actualización: 14 de noviembre de 2026.
 
 Criterio de aceptación para relaciones entre variables: correlación parcial con Niño 1+2, n efectivo (Pyper y Peterman, 1998), FDR (p_fdr < 0,05), misma dirección sin 1998 y en las dos mitades del periodo. Para tendencias: Mann-Kendall con pendiente de Sen (p < 0,05), repetido con otro método, otra estación y otro periodo.
 
@@ -68,8 +68,40 @@ Con la serie larga disponible, la afirmación sostenible es "no se detecta una t
 
 Series más largas posibles: clorofila satelital continua no existe antes de 1997 (SeaWiFS), de modo que la clorofila no puede extenderse; la temperatura sí (CRW desde 1986, ERSST desde 1854, de modo que se puede usar desde 1950).
 
+## 5. Enfoques nuevos (14/11)
+
+Scripts: `enfoques_nuevos.py` (E1 a E3), `enfoque_adelanto.py` (E4), `enfoque_lluvia_paita.py` (E5). Tablas: `tablas/nuevos_E*.csv`.
+
+| Id | Prueba | Resultado | Estado |
+|---|---|---|---|
+| E1 | Tendencia de los eventos extremos: meses por año con clorofila ≤ −30 % (1998-2025) y con temperatura ≥ +1 °C sobre 1986-2015 (1986-2025; +0,5 °C en la Antártida) | 14 pruebas; ninguna significativa con FDR (la más baja: Península, clorofila baja, p = 0,043 sin corregir, p_fdr = 0,58) | Sin tendencia |
+| E2 | Tendencia de la fenología de la clorofila: amplitud estacional, valor y mes del pico anual | 21 pruebas; ninguna con FDR (Paita, valor del pico, p = 0,03 sin corregir) | Sin tendencia |
+| E3 | Estudio de eventos de El Niño: relación entre la intensidad del pico y la caída de la clorofila, y recuperación | Solo 4 eventos con Niño 1+2 ≥ 1,5 °C (1998, 2015, 2023 y 2026, este último sin terminar): insuficiente | No concluyente |
+| E4 | Capacidad de adelanto: Niño 1+2 y ONI frente a la clorofila, 0 a 8 meses | 135 pruebas, 24 robustas (ver abajo) | Un resultado nuevo |
+| E5 | ¿La lluvia explica el hallazgo de Paita? (NASA POWER) | No: la relación sigue igual al quitar la lluvia | Sin explicación |
+
+### E4. Respuesta tardía en Paita–Sechura
+
+- La clorofila de Paita–Sechura **sube** entre 2 y 8 meses después de un calentamiento de Niño 1+2, con el máximo a 5 meses: r = +0,36 (p_fdr < 0,001). Pasa FDR en todos los desfases de 2 a 8 meses, mantiene la dirección sin 1998 (r = +0,29) y en las dos mitades del periodo (+0,41 y +0,33), y al quitar un año cualquiera r se mantiene entre +0,29 y +0,39.
+- Con desfase 0 no hay relación (r = +0,05). Es un efecto de rebote retrasado, no la caída simultánea que se ve en el centro de la costa.
+- En las otras zonas el mismo desfase no repite el signo: Chimbote −0,22, Callao −0,18, Pisco +0,06, Ilo −0,08. Es un patrón del norte.
+- Kd490 (turbidez) de Paita muestra el mismo patrón retrasado (r = +0,34 a 5 meses), de modo que el aumento no es exclusivo de la clorofila.
+- ONI no aporta adelanto: al controlar Niño 1+2 simultáneo, ninguna zona pasa FDR (Ilo, r = +0,30, p_fdr = 0,08).
+
+### E5. Lluvia (NASA POWER, Paita–Sechura)
+
+- Niño 1+2 → lluvia: r = +0,40 sin desfase, como se espera.
+- Lluvia → clorofila y Kd490: r negativa y sin desfase (−0,32 y −0,39). La lluvia no aumenta la clorofila al mismo tiempo.
+- La relación Niño 1+2 → clorofila de Paita a 5 meses sigue igual (r = +0,355) al quitar la parte explicada por la lluvia. La escorrentía de los ríos no explica el hallazgo.
+- Las hipótesis que quedan sin probar: recuperación tras el calentamiento (rebote de nutrientes y afloramiento), cambios en el algoritmo de color en aguas turbias y variación en la ventana de observación por nubosidad. Hace falta contrastarlo con otra fuente (clorofila MODIS-Aqua de Giovanni para Paita) antes de presentarlo como hallazgo.
+
+### Estado
+
+Es el único resultado nuevo que cumple el criterio de aceptación, y no depende de 1998. Se presenta como candidato, no como hallazgo establecido: la explicación física no está probada y falta una segunda fuente.
+
 ## 4. Pendiente
 
+- Contrastar la respuesta tardía de Paita (E4) con la clorofila MODIS-Aqua de Giovanni para esa zona.
 - Repetir el análisis de tendencias con MODIS-Aqua (Giovanni) para las demás zonas y con la temperatura de MODIS-Aqua para la Antártida, como tercera fuente independiente.
 - Usar OISST (NOAA, 1981-2026, 0,25 grados) como comparación de la temperatura antártica.
 - Implementar en la web el panel de tendencias (Mann-Kendall y pendiente de Sen, con la sensibilidad al periodo).

@@ -1,0 +1,136 @@
+zona,predictor,control,lag,n,n_eff,r,p,r_sin1998,r_mitad1,r_mitad2,p_fdr,misma_direccion,robusta
+paita,Nino1+2,ninguno,0,337,155.1,0.0451,0.577,0.0769,-0.1602,0.2169,0.776,False,False
+paita,ONI,ninguno,0,337,152.0,-0.0395,0.6288,0.0336,-0.2818,0.1771,0.8085,False,False
+paita,ONI,Nino1+2 simultaneo,0,337,193.0,-0.0943,0.1921,-0.0238,-0.2068,0.0324,0.4631,False,False
+paita,Nino1+2,ninguno,1,336,154.6,0.1657,0.0396,0.1725,-0.0259,0.3288,0.1304,False,False
+paita,ONI,ninguno,1,336,151.3,0.0129,0.8751,0.0717,-0.1993,0.2084,0.934,False,False
+paita,ONI,Nino1+2 simultaneo,1,336,192.4,-0.1345,0.0627,-0.0542,-0.2162,-0.042,0.18,True,False
+paita,Nino1+2,ninguno,2,335,153.7,0.2323,0.0038,0.208,0.0839,0.3616,0.0268,True,True
+paita,ONI,ninguno,2,335,150.6,0.1039,0.205,0.1458,-0.0527,0.2571,0.4646,False,False
+paita,ONI,Nino1+2 simultaneo,2,335,191.8,-0.072,0.3215,0.0182,-0.1289,-0.0011,0.6028,False,False
+paita,Nino1+2,ninguno,3,334,151.7,0.2948,0.0002,0.2322,0.2181,0.3688,0.0026,True,True
+paita,ONI,ninguno,3,334,148.5,0.1982,0.0156,0.2143,0.107,0.3036,0.0779,True,False
+paita,ONI,Nino1+2 simultaneo,3,334,187.8,-0.0004,0.996,0.0933,-0.044,0.0642,0.996,False,False
+paita,Nino1+2,ninguno,4,333,151.1,0.3192,0.0001,0.2647,0.2808,0.363,0.0011,True,True
+paita,ONI,ninguno,4,333,147.7,0.2443,0.0028,0.2573,0.181,0.3251,0.0222,True,True
+paita,ONI,Nino1+2 simultaneo,4,333,187.2,0.0406,0.5806,0.1262,-0.0036,0.1041,0.776,False,False
+paita,Nino1+2,ninguno,5,332,150.4,0.3577,0.0,0.2863,0.4099,0.3332,0.0004,True,True
+paita,ONI,ninguno,5,332,147.1,0.2739,0.0008,0.2663,0.2516,0.3276,0.0071,True,True
+paita,ONI,Nino1+2 simultaneo,5,332,186.6,0.0468,0.525,0.1215,-0.0193,0.1407,0.7384,False,False
+paita,Nino1+2,ninguno,6,331,149.8,0.3225,0.0001,0.2683,0.4246,0.2649,0.0011,True,True
+paita,ONI,ninguno,6,331,146.5,0.2579,0.0016,0.2547,0.2328,0.3164,0.0139,True,True
+paita,ONI,Nino1+2 simultaneo,6,331,186.2,0.0574,0.4359,0.1218,-0.0515,0.1975,0.6935,False,False
+paita,Nino1+2,ninguno,7,330,149.0,0.3155,0.0001,0.2629,0.4184,0.2651,0.0013,True,True
+paita,ONI,ninguno,7,330,146.0,0.2317,0.0049,0.22,0.2121,0.2971,0.0314,True,True
+paita,ONI,Nino1+2 simultaneo,7,330,186.0,0.0292,0.6928,0.0797,-0.07,0.1679,0.8414,False,False
+paita,Nino1+2,ninguno,8,329,148.0,0.3,0.0002,0.2391,0.3541,0.2842,0.0026,True,True
+paita,ONI,ninguno,8,329,145.1,0.2004,0.0156,0.1729,0.1972,0.243,0.0779,True,False
+paita,ONI,Nino1+2 simultaneo,8,329,184.4,0.001,0.9893,0.0355,-0.0368,0.0632,0.996,False,False
+chimbote,Nino1+2,ninguno,0,335,136.6,-0.3622,0.0,-0.3191,-0.2391,-0.4938,0.0005,True,True
+chimbote,ONI,ninguno,0,335,121.0,-0.2455,0.0066,-0.2213,-0.0643,-0.4036,0.0408,True,True
+chimbote,ONI,Nino1+2 simultaneo,0,335,146.8,-0.0033,0.9684,-0.0004,0.0814,-0.0559,0.996,False,False
+chimbote,Nino1+2,ninguno,1,334,136.5,-0.3691,0.0,-0.3498,-0.2434,-0.5014,0.0004,True,True
+chimbote,ONI,ninguno,1,334,121.2,-0.2596,0.004,-0.2417,-0.0791,-0.4139,0.0271,True,True
+chimbote,ONI,Nino1+2 simultaneo,1,334,146.4,-0.0043,0.9589,0.0022,0.0831,-0.0601,0.9958,False,False
+chimbote,Nino1+2,ninguno,2,333,136.6,-0.3487,0.0,-0.3495,-0.2231,-0.4747,0.0008,True,True
+chimbote,ONI,ninguno,2,333,121.0,-0.2436,0.0071,-0.2416,-0.0645,-0.3866,0.0417,True,True
+chimbote,ONI,Nino1+2 simultaneo,2,333,145.9,-0.0007,0.993,-0.0055,0.0963,-0.0702,0.996,False,False
+chimbote,Nino1+2,ninguno,3,332,136.8,-0.3245,0.0001,-0.3384,-0.1896,-0.4541,0.0015,True,True
+chimbote,ONI,ninguno,3,332,120.8,-0.2111,0.0202,-0.2198,-0.0298,-0.3449,0.0854,True,False
+chimbote,ONI,Nino1+2 simultaneo,3,332,145.4,0.0148,0.8599,0.0024,0.1133,-0.0497,0.9311,False,False
+chimbote,Nino1+2,ninguno,4,331,136.9,-0.2928,0.0005,-0.316,-0.1747,-0.3955,0.005,True,True
+chimbote,ONI,ninguno,4,331,120.6,-0.1703,0.0623,-0.1905,0.0141,-0.2944,0.18,False,False
+chimbote,ONI,Nino1+2 simultaneo,4,331,145.0,0.0335,0.6888,0.0089,0.1461,-0.0494,0.8414,False,False
+chimbote,Nino1+2,ninguno,5,330,136.9,-0.2196,0.01,-0.2452,-0.0786,-0.3441,0.0537,True,False
+chimbote,ONI,ninguno,5,330,120.4,-0.1323,0.1492,-0.1538,0.043,-0.2447,0.3729,False,False
+chimbote,ONI,Nino1+2 simultaneo,5,330,144.5,0.0084,0.9201,-0.015,0.0932,-0.032,0.9629,False,False
+chimbote,Nino1+2,ninguno,6,329,137.7,-0.1815,0.0334,-0.1835,-0.0391,-0.3055,0.1165,True,False
+chimbote,ONI,ninguno,6,329,120.8,-0.1087,0.2358,-0.1186,0.0302,-0.1732,0.4975,False,False
+chimbote,ONI,Nino1+2 simultaneo,6,329,144.3,0.0025,0.9766,-0.0259,0.0386,0.0546,0.996,False,False
+chimbote,Nino1+2,ninguno,7,328,137.5,-0.1677,0.0497,-0.1541,-0.0587,-0.2565,0.1525,True,False
+chimbote,ONI,ninguno,7,328,120.3,-0.0839,0.3616,-0.0816,0.0138,-0.1029,0.6259,False,False
+chimbote,ONI,Nino1+2 simultaneo,7,328,143.7,0.0193,0.8188,-0.006,0.0283,0.113,0.9124,False,False
+chimbote,Nino1+2,ninguno,8,327,137.0,-0.1584,0.0645,-0.1456,-0.0965,-0.1961,0.1814,True,False
+chimbote,ONI,ninguno,8,327,119.8,-0.0585,0.5257,-0.0347,0.0063,-0.0385,0.7384,False,False
+chimbote,ONI,Nino1+2 simultaneo,8,327,143.3,0.0471,0.5759,0.0536,0.0456,0.1591,0.776,True,False
+callao,Nino1+2,ninguno,0,336,150.8,-0.3746,0.0,-0.3309,-0.257,-0.4715,0.0003,True,True
+callao,ONI,ninguno,0,336,137.4,-0.223,0.0087,-0.213,-0.0458,-0.377,0.049,True,True
+callao,ONI,Nino1+2 simultaneo,0,336,232.9,0.0413,0.5302,0.0233,0.1131,-0.0418,0.7384,False,False
+callao,Nino1+2,ninguno,1,335,150.4,-0.3257,0.0,-0.291,-0.2047,-0.4218,0.001,True,True
+callao,ONI,ninguno,1,335,136.1,-0.2032,0.0176,-0.1918,-0.029,-0.3485,0.0801,True,False
+callao,ONI,Nino1+2 simultaneo,1,335,232.2,0.0352,0.5934,0.022,0.11,-0.0499,0.7777,False,False
+callao,Nino1+2,ninguno,2,334,149.3,-0.2883,0.0004,-0.2615,-0.1687,-0.3809,0.0037,True,True
+callao,ONI,ninguno,2,334,136.0,-0.1706,0.0471,-0.1737,-0.0047,-0.3032,0.1479,True,False
+callao,ONI,Nino1+2 simultaneo,2,334,234.4,0.0461,0.4826,0.0138,0.124,-0.0427,0.716,False,False
+callao,Nino1+2,ninguno,3,333,147.5,-0.2382,0.0036,-0.2167,-0.0946,-0.3505,0.0268,True,True
+callao,ONI,ninguno,3,333,135.0,-0.135,0.1186,-0.1457,0.0333,-0.2679,0.3021,False,False
+callao,ONI,Nino1+2 simultaneo,3,333,233.7,0.0412,0.5306,0.0005,0.1135,-0.0416,0.7384,False,False
+callao,Nino1+2,ninguno,4,332,146.6,-0.1962,0.0174,-0.1682,-0.049,-0.3124,0.0801,True,False
+callao,ONI,ninguno,4,332,134.2,-0.1167,0.179,-0.1276,0.0481,-0.249,0.4393,False,False
+callao,ONI,Nino1+2 simultaneo,4,332,233.1,0.0177,0.7884,-0.0343,0.0881,-0.068,0.902,False,False
+callao,Nino1+2,ninguno,5,331,145.9,-0.1794,0.0303,-0.1538,-0.0574,-0.2783,0.1107,True,False
+callao,ONI,ninguno,5,331,133.7,-0.101,0.2463,-0.1104,0.0569,-0.2318,0.5038,False,False
+callao,ONI,Nino1+2 simultaneo,5,331,232.4,0.015,0.8196,-0.0348,0.0915,-0.0848,0.9124,False,False
+callao,Nino1+2,ninguno,6,330,145.2,-0.1764,0.0337,-0.1354,-0.0931,-0.2456,0.1165,True,False
+callao,ONI,ninguno,6,330,133.2,-0.0966,0.2683,-0.0863,0.0247,-0.1965,0.5327,False,False
+callao,ONI,Nino1+2 simultaneo,6,330,231.3,0.0147,0.8245,-0.0233,0.0705,-0.0565,0.9124,False,False
+callao,Nino1+2,ninguno,7,329,146.8,-0.1567,0.0582,-0.1101,-0.0819,-0.2194,0.1747,True,False
+callao,ONI,ninguno,7,329,134.9,-0.0819,0.3452,-0.0559,0.0117,-0.1569,0.6213,False,False
+callao,ONI,Nino1+2 simultaneo,7,329,235.3,0.0114,0.8621,-0.0094,0.0392,-0.0237,0.9311,False,False
+callao,Nino1+2,ninguno,8,328,146.3,-0.1453,0.0799,-0.0966,-0.0794,-0.1995,0.2202,True,False
+callao,ONI,ninguno,8,328,134.5,-0.0676,0.4367,-0.034,-0.0157,-0.1046,0.6935,True,False
+callao,ONI,Nino1+2 simultaneo,8,328,234.3,0.0217,0.7417,0.0098,0.0011,0.0489,0.8706,True,False
+pisco,Nino1+2,ninguno,0,337,181.8,-0.1634,0.0276,-0.1479,-0.0543,-0.2438,0.1072,True,False
+pisco,ONI,ninguno,0,337,166.3,-0.0908,0.2445,-0.0575,0.019,-0.1273,0.5038,False,False
+pisco,ONI,Nino1+2 simultaneo,0,337,173.4,0.0259,0.7351,0.0624,0.0502,0.0857,0.8705,True,False
+pisco,Nino1+2,ninguno,1,336,181.3,-0.1275,0.087,-0.1501,0.0207,-0.2389,0.2302,False,False
+pisco,ONI,ninguno,1,336,166.0,-0.0455,0.5609,-0.0375,0.0779,-0.077,0.7726,False,False
+pisco,ONI,Nino1+2 simultaneo,1,336,172.9,0.06,0.4329,0.0938,0.069,0.1598,0.6935,True,False
+pisco,Nino1+2,ninguno,2,335,180.1,-0.0694,0.3543,-0.1117,0.0707,-0.1637,0.6224,False,False
+pisco,ONI,ninguno,2,335,165.6,-0.0102,0.8963,-0.037,0.1168,-0.0379,0.9453,False,False
+pisco,ONI,Nino1+2 simultaneo,2,335,172.2,0.0549,0.4745,0.0579,0.0813,0.1281,0.7126,True,False
+pisco,Nino1+2,ninguno,3,334,178.9,0.0193,0.7978,-0.0237,0.1313,-0.0351,0.9051,False,False
+pisco,ONI,ninguno,3,334,164.8,0.0341,0.664,-0.0132,0.1676,0.0082,0.83,False,False
+pisco,ONI,Nino1+2 simultaneo,3,334,171.4,0.031,0.6871,0.0088,0.095,0.0461,0.8414,True,False
+pisco,Nino1+2,ninguno,4,333,178.4,0.0758,0.3143,0.0392,0.1739,0.0435,0.5975,True,False
+pisco,ONI,ninguno,4,333,164.6,0.0638,0.4161,0.0065,0.1899,0.0495,0.6935,True,False
+pisco,ONI,Nino1+2 simultaneo,4,333,170.9,0.0162,0.8337,-0.0253,0.0858,0.0172,0.9151,False,False
+pisco,Nino1+2,ninguno,5,332,178.1,0.0595,0.4301,0.0347,0.1275,0.0549,0.6935,True,False
+pisco,ONI,ninguno,5,332,164.3,0.0744,0.3433,0.028,0.187,0.0825,0.6213,True,False
+pisco,ONI,Nino1+2 simultaneo,5,332,170.3,0.0415,0.591,0.0028,0.1132,0.053,0.7777,True,False
+pisco,Nino1+2,ninguno,6,331,177.8,0.0288,0.7026,0.043,0.0334,0.0806,0.8414,True,False
+pisco,ONI,ninguno,6,331,163.9,0.0514,0.5136,0.0315,0.1309,0.0825,0.7384,True,False
+pisco,ONI,Nino1+2 simultaneo,6,331,169.6,0.0367,0.6348,-0.0023,0.1163,0.0279,0.8085,False,False
+pisco,Nino1+2,ninguno,7,330,177.5,-0.0349,0.6439,0.0122,-0.0819,0.055,0.8124,False,False
+pisco,ONI,ninguno,7,330,163.4,0.0238,0.7628,0.0302,0.0686,0.0754,0.8802,True,False
+pisco,ONI,Nino1+2 simultaneo,7,330,168.8,0.0553,0.4751,0.0198,0.1298,0.045,0.7126,True,False
+pisco,Nino1+2,ninguno,8,329,177.4,-0.0237,0.7539,0.0249,-0.0787,0.0768,0.8774,False,False
+pisco,ONI,ninguno,8,329,163.2,0.012,0.8787,0.0218,0.036,0.0816,0.934,True,False
+pisco,ONI,Nino1+2 simultaneo,8,329,168.8,0.0294,0.7042,-0.003,0.0869,0.034,0.8414,False,False
+ilo,Nino1+2,ninguno,0,337,87.2,-0.138,0.2018,-0.0566,-0.123,-0.1851,0.4646,True,False
+ilo,ONI,ninguno,0,337,71.3,0.1111,0.355,0.1497,0.248,-0.0639,0.6224,False,False
+ilo,ONI,Nino1+2 simultaneo,0,337,62.8,0.2777,0.0278,0.2655,0.3849,0.1144,0.1072,True,False
+ilo,Nino1+2,ninguno,1,336,86.9,-0.1173,0.2792,-0.0417,-0.1065,-0.16,0.5463,True,False
+ilo,ONI,ninguno,1,336,71.4,0.1375,0.2516,0.1731,0.2783,-0.0375,0.5069,False,False
+ilo,ONI,Nino1+2 simultaneo,1,336,62.6,0.2986,0.0178,0.2864,0.4142,0.128,0.0801,True,False
+ilo,Nino1+2,ninguno,2,335,86.9,-0.098,0.3667,-0.0353,-0.0337,-0.1846,0.6266,True,False
+ilo,ONI,ninguno,2,335,71.4,0.1493,0.2125,0.1797,0.295,-0.0281,0.4696,False,False
+ilo,ONI,Nino1+2 simultaneo,2,335,62.4,0.2963,0.019,0.287,0.3799,0.1631,0.0826,True,False
+ilo,Nino1+2,ninguno,3,334,87.7,-0.0858,0.4272,-0.0308,0.0077,-0.1972,0.6935,False,False
+ilo,ONI,ninguno,3,334,72.0,0.1524,0.2013,0.1731,0.2997,-0.0275,0.4646,False,False
+ilo,ONI,Nino1+2 simultaneo,3,334,62.7,0.2862,0.0233,0.2694,0.3523,0.1704,0.0953,True,False
+ilo,Nino1+2,ninguno,4,333,87.8,-0.0804,0.4571,-0.0363,0.0146,-0.1958,0.7126,False,False
+ilo,ONI,ninguno,4,333,72.0,0.1506,0.2065,0.162,0.2936,-0.0296,0.4646,False,False
+ilo,ONI,Nino1+2 simultaneo,4,333,62.5,0.2754,0.0296,0.2535,0.3353,0.1619,0.1107,True,False
+ilo,Nino1+2,ninguno,5,332,87.8,-0.0775,0.4734,-0.0407,-0.0151,-0.1702,0.7126,True,False
+ilo,ONI,ninguno,5,332,71.9,0.1478,0.2157,0.1538,0.2751,-0.0241,0.4696,False,False
+ilo,ONI,Nino1+2 simultaneo,5,332,62.3,0.2652,0.0368,0.2415,0.3305,0.1402,0.1241,True,False
+ilo,Nino1+2,ninguno,6,331,87.8,-0.0799,0.4598,-0.0501,-0.0313,-0.1666,0.7126,True,False
+ilo,ONI,ninguno,6,331,71.7,0.1431,0.2315,0.1395,0.2508,-0.0194,0.496,False,False
+ilo,ONI,Nino1+2 simultaneo,6,331,62.0,0.2595,0.0416,0.2279,0.3098,0.1463,0.1338,True,False
+ilo,Nino1+2,ninguno,7,330,87.8,-0.0686,0.5257,-0.018,-0.0609,-0.1246,0.7384,True,False
+ilo,ONI,ninguno,7,330,71.4,0.1237,0.3029,0.1271,0.1944,-0.0133,0.5841,False,False
+ilo,ONI,Nino1+2 simultaneo,7,330,61.6,0.2214,0.0847,0.1808,0.2639,0.109,0.2287,True,False
+ilo,Nino1+2,ninguno,8,329,88.3,-0.0565,0.6004,-0.0062,-0.0687,-0.0945,0.7794,True,False
+ilo,ONI,ninguno,8,329,71.6,0.1166,0.3309,0.1149,0.1707,-0.0079,0.6119,False,False
+ilo,ONI,Nino1+2 simultaneo,8,329,61.8,0.2012,0.1174,0.1539,0.2404,0.0867,0.3021,True,False

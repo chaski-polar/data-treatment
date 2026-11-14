@@ -1,0 +1,22 @@
+prueba,zona,periodo,n_anios,tau,p,tendencia_por_decada,p_fdr
+E2 amplitud estacional (máx-mín)/media,paita,1998-2025,28,-0.2169,0.11,-0.1262,0.7701
+E2 valor del pico anual,paita,1998-2025,28,-0.291,0.0303,-0.2606,0.6371
+E2 mes del pico anual,paita,1998-2025,28,0.1443,0.3156,-0.0,1.0
+E2 amplitud estacional (máx-mín)/media,chimbote,1998-2025,28,0.1217,0.3774,0.0942,1.0
+E2 valor del pico anual,chimbote,1998-2025,28,-0.0741,0.597,-0.1254,1.0
+E2 mes del pico anual,chimbote,1998-2025,28,0.0374,0.7928,-0.0,1.0
+E2 amplitud estacional (máx-mín)/media,callao,1998-2025,28,0.0265,0.8602,0.0114,1.0
+E2 valor del pico anual,callao,1998-2025,28,-0.0053,0.9844,-0.015,1.0
+E2 mes del pico anual,callao,1998-2025,28,-0.1005,0.4974,-0.0,1.0
+E2 amplitud estacional (máx-mín)/media,pisco,1998-2025,28,-0.0635,0.6525,-0.0283,1.0
+E2 valor del pico anual,pisco,1998-2025,28,-0.1164,0.3991,-0.1432,1.0
+E2 mes del pico anual,pisco,1998-2025,28,-0.0396,0.7864,-0.0,1.0
+E2 amplitud estacional (máx-mín)/media,ilo,1998-2025,28,0.127,0.3564,0.0429,1.0
+E2 valor del pico anual,ilo,1998-2025,28,0.2487,0.0658,0.2973,0.6908
+E2 mes del pico anual,ilo,1998-2025,28,0.0112,0.9361,-0.0,1.0
+E2 amplitud estacional (máx-mín)/media,rey_jorge,1998-2025,0,,,,1.0
+E2 valor del pico anual,rey_jorge,1998-2025,0,,,,1.0
+E2 mes del pico anual,rey_jorge,1998-2025,0,,,,1.0
+E2 amplitud estacional (máx-mín)/media,peninsula_antartica,1998-2025,0,,,,1.0
+E2 valor del pico anual,peninsula_antartica,1998-2025,0,,,,1.0
+E2 mes del pico anual,peninsula_antartica,1998-2025,0,,,,1.0

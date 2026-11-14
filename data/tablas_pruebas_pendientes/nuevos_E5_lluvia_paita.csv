@@ -1,0 +1,40 @@
+relacion,control,lag,n,n_eff,r,p,r_sin1998,r_mitad1,r_mitad2,p_fdr,misma_direccion,robusta
+Nino1+2 -> lluvia Paita,ninguno,0,324,121.1,0.4028,0.0,0.256,0.5189,0.2895,0.0001,True,True
+Nino1+2 -> lluvia Paita,ninguno,1,323,120.7,0.2673,0.0031,0.1211,0.4092,0.1447,0.0066,True,True
+Nino1+2 -> lluvia Paita,ninguno,2,322,119.9,0.1291,0.1599,0.0356,0.2599,0.0507,0.2228,True,False
+Nino1+2 -> lluvia Paita,ninguno,3,321,119.4,0.0229,0.8047,0.0082,-0.007,0.0217,0.923,False,False
+Nino1+2 -> lluvia Paita,ninguno,4,320,119.0,0.0028,0.9758,-0.0105,-0.0093,-0.0066,0.9758,False,False
+Nino1+2 -> lluvia Paita,ninguno,5,319,118.5,-0.0108,0.9072,-0.0228,-0.0046,-0.0295,0.9311,True,False
+Nino1+2 -> lluvia Paita,ninguno,6,318,118.1,-0.0151,0.8712,-0.0255,-0.0119,-0.0321,0.9311,True,False
+Nino1+2 -> lluvia Paita,ninguno,7,317,117.6,-0.017,0.8553,-0.0228,-0.0244,-0.0285,0.9311,True,False
+Nino1+2 -> lluvia Paita,ninguno,8,316,117.2,-0.0113,0.9038,-0.0132,-0.0237,-0.0193,0.9311,True,False
+lluvia Paita -> clorofila Paita,ninguno,0,324,185.2,-0.3208,0.0,-0.261,-0.4062,-0.2265,0.0001,True,True
+lluvia Paita -> clorofila Paita,ninguno,1,324,185.2,-0.09,0.2228,0.0233,-0.2555,0.1031,0.2897,False,False
+lluvia Paita -> clorofila Paita,ninguno,2,324,185.2,0.0623,0.3993,0.1473,-0.0696,0.2167,0.5023,False,False
+lluvia Paita -> clorofila Paita,ninguno,3,324,185.2,0.1963,0.0074,0.1397,0.2137,0.1841,0.0137,True,True
+lluvia Paita -> clorofila Paita,ninguno,4,324,185.2,0.2032,0.0055,0.1273,0.2571,0.1515,0.0107,True,True
+lluvia Paita -> clorofila Paita,ninguno,5,324,185.2,0.2524,0.0005,0.1304,0.3487,0.1554,0.0013,True,True
+lluvia Paita -> clorofila Paita,ninguno,6,324,185.2,0.1311,0.0751,0.0475,0.2342,0.0281,0.1117,True,False
+lluvia Paita -> Kd490 Paita,ninguno,0,324,195.6,-0.385,0.0,-0.3143,-0.4744,-0.2865,0.0,True,True
+lluvia Paita -> Kd490 Paita,ninguno,1,324,195.6,-0.1266,0.0773,0.012,-0.3188,0.0969,0.1117,False,False
+lluvia Paita -> Kd490 Paita,ninguno,2,324,195.6,0.0375,0.6018,0.1476,-0.127,0.2274,0.7112,False,False
+lluvia Paita -> Kd490 Paita,ninguno,3,324,195.6,0.1626,0.0229,0.1167,0.1689,0.1615,0.0389,True,True
+lluvia Paita -> Kd490 Paita,ninguno,4,324,195.6,0.1478,0.0389,0.0764,0.204,0.0918,0.0618,True,False
+lluvia Paita -> Kd490 Paita,ninguno,5,324,195.6,0.1898,0.0078,0.0853,0.2789,0.0997,0.0138,True,True
+lluvia Paita -> Kd490 Paita,ninguno,6,324,195.6,0.0982,0.1713,0.0382,0.1679,0.0274,0.2303,True,False
+Nino1+2 -> clorofila Paita,ninguno,0,337,155.1,0.0451,0.577,0.0769,-0.1602,0.2169,0.7032,False,False
+Nino1+2 -> clorofila Paita,ninguno,1,336,154.6,0.1657,0.0396,0.1725,-0.0259,0.3288,0.0618,False,False
+Nino1+2 -> clorofila Paita,ninguno,2,335,153.7,0.2323,0.0038,0.208,0.0839,0.3616,0.0077,True,True
+Nino1+2 -> clorofila Paita,ninguno,3,334,151.7,0.2948,0.0002,0.2322,0.2181,0.3688,0.0006,True,True
+Nino1+2 -> clorofila Paita,ninguno,4,333,151.1,0.3192,0.0001,0.2647,0.2808,0.363,0.0003,True,True
+Nino1+2 -> clorofila Paita,ninguno,5,332,150.4,0.3577,0.0,0.2863,0.4099,0.3332,0.0001,True,True
+Nino1+2 -> clorofila Paita,ninguno,6,331,149.8,0.3225,0.0001,0.2683,0.4246,0.2649,0.0003,True,True
+Nino1+2 -> clorofila Paita,ninguno,7,330,149.0,0.3155,0.0001,0.2629,0.4184,0.2651,0.0003,True,True
+Nino1+2 -> clorofila Paita,ninguno,8,329,148.0,0.3,0.0002,0.2391,0.3541,0.2842,0.0006,True,True
+Nino1+2 -> clorofila Paita (sin la parte explicada por la lluvia),lluvia,2,322,127.4,0.2808,0.0014,0.2342,0.1582,0.3713,0.0031,True,True
+Nino1+2 -> clorofila Paita (sin la parte explicada por la lluvia),lluvia,3,322,145.6,0.3105,0.0001,0.2442,0.2426,0.3666,0.0005,True,True
+Nino1+2 -> clorofila Paita (sin la parte explicada por la lluvia),lluvia,4,322,151.6,0.3255,0.0,0.2772,0.2732,0.3723,0.0003,True,True
+Nino1+2 -> clorofila Paita (sin la parte explicada por la lluvia),lluvia,5,322,157.7,0.3546,0.0,0.2937,0.3911,0.3352,0.0001,True,True
+Nino1+2 -> clorofila Paita (sin la parte explicada por la lluvia),lluvia,6,322,162.5,0.3087,0.0001,0.2674,0.3983,0.2469,0.0003,True,True
+Nino1+2 -> clorofila Paita (sin la parte explicada por la lluvia),lluvia,7,322,167.4,0.2949,0.0001,0.2596,0.3803,0.2448,0.0004,True,True
+Nino1+2 -> clorofila Paita (sin la parte explicada por la lluvia),lluvia,8,322,160.2,0.2909,0.0002,0.2386,0.3372,0.2798,0.0006,True,True
